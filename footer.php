@@ -13,7 +13,7 @@
 
 	</div><!-- #content -->
 
-	<footer id="colophon" class="site-footer" role="contentinfo">
+	<footer id="colophon" class="site-footer skip" role="contentinfo">
 		<div class="site-info">
 			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'simpletheme' ), 'simpletheme', '<a href="http://frasaleksander.github.io" rel="designer">Aleksander Fras</a>' ); ?>
 		</div><!-- .site-info -->
