@@ -6,6 +6,9 @@ html {
 
 body {
 	margin: 0;
+	font-size:1em;
+	font-family:Arial, 'sans-serif', serif;
+	font-weight:400;
 }
 
 article,
@@ -207,4 +210,10 @@ table {
 td,
 th {
 	padding: 0;
+}
+
+.skip {
+	position:absolute;
+	top:-1000000px;
+	left:-1000000px;
 }
