@@ -1,0 +1,31 @@
+{
+  "name": "simpletheme",
+  "version": "1.0.0",
+  "description": "Simple WordPress theme",
+  "main": "app/app.js",
+  "scripts": {
+    "test": "test/test.js",
+    "watch": "(watchify app/app.js -o build/build.js) & (compass watch) & livereload"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/frasaleksander/simpletheme.git"
+  },
+  "keywords": [
+    "WordPress",
+    "simple",
+    "theme",
+    "onepager",
+    "light",
+    "dark"
+  ],
+  "author": "Aleksander Fras",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/frasaleksander/simpletheme/issues"
+  },
+  "homepage": "https://github.com/frasaleksander/simpletheme#readme",
+  "devDependencies": {
+    "jquery": "^3.1.1"
+  }
+}

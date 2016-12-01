@@ -15,8 +15,6 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'simpletheme' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'simpletheme' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
 			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'simpletheme' ), 'simpletheme', '<a href="http://frasaleksander.github.io" rel="designer">Aleksander Fras</a>' ); ?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
