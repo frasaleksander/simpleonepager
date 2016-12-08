@@ -9,6 +9,7 @@ body {
 	font-size:1em;
 	font-family:Arial, 'sans-serif', serif;
 	font-weight:400;
+	overflow-x:hidden;
 }
 
 article,
@@ -48,9 +49,21 @@ a {
 	background-color: transparent;
 }
 
+a,
 a:active,
-a:hover {
+a:hover,
+a:visited,
+a:link,
+a:focus {
 	outline: 0;
+	border:0;
+	color:#f0f;
+}
+
+a img,
+img {
+	border:0;
+	outline:0;
 }
 
 abbr[title] {

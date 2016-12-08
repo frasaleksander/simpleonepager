@@ -1,10 +1,12 @@
 ul, ol {
-	margin: 0 0 1.5em 3em;
+	margin: 0 0 1.5em 0;
 }
 
 ul {
 	list-style: disc;
 }
+
+
 
 ol {
 	list-style: decimal;
@@ -12,8 +14,7 @@ ol {
 
 li > ul,
 li > ol {
-	margin-bottom: 0;
-	margin-left: 1.5em;
+	margin:0 0 1.5em 0;
 }
 
 dt {
@@ -22,4 +23,12 @@ dt {
 
 dd {
 	margin: 0 1.5em 1.5em;
+}
+
+li.has-submenu {
+	list-style:none;
+}
+li.has-submenu ol,
+li.has-submenu ul {
+	margin-bottom:0;
 }

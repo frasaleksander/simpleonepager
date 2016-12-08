@@ -26,7 +26,7 @@ function simpletheme_setup() {
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
-
+	add_theme_support( 'custom-logo' );
 	/*
 	 * Let WordPress manage the document title.
 	 * By adding theme support, we declare that this theme does not use a
@@ -102,8 +102,8 @@ add_action( 'widgets_init', 'simpletheme_widgets_init' );
  * Enqueue scripts and styles.
  */
 function simpletheme_scripts() {
-	wp_enqueue_style( 'simpletheme-style', get_template_directory_uri() . '/stylesheets/style.css' );
-
+	wp_enqueue_style(  'animate', get_template_directory_uri() . '/css/animate.css/animate.css' );
+	wp_enqueue_style(  'simpletheme', get_template_directory_uri() . '/stylesheets/style.css' );
 	wp_enqueue_script( 'simpletheme-js', get_template_directory_uri() . '/build/build.js', array(), '', true );
 
 

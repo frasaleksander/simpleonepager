@@ -40,6 +40,17 @@
 		</div><!-- .site-branding -->
 
 		<nav id="site-navigation" class="main-navigation" role="navigation">
+		    <?php 
+		    $custom_logo_id = get_theme_mod( 'custom_logo' );
+			$logo_src = wp_get_attachment_image_src( $custom_logo_id , 'full' );
+		    ?>
+		    <?php if($logo_src): ?>
+		    <div class="logo-container">
+		        
+		    	<img src="https://www.my-egret.com/img/cms/egret_logo_BLACK.png" alt="<?php echo get_bloginfo('name') . ' - ' . $description; ?>" >
+		        
+		    </div><!-- logo-container -->
+		    <?php endif; //if($logo_src): ?>
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'simpletheme' ); ?></button>
 			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 		</nav><!-- #site-navigation -->
