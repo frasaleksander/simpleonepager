@@ -47,7 +47,7 @@
 		    <?php if($logo_src): ?>
 		    <div class="logo-container">
 		        
-		    	<img src="https://www.my-egret.com/img/cms/egret_logo_BLACK.png" alt="<?php echo get_bloginfo('name') . ' - ' . $description; ?>" >
+		    	<img src="<?php echo $logo_src[0]; ?>" alt="<?php echo get_bloginfo('name') . ' - ' . $description; ?>" >
 		        
 		    </div><!-- logo-container -->
 		    <?php endif; //if($logo_src): ?>

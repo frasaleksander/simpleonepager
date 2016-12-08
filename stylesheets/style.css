@@ -483,7 +483,9 @@ table {
 button,
 input[type="button"],
 input[type="reset"],
-input[type="submit"] {
+input[type="submit"],
+.btn {
+  display: inline-block;
   border: 1px solid;
   border-color: transparent;
   background: #e6e6e6;
@@ -491,23 +493,26 @@ input[type="submit"] {
   font-size: 12px;
   font-size: 0.75rem;
   line-height: 1;
-  padding: .5em;
+  padding: .5em 1.2em;
 }
-/* line 13, ../sass/forms/_buttons.scss */
+/* line 15, ../sass/forms/_buttons.scss */
 button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
-input[type="submit"]:hover {
+input[type="submit"]:hover,
+.btn:hover {
   border-color: transparent;
 }
-/* line 17, ../sass/forms/_buttons.scss */
+/* line 19, ../sass/forms/_buttons.scss */
 button:active, button:focus,
 input[type="button"]:active,
 input[type="button"]:focus,
 input[type="reset"]:active,
 input[type="reset"]:focus,
 input[type="submit"]:active,
-input[type="submit"]:focus {
+input[type="submit"]:focus,
+.btn:active,
+.btn:focus {
   border-color: transparent;
 }
 
@@ -528,7 +533,7 @@ input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
 textarea {
-  color: #666;
+  color: #444;
   border: 1px solid #ccc;
   padding: 0.5em;
 }
@@ -570,16 +575,16 @@ textarea {
 --------------------------------------------------------------*/
 /* line 1, ../sass/navigation/_links.scss */
 a {
-  color: royalblue;
+  color: #231f20;
   outline: 0;
 }
 /* line 4, ../sass/navigation/_links.scss */
 a:visited {
-  color: purple;
+  color: #231f20;
 }
 /* line 7, ../sass/navigation/_links.scss */
 a:hover, a:focus, a:active {
-  color: midnightblue;
+  color: #f06d06;
   outline: 0;
 }
 
@@ -801,7 +806,7 @@ a:hover, a:focus, a:active {
 
 /* line 5, ../sass/site/primary/_posts-and-pages.scss */
 .hentry {
-  margin: 0 0 1.5em;
+  margin: 0em;
 }
 
 /* line 9, ../sass/site/primary/_posts-and-pages.scss */
@@ -820,13 +825,13 @@ a:hover, a:focus, a:active {
 .page-content,
 .entry-content,
 .entry-summary {
-  margin: 1.5em 0 0;
+  margin: 0;
 }
 
 /* line 25, ../sass/site/primary/_posts-and-pages.scss */
 .page-links {
   clear: both;
-  margin: 0 0 1.5em;
+  margin: 0 0 1.5em 0;
 }
 
 /*--------------------------------------------------------------
