@@ -1,6 +1,6 @@
 window.jQuery = window.$ = require('jquery');
 var WOW = require('wowjs');
-console.log(WOW);
+var Waypoint = require('waypoints/lib/jquery.waypoints.js');
 
 (function($){
 

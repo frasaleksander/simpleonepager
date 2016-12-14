@@ -64,9 +64,11 @@ function simpletheme_setup() {
 
 	// Set up the WordPress core custom background feature.
 	add_theme_support( 'custom-background', apply_filters( 'simpletheme_custom_background_args', array(
-		'default-color' => 'ffffff',
+		'default-color' => '#fff',
 		'default-image' => '',
 	) ) );
+
+
 }
 endif;
 add_action( 'after_setup_theme', 'simpletheme_setup' );

@@ -1,0 +1,35 @@
+.logo-container {
+    @include inline-block();
+	img {
+		max-width:10em;
+		max-height:5em;
+	}
+}
+
+#masthead {
+	position:absolute;
+	left:0;
+	top:0;
+	right:0;
+	z-index:1000;
+	padding:1em 2.5%;
+}
+
+
+.top-headings {
+	position:absolute;
+	top:45%;
+	left:50%;
+	width:80%;
+	@include transform(translate(-45%,-50%));
+	max-width:1000px;
+	text-align:left;
+	h1,h2,h3,h4,h5,h6 {
+		text-transform:uppercase;
+	}
+}
+
+.sow-slider-base ul.sow-slider-images li.sow-slider-image .sow-slider-image-overlay.sow-slider-image-cover {
+	background-position:top center;
+	background-size:100% !important;
+}

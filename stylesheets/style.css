@@ -90,7 +90,7 @@ a:link,
 a:focus {
   outline: 0;
   border: 0;
-  color: #f0f;
+  cursor: pointer;
 }
 
 /* line 63, ../sass/_normalize.scss */
@@ -295,6 +295,162 @@ th {
   position: absolute;
   top: -1000000px;
   left: -1000000px;
+}
+
+/* line 235, ../sass/_normalize.scss */
+.max-550 {
+  max-width: 550px;
+}
+
+/* line 235, ../sass/_normalize.scss */
+.max-600 {
+  max-width: 600px;
+}
+
+/* line 235, ../sass/_normalize.scss */
+.max-650 {
+  max-width: 650px;
+}
+
+/* line 235, ../sass/_normalize.scss */
+.max-700 {
+  max-width: 700px;
+}
+
+/* line 235, ../sass/_normalize.scss */
+.max-750 {
+  max-width: 750px;
+}
+
+/* line 235, ../sass/_normalize.scss */
+.max-800 {
+  max-width: 800px;
+}
+
+/* line 235, ../sass/_normalize.scss */
+.max-850 {
+  max-width: 850px;
+}
+
+/* line 235, ../sass/_normalize.scss */
+.max-900 {
+  max-width: 900px;
+}
+
+/* line 235, ../sass/_normalize.scss */
+.max-950 {
+  max-width: 950px;
+}
+
+/* line 235, ../sass/_normalize.scss */
+.max-1000 {
+  max-width: 1000px;
+}
+
+/* line 235, ../sass/_normalize.scss */
+.max-1050 {
+  max-width: 1050px;
+}
+
+/* line 235, ../sass/_normalize.scss */
+.max-1100 {
+  max-width: 1100px;
+}
+
+/* line 235, ../sass/_normalize.scss */
+.max-1150 {
+  max-width: 1150px;
+}
+
+/* line 235, ../sass/_normalize.scss */
+.max-1200 {
+  max-width: 1200px;
+}
+
+/* line 235, ../sass/_normalize.scss */
+.max-1250 {
+  max-width: 1250px;
+}
+
+/* line 235, ../sass/_normalize.scss */
+.max-1300 {
+  max-width: 1300px;
+}
+
+/* line 235, ../sass/_normalize.scss */
+.max-1350 {
+  max-width: 1350px;
+}
+
+/* line 235, ../sass/_normalize.scss */
+.max-1400 {
+  max-width: 1400px;
+}
+
+/* line 235, ../sass/_normalize.scss */
+.max-1450 {
+  max-width: 1450px;
+}
+
+/* line 235, ../sass/_normalize.scss */
+.max-1500 {
+  max-width: 1500px;
+}
+
+/* line 235, ../sass/_normalize.scss */
+.max-1550 {
+  max-width: 1550px;
+}
+
+/* line 235, ../sass/_normalize.scss */
+.max-1600 {
+  max-width: 1600px;
+}
+
+/* line 235, ../sass/_normalize.scss */
+.max-1650 {
+  max-width: 1650px;
+}
+
+/* line 235, ../sass/_normalize.scss */
+.max-1700 {
+  max-width: 1700px;
+}
+
+/* line 235, ../sass/_normalize.scss */
+.max-1750 {
+  max-width: 1750px;
+}
+
+/* line 235, ../sass/_normalize.scss */
+.max-1800 {
+  max-width: 1800px;
+}
+
+/* line 235, ../sass/_normalize.scss */
+.max-1850 {
+  max-width: 1850px;
+}
+
+/* line 235, ../sass/_normalize.scss */
+.max-1900 {
+  max-width: 1900px;
+}
+
+/* line 235, ../sass/_normalize.scss */
+.max-1950 {
+  max-width: 1950px;
+}
+
+/* line 235, ../sass/_normalize.scss */
+.max-2000 {
+  max-width: 2000px;
+}
+
+/* line 240, ../sass/_normalize.scss */
+.margin-auto {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /*--------------------------------------------------------------
@@ -503,18 +659,6 @@ input[type="submit"]:hover,
 .btn:hover {
   border-color: transparent;
 }
-/* line 19, ../sass/forms/_buttons.scss */
-button:active, button:focus,
-input[type="button"]:active,
-input[type="button"]:focus,
-input[type="reset"]:active,
-input[type="reset"]:focus,
-input[type="submit"]:active,
-input[type="submit"]:focus,
-.btn:active,
-.btn:focus {
-  border-color: transparent;
-}
 
 /* line 1, ../sass/forms/_fields.scss */
 input[type="text"],
@@ -575,115 +719,105 @@ textarea {
 --------------------------------------------------------------*/
 /* line 1, ../sass/navigation/_links.scss */
 a {
-  color: #231f20;
   outline: 0;
+  text-decoration: none;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
 }
 /* line 4, ../sass/navigation/_links.scss */
-a:visited {
-  color: #231f20;
-}
-/* line 7, ../sass/navigation/_links.scss */
 a:hover, a:focus, a:active {
-  color: #f06d06;
   outline: 0;
+}
+
+/* line 13, ../sass/navigation/_links.scss */
+.site-header a {
+  text-decoration: none;
+}
+
+/* line 18, ../sass/navigation/_links.scss */
+a > img {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
 }
 
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
-/* line 1, ../sass/navigation/_menus.scss */
+/* line 1, ../sass/navigation/_menus_my.scss */
 .main-navigation {
-  clear: both;
-  display: block;
-  float: left;
-  width: 100%;
-}
-/* line 7, ../sass/navigation/_menus.scss */
-.main-navigation ul {
-  display: none;
-  list-style: none;
-  margin: 0;
-  padding-left: 0;
-}
-/* line 13, ../sass/navigation/_menus.scss */
-.main-navigation ul ul {
-  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-  float: left;
-  position: absolute;
-  top: 1.5em;
-  left: -999em;
-  z-index: 99999;
-}
-/* line 21, ../sass/navigation/_menus.scss */
-.main-navigation ul ul ul {
-  left: -999em;
-  top: 0;
-}
-/* line 27, ../sass/navigation/_menus.scss */
-.main-navigation ul ul li:hover > ul, .main-navigation ul ul li.focus > ul {
-  left: 100%;
-}
-/* line 33, ../sass/navigation/_menus.scss */
-.main-navigation ul ul a {
-  width: 200px;
-}
-/* line 46, ../sass/navigation/_menus.scss */
-.main-navigation ul li:hover > ul,
-.main-navigation ul li.focus > ul {
-  left: auto;
-}
-/* line 52, ../sass/navigation/_menus.scss */
-.main-navigation li {
-  float: left;
   position: relative;
+  font-weight: bold;
 }
-/* line 61, ../sass/navigation/_menus.scss */
-.main-navigation a {
-  display: block;
-  text-decoration: none;
+/* line 3, ../sass/navigation/_menus_my.scss */
+.main-navigation ul {
+  list-style: none;
+}
+/* line 6, ../sass/navigation/_menus_my.scss */
+.main-navigation .menu {
+  margin: 0;
+  padding: 0;
+}
+/* line 11, ../sass/navigation/_menus_my.scss */
+.main-navigation #primary-menu {
+  color: #fff;
+}
+/* line 13, ../sass/navigation/_menus_my.scss */
+.main-navigation #primary-menu a {
+  color: #fff;
 }
 
-/* Small menu. */
-/* line 74, ../sass/navigation/_menus.scss */
-.menu-toggle,
-.main-navigation.toggled ul {
-  display: block;
+/* line 20, ../sass/navigation/_menus_my.scss */
+.menu-toggle {
+  display: none;
 }
 
-@media screen and (min-width: 37.5em) {
-  /* line 80, ../sass/navigation/_menus.scss */
-  .menu-toggle {
-    display: none;
+@media (min-width: 780px) {
+  /* line 25, ../sass/navigation/_menus_my.scss */
+  .nav-style-1 {
+    text-transform: uppercase;
   }
-
-  /* line 83, ../sass/navigation/_menus.scss */
-  .main-navigation ul {
-    display: block;
+  /* line 27, ../sass/navigation/_menus_my.scss */
+  .nav-style-1 > [class*="menu-"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+  }
+  /* line 35, ../sass/navigation/_menus_my.scss */
+  .nav-style-1 #primary-menu {
+    margin-left: -1em;
+    display: inline-block;
+    vertical-align: middle;
+    *vertical-align: auto;
+    *zoom: 1;
+    *display: inline;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+  /* line 38, ../sass/navigation/_menus_my.scss */
+  .nav-style-1 #primary-menu li {
+    display: inline-block;
+    vertical-align: middle;
+    *vertical-align: auto;
+    *zoom: 1;
+    *display: inline;
+    margin-left: 1em;
+    letter-spacing: 1px;
   }
 }
-/* line 92, ../sass/navigation/_menus.scss */
-.site-main .comment-navigation, .site-main
-.posts-navigation, .site-main
-.post-navigation {
-  margin: 0 0 1.5em;
-  overflow: hidden;
-}
-/* line 97, ../sass/navigation/_menus.scss */
-.comment-navigation .nav-previous,
-.posts-navigation .nav-previous,
-.post-navigation .nav-previous {
-  float: left;
-  width: 50%;
-}
-/* line 102, ../sass/navigation/_menus.scss */
-.comment-navigation .nav-next,
-.posts-navigation .nav-next,
-.post-navigation .nav-next {
-  float: right;
-  text-align: right;
-  width: 50%;
-}
-
 /*--------------------------------------------------------------
 # Accessibility
 --------------------------------------------------------------*/
@@ -837,6 +971,54 @@ a:hover, a:focus, a:active {
 /*--------------------------------------------------------------
 ## Comments
 --------------------------------------------------------------*/
+/* line 1, ../sass/site/primary/_header.scss */
+.logo-container {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+}
+/* line 3, ../sass/site/primary/_header.scss */
+.logo-container img {
+  max-width: 10em;
+  max-height: 5em;
+}
+
+/* line 9, ../sass/site/primary/_header.scss */
+#masthead {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 1em 2.5%;
+}
+
+/* line 19, ../sass/site/primary/_header.scss */
+.top-headings {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  width: 80%;
+  -moz-transform: translate(-45%, -50%);
+  -ms-transform: translate(-45%, -50%);
+  -webkit-transform: translate(-45%, -50%);
+  transform: translate(-45%, -50%);
+  max-width: 1000px;
+  text-align: left;
+}
+/* line 27, ../sass/site/primary/_header.scss */
+.top-headings h1, .top-headings h2, .top-headings h3, .top-headings h4, .top-headings h5, .top-headings h6 {
+  text-transform: uppercase;
+}
+
+/* line 32, ../sass/site/primary/_header.scss */
+.sow-slider-base ul.sow-slider-images li.sow-slider-image .sow-slider-image-overlay.sow-slider-image-cover {
+  background-position: top center;
+  background-size: 100% !important;
+}
+
 /* line 1, ../sass/site/primary/_comments.scss */
 .comment-content a {
   word-wrap: break-word;

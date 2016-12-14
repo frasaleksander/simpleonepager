@@ -57,7 +57,7 @@ a:link,
 a:focus {
 	outline: 0;
 	border:0;
-	color:#f0f;
+	cursor:pointer;
 }
 
 a img,
@@ -229,4 +229,15 @@ th {
 	position:absolute;
 	top:-1000000px;
 	left:-1000000px;
+}
+
+@for $i from 1 through 30 {
+	.max-#{500+$i*50} {
+		max-width: 500+$i*50 + px;
+	}
+}
+
+.margin-auto {
+	margin-left:auto;
+	margin-right:auto;
 }
