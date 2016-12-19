@@ -10,6 +10,40 @@
  *
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  */
+class AFCustomizer {
+	private $currentSection = '';
+	private $wp_customize = null;
+
+	public function __construct() {
+		echo "cool";
+	}
+
+	public function setCurrentSection($section_name) {
+		$this->currentSection = $section_name;
+	}
+
+	public function addColorOption($option_name, $title, $default_color, $section_name = '') {
+		
+		if(!$section_name) {
+			$section_name = $this->currentSection;
+		}
+
+		$this->wp_customize->add_setting( $option_name, array(
+			'default'        => $default_color,
+			'theme_supports' => 'custom-header',
+			'sanitize_callback'    => 'sanitize_hex_color_no_hash',
+			'sanitize_js_callback' => 'maybe_hash_hex_color',
+		) );
+
+		$this->wp_customize->add_control( new WP_Customize_Color_Control( $this->wp_customize, $option_name, array(
+			'label'   => __( $title, 'simpletheme' ),
+			'section' => $section_name,
+		) ) );
+
+	}
+
+}
+
 function simpletheme_customizer_add_color_option($wp_customize, $option_name, $title, $section, $default_color) {
 	$wp_customize->add_setting( $option_name, array(
 		'default'        => $default_color,
@@ -26,6 +60,8 @@ function simpletheme_customizer_add_color_option($wp_customize, $option_name, $t
 
 function simpletheme_customizer_general_colors($wp_customize) {
 
+	$afcustomizer = new AFCustomizer();
+	
 	$wp_customize->add_section( 'general_colors', array(
 	    'priority'       => 10,
 	    'capability'     => 'edit_theme_options',
@@ -57,6 +93,7 @@ function simpletheme_customizer_general_colors($wp_customize) {
 	
 
 }
+
 function simpletheme_customize_register( $wp_customize ) {
 
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
