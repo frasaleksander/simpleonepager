@@ -118,6 +118,8 @@ function simpletheme_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'simpletheme_scripts' );
 
+
+require_once get_template_directory() . '/inc/tgm/tgm-plugins.php';
 /**
  * Implement the Custom Header feature.
  */

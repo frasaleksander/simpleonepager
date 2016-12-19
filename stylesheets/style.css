@@ -984,19 +984,20 @@ a > img {
 .logo-container img {
   max-width: 10em;
   max-height: 5em;
+  cursor: pointer;
 }
 
-/* line 9, ../sass/site/primary/_header.scss */
+/* line 10, ../sass/site/primary/_header.scss */
 #masthead {
   position: absolute;
   left: 0;
   top: 0;
   right: 0;
   z-index: 1000;
-  padding: 1em 2.5%;
+  padding: 2em 2.5%;
 }
 
-/* line 19, ../sass/site/primary/_header.scss */
+/* line 20, ../sass/site/primary/_header.scss */
 .top-headings {
   position: absolute;
   top: 45%;
@@ -1009,19 +1010,19 @@ a > img {
   max-width: 1000px;
   text-align: left;
 }
-/* line 27, ../sass/site/primary/_header.scss */
+/* line 28, ../sass/site/primary/_header.scss */
 .top-headings h1, .top-headings h2, .top-headings h3, .top-headings h4, .top-headings h5, .top-headings h6 {
   text-transform: uppercase;
   line-height: 1.625 !important;
 }
 
 @media (min-width: 780px) {
-  /* line 34, ../sass/site/primary/_header.scss */
+  /* line 35, ../sass/site/primary/_header.scss */
   .sow-slider-base ul.sow-slider-images li.sow-slider-image .sow-slider-image-overlay {
     background-size: 110%;
   }
 
-  /* line 37, ../sass/site/primary/_header.scss */
+  /* line 38, ../sass/site/primary/_header.scss */
   .sow-slider-base ul.sow-slider-images li.sow-slider-image.cycle-slide-active .sow-slider-image-overlay {
     -moz-transition: all 10s ease 0s;
     -o-transition: all 10s ease 0s;
