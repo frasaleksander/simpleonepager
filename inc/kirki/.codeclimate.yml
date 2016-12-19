@@ -1,0 +1,53 @@
+---
+engines:
+  csslint:
+    enabled: true
+    checks:
+      fallback-colors:
+        enabled: false
+      qualified-headings:
+        enabled: false
+      important:
+        enabled: false
+      universal-selector:
+        enabled: false
+      compatible-vendor-prefixes:
+        enabled: false
+      box-sizing:
+        enabled: false
+      star-property-hack:
+        enabled: false
+  duplication:
+    enabled: false
+    config:
+      languages:
+      - javascript
+      - php
+  fixme:
+    enabled: true
+  phpmd:
+    enabled: true
+    checks:
+      Controversial/CamelCaseClassName:
+        enabled: false
+      Controversial/CamelCaseMethodName:
+        enabled: false
+      Controversial/CamelCaseVariableName:
+        enabled: false
+      Controversial/CamelCasePropertyName:
+        enabled: false
+      Naming/ShortVariable:
+        enabled: false
+ratings:
+  paths:
+  - "**.css"
+  - "**.js"
+  - "**.php"
+exclude_paths:
+- controls/sortable/serialize.js
+- controls/code/codemirror/*
+- controls/**/selectize.js
+- assets/js/vendor/*
+- lib/class-aricolor.php
+- tests/*
+- bin/*
