@@ -68,8 +68,9 @@ function simpletheme_header_style() {
 	$button_color_border           = fallback_color(get_theme_mod('button_color_border'));
 	$button_color_border_hover     = fallback_color(get_theme_mod('button_color_border_hover'));
 	$button_color_border_focus     = fallback_color(get_theme_mod('button_color_border_focus'));
-
+	print_r(simpletheme_get_theme_mod('text_color'));
 	?>
+
 	<style type="text/css">
 	<?php
 		// Has the text been hidden?

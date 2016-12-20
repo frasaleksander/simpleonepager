@@ -106,9 +106,12 @@ add_action( 'widgets_init', 'simpletheme_widgets_init' );
 /**
  * Enqueue scripts and styles.
  */
-function simpletheme_scripts() {
+function simpletheme_css_scripts() {
 	wp_enqueue_style(  'animate', get_template_directory_uri() . '/css/animate.css/animate.css' );
 	wp_enqueue_style(  'simpletheme', get_template_directory_uri() . '/stylesheets/style.css' );
+}
+
+function simpletheme_js_scripts() {
 	wp_enqueue_script( 'simpletheme-js', get_template_directory_uri() . '/build/build.js', array(), '', true );
 
 
@@ -116,10 +119,15 @@ function simpletheme_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
-add_action( 'wp_enqueue_scripts', 'simpletheme_scripts' );
 
+add_action( 'wp_enqueue_scripts', 'simpletheme_css_scripts' );
+add_action( 'wp_enqueue_scripts', 'simpletheme_js_scripts'  );
 
+/**
+ * Include TGM for required plugin instal
+ */
 require_once get_template_directory() . '/inc/tgm/tgm-plugins.php';
+
 /**
  * Implement the Custom Header feature.
  */
@@ -137,8 +145,15 @@ require get_template_directory() . '/inc/extras.php';
 
 /**
  * Customizer additions.
+ * Include Kirki for faster workflow
+ * Include customizer parts
  */
-require get_template_directory() . '/inc/customizer.php';
+require_once get_template_directory() . '/inc/kirki/include-kirki.php';
+require_once get_template_directory() . '/inc/kirki/simpletheme-kirki.php';
+require_once get_template_directory() . '/inc/customizer/colors/colors-main.php';
+require_once get_template_directory() . '/inc/customizer/customizer-helpers.php';
+require_once get_template_directory() . '/inc/customizer/customizer.php';
+require_once get_template_directory() . '/inc/customizer/kirki-customizer.php';
 
 /**
  * Load Jetpack compatibility file.
