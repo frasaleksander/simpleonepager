@@ -13,6 +13,12 @@ body {
 }
 
 blockquote, q {
+	@include inline-block();
+	margin: 0 0 1rem;
+    padding: .5625rem 1.25rem 0 1.1875rem;
+	p {
+		margin:0 0 15px 0;
+	}
 	quotes: "" "";
 
 	&:before,

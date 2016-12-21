@@ -17,14 +17,23 @@ Simpletheme_Kirki::add_config( 'simpletheme', array(
 Simpletheme_Kirki::add_panel( 'colors_panel', array(
 	'priority'       => 40,
 	'capability'     => 'edit_theme_options',
-	'theme_supports' => 'custom-header',
+	'theme_supports' => '',
 	'title'          => __('Colors', 'simpletheme'),
 	'description'    => __('Color settings for simpletheme', 'simpletheme'),
 ) );
 
+Simpletheme_Kirki::add_panel( 'typography_panel', array(
+	'priority'       => 41,
+	'capability'     => 'edit_theme_options',
+	'theme_supports' => '',
+	'title'          => __('Typography', 'simpletheme'),
+	'description'    => __('Typography settings for simpletheme', 'simpletheme'),
+) );
+
 //function located in /inc/customizer/colors/colors-main.php
 simpletheme_kirki_customizer_colors_main();
-
+//function located in /inc/customizer/typography/typography-main.php
+simpletheme_kirki_customizer_typography_main();
 
 
 

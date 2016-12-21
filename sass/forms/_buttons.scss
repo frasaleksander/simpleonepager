@@ -4,14 +4,12 @@ input[type="reset"],
 input[type="submit"],
 .btn {
 	display:inline-block;
-	border: 1px solid;
-	border-color: $color__border-button;
-	background: $color__background-button;
-	color: rgba(0, 0, 0, .8);
 	@include font-size(0.75);
 	line-height: 1;
 	padding: .5em 1.2em;
-
+	border-style:solid;
+	border-width: 1px;
+	outline: none;
 	&:hover {
 		border-color: $color__border-button-hover;
 	}

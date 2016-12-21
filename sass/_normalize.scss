@@ -1,4 +1,11 @@
 html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html {
 	font-family: sans-serif;
 	-webkit-text-size-adjust: 100%;
 	-ms-text-size-adjust:     100%;
@@ -10,6 +17,11 @@ body {
 	font-family:Arial, 'sans-serif', serif;
 	font-weight:400;
 	overflow-x:hidden;
+}
+
+blockquote, dd, div, dl, dt, form, h1, h2, h3, h4, h5, h6, li, ol, p, pre, td, th, ul {
+	padding: 0;
+	margin:0;
 }
 
 article,
@@ -79,9 +91,8 @@ dfn {
 	font-style: italic;
 }
 
-h1 {
-	font-size: 2em;
-	margin: 0.67em 0;
+h1,h2,h3,h4,h5,h6 {
+	margin:0 0 0.5rem 0;
 }
 
 mark {
@@ -134,8 +145,9 @@ code,
 kbd,
 pre,
 samp {
-	font-family: monospace, monospace;
-	font-size: 1em;
+	font-family: inherit;
+	font-size: 1rem;
+	padding:.125rem .3125rem .0625rem;
 }
 
 button,
@@ -241,3 +253,4 @@ th {
 	margin-left:auto;
 	margin-right:auto;
 }
+

@@ -1,33 +1,41 @@
-ul, ol {
-	margin: 0 0 1.5em 0;
+ol, ul {
+    margin-left: 1.25rem;
+}
+
+dl, ol, ul {
+	padding:0;
+	margin-top:0;
+	margin-right:0;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    list-style-position: outside !important;
 }
 
 ul {
 	list-style: disc;
 }
 
-
-
 ol {
 	list-style: decimal;
 }
 
-li > ul,
+/*li > ul,
 li > ol {
-	margin:0 0 1.5em 0;
-}
+	margin:0 0 1.5rem 0;
+}*/
 
 dt {
 	font-weight: bold;
 }
 
 dd {
-	margin: 0 1.5em 1.5em;
+	margin: 0 1.5rem 1.5rem;
 }
 
 li.has-submenu {
 	list-style:none;
 }
+
 li.has-submenu ol,
 li.has-submenu ul {
 	margin-bottom:0;
