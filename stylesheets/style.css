@@ -737,8 +737,9 @@ textarea {
   border-width: 1px;
   padding: 0.5em;
   outline: none;
+  margin: 0 0 1rem 0;
 }
-/* line 23, ../sass/forms/_fields.scss */
+/* line 24, ../sass/forms/_fields.scss */
 input[type="text"]:focus, input[type="text"]:active,
 input[type="email"]:focus,
 input[type="email"]:active,
@@ -775,12 +776,12 @@ textarea:active {
   border-width: 1px;
 }
 
-/* line 28, ../sass/forms/_fields.scss */
+/* line 29, ../sass/forms/_fields.scss */
 select {
   border-width: 1px !important;
 }
 
-/* line 32, ../sass/forms/_fields.scss */
+/* line 33, ../sass/forms/_fields.scss */
 textarea {
   width: 100%;
 }
