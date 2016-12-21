@@ -141,12 +141,17 @@ pre {
 	overflow: auto;
 }
 
+code {
+    font-weight: 400;
+    padding: .125rem .3125rem .0625rem;
+}
+
 code,
 kbd,
 pre,
 samp {
 	font-family: inherit;
-	font-size: 1rem;
+	font-size: 1em;
 	padding:.125rem .3125rem .0625rem;
 }
 

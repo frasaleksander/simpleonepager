@@ -40,7 +40,6 @@ if(!function_exists('simpletheme_kirki_customizer_colors_main')) {
 			'default'     => '#444444',
 			'priority'    => 10,
 			'choices'     => array( 'alpha' => true ),
-			'alpha'       => false,
 			'output'         => array(
 		    	array(
 		    		'element' => 'body',
@@ -81,10 +80,10 @@ if(!function_exists('simpletheme_kirki_customizer_colors_main')) {
 		        'visited'   => esc_attr__( 'Visited', 'simpletheme' ),
 		    ),
 		    'default'     => array(
-		        'color'   => '#f06d06',
-		        'hover'   => '#f06d06',
-		        'active'  => '#f06d06',
-		        'visited'   => '#f06d06',
+		        'color'   => '#2199e8',
+		        'hover'   => '#2199e8',
+		        'active'  => '#2199e8',
+		        'visited'   => '#2199e8',
 		    ),
 		    'output'      => array(
 		    	array(
@@ -307,10 +306,10 @@ if(!function_exists('simpletheme_kirki_customizer_colors_main')) {
 		        'focus'   => esc_attr__( 'Focus', 'simpletheme' ),
 		    ),
 		    'default'     => array(
-		        'color'   => '#e6e6e6',
-		        'hover'   => '#444444',
-		        'active'  => '#444444',
-		        'focus'   => '#444444',
+		        'color'   => '#444444',
+		        'hover'   => '#e6e6e6',
+		        'active'  => '#e6e6e6',
+		        'focus'   => '#e6e6e6',
 		    ),
 		    'output'      => array(
 		    	array(
@@ -382,7 +381,7 @@ if(!function_exists('simpletheme_kirki_customizer_colors_main')) {
 		) );
 
 		/*
-		 * Button Border Color 
+		 * Blockquote Color
 		 */
 		Simpletheme_Kirki::add_field( 'simpletheme', array(
 		    'type'        => 'multicolor',
@@ -397,9 +396,9 @@ if(!function_exists('simpletheme_kirki_customizer_colors_main')) {
 		        //'focus'   => esc_attr__( 'Focus', 'simpletheme' ),
 		    ),
 		    'default'     => array(
-		        'bgcolor'       => '#e7e7e7',
-		        'textcolor'     => '#e7e7e7',
-		        'headingcolor'  => '#e7e7e7',
+		        'bgcolor'       => 'rgba(255,255,255,0)',
+		        'textcolor'     => '#444444',
+		        'headingcolor'  => '#444444',
 		        //'focus'   => '#e7e7e7',
 		    ),
 		    'output'      => array(
@@ -416,6 +415,38 @@ if(!function_exists('simpletheme_kirki_customizer_colors_main')) {
 		    	array(
 		    		'choice'   => 'headingcolor',
 		    		'element'  => 'blockquote h1, blockquote h2, blockquote h3,blockquote h4, blockquote h5, blockquote h6',
+		    		'property' => 'color',
+		    	),
+		
+		    ),
+		) );
+
+		/*
+		 * Code Color
+		 */
+		Simpletheme_Kirki::add_field( 'simpletheme', array(
+		    'type'        => 'multicolor',
+		    'settings'    => 'body_code_color',
+		    'label'       => esc_attr__( 'Code Color', 'simpletheme' ),
+		    'section'     => 'colors_main',
+		    'priority'    => 10,
+		    'choices'     => array(
+		        'bgcolor'       => esc_attr__( 'Background', 'simpletheme' ),
+		        'textcolor'     => esc_attr__( 'Text', 'simpletheme' ),
+		    ),
+		    'default'     => array(
+		        'bgcolor'       => '#f7f7f7',
+		        'textcolor'     => '#444444',
+		    ),
+		    'output'      => array(
+		    	array(
+		    		'choice'   => 'bgcolor',
+		    		'element'  => '.highlight, code, kbd',
+		    		'property' => 'background-color',
+		    	),
+		    	array(
+		    		'choice'   => 'textcolor',
+		    		'element'  => '.highlight, code, kbd',
 		    		'property' => 'color',
 		    	),
 		

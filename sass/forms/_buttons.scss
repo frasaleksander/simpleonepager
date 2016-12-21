@@ -4,9 +4,16 @@ input[type="reset"],
 input[type="submit"],
 .btn {
 	display:inline-block;
-	@include font-size(0.75);
+	text-align: center;
+	cursor:pointer;
+	@include font-size(0.9);
 	line-height: 1;
-	padding: .5em 1.2em;
+	border-radius: 0;
+    padding: .5em 1em;
+    margin: 0 0 1rem;
+	-webkit-appearance: none;
+    transition: background-color .25s ease-out,color .25s ease-out;
+    vertical-align: middle;
 	border-style:solid;
 	border-width: 1px;
 	outline: none;
@@ -19,4 +26,5 @@ input[type="submit"],
 		//border-color: $color__border-button-focus;
 	}
 }
-
+    
+    
