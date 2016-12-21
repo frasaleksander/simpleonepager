@@ -40,6 +40,6 @@ if ( ! function_exists( 'simpletheme_header_style' ) ) :
  * @see simpletheme_custom_header_setup().
  */
 function simpletheme_header_style() {
-
+	//echo 'la' . get_theme_mod('body_text_color');
 }
 endif;

@@ -18,7 +18,7 @@ if(!function_exists('simpletheme_kirki_customizer_typography_main')) {
 
 		Simpletheme_Kirki::add_field( 'simpletheme', array(
 			'type'        => 'typography',
-			'settings'    => 'body-text-font',
+			'settings'    => 'body_text_font',
 			'label'       => esc_attr__( 'Text', 'simpletheme' ),
 			'section'     => 'typography_main',
 			'default'     => array(
@@ -42,12 +42,35 @@ if(!function_exists('simpletheme_kirki_customizer_typography_main')) {
 
 		Simpletheme_Kirki::add_field( 'simpletheme', array(
 			'type'        => 'typography',
-			'settings'    => 'body-h1-font',
-			'label'       => esc_attr__( 'H1', 'simpletheme' ),
+			'settings'    => 'body_allh_font',
+			'label'       => esc_attr__( 'H1, H2, H3, H4, H5, H6', 'simpletheme' ),
 			'section'     => 'typography_main',
 			'default'     => array(
 				'font-family'    => 'Open Sans',
 				'variant'        => '700',
+				'font-size'      => '1rem',
+				'line-height'    => '1.4',
+				'letter-spacing' => '0',
+				'subsets'        => array( 'latin-ext' ),
+				'text-transform' => 'uppercase',
+				'text-align'     => 'left'
+			),
+			'priority'    => 10,
+			'output'      => array(
+				array(
+					'element' => 'h1, h2, h3, h4, h5, h6',
+				),
+			),
+		) );
+
+
+		Simpletheme_Kirki::add_field( 'simpletheme', array(
+			'type'        => 'typography',
+			'settings'    => 'body_h1_font',
+			'label'       => esc_attr__( 'H1', 'simpletheme' ),
+			'section'     => 'typography_main',
+			'default'     => array(
+				'font-family'    => 'inherit',
 				'font-size'      => '3rem',
 				'line-height'    => '1.4',
 				'letter-spacing' => '0',
@@ -65,12 +88,11 @@ if(!function_exists('simpletheme_kirki_customizer_typography_main')) {
 
 		Simpletheme_Kirki::add_field( 'simpletheme', array(
 			'type'        => 'typography',
-			'settings'    => 'body-h2-font',
+			'settings'    => 'body_h2_font',
 			'label'       => esc_attr__( 'H2', 'simpletheme' ),
 			'section'     => 'typography_main',
 			'default'     => array(
-				'font-family'    => 'Open Sans',
-				'variant'        => '700',
+				'font-family'    => 'inherit',
 				'font-size'      => '2.5rem',
 				'line-height'    => '1.4',
 				'letter-spacing' => '0',
@@ -88,12 +110,11 @@ if(!function_exists('simpletheme_kirki_customizer_typography_main')) {
 
 		Simpletheme_Kirki::add_field( 'simpletheme', array(
 			'type'        => 'typography',
-			'settings'    => 'body-h3-font',
+			'settings'    => 'body_h3_font',
 			'label'       => esc_attr__( 'H3', 'simpletheme' ),
 			'section'     => 'typography_main',
 			'default'     => array(
-				'font-family'    => 'Open Sans',
-				'variant'        => '700',
+				'font-family'    => 'inherit',
 				'font-size'      => '1.9375rem',
 				'line-height'    => '1.4',
 				'letter-spacing' => '0',
@@ -111,12 +132,11 @@ if(!function_exists('simpletheme_kirki_customizer_typography_main')) {
 
 		Simpletheme_Kirki::add_field( 'simpletheme', array(
 			'type'        => 'typography',
-			'settings'    => 'body-h4-font',
+			'settings'    => 'body_h4_font',
 			'label'       => esc_attr__( 'H4', 'simpletheme' ),
 			'section'     => 'typography_main',
 			'default'     => array(
-				'font-family'    => 'Open Sans',
-				'variant'        => '700',
+				'font-family'    => 'inherit',
 				'font-size'      => '1.5625rem',
 				'line-height'    => '1.4',
 				'letter-spacing' => '0',
@@ -134,7 +154,7 @@ if(!function_exists('simpletheme_kirki_customizer_typography_main')) {
 
 		Simpletheme_Kirki::add_field( 'simpletheme', array(
 			'type'        => 'typography',
-			'settings'    => 'body-h5-font',
+			'settings'    => 'body_h5_font',
 			'label'       => esc_attr__( 'H5', 'simpletheme' ),
 			'section'     => 'typography_main',
 			'default'     => array(
@@ -157,12 +177,11 @@ if(!function_exists('simpletheme_kirki_customizer_typography_main')) {
 
 		Simpletheme_Kirki::add_field( 'simpletheme', array(
 			'type'        => 'typography',
-			'settings'    => 'body-h6-font',
+			'settings'    => 'body_h6_font',
 			'label'       => esc_attr__( 'H6', 'simpletheme' ),
 			'section'     => 'typography_main',
 			'default'     => array(
-				'font-family'    => 'Open Sans',
-				'variant'        => '700',
+				'font-family'    => 'inherit',
 				'font-size'      => '1rem',
 				'line-height'    => '1.4',
 				'letter-spacing' => '0',
@@ -180,7 +199,7 @@ if(!function_exists('simpletheme_kirki_customizer_typography_main')) {
 
 		Simpletheme_Kirki::add_field( 'simpletheme', array(
 			'type'        => 'typography',
-			'settings'    => 'body-code-font',
+			'settings'    => 'body_code_font',
 			'label'       => esc_attr__( 'Code', 'simpletheme' ),
 			'section'     => 'typography_main',
 			'default'     => array(
@@ -201,12 +220,19 @@ if(!function_exists('simpletheme_kirki_customizer_typography_main')) {
 			),
 		) );
 
+		/*
+		 * Blockquote Headings
+		 */
 		Simpletheme_Kirki::add_field( 'simpletheme', array(
 			'type'        => 'typography',
-			'settings'    => 'body-blockquote-headings-font',
-			'label'       => esc_attr__( 'Blockquote Headings', 'simpletheme' ),
+			'settings'    => 'body_blockquote_headings_font',
+			'label'       => esc_attr__( 'Blockquote Headings (H1, H2, H3, H4, H5, H6)', 'simpletheme' ),
 			'section'     => 'typography_main',
 			'default'     => array(
+				'font-family'    => 'inherit',
+				'line-height'    => '1.4',
+				'letter-spacing' => '0',
+				'subsets'        => array( 'latin-ext' ),
 				'text-transform' => 'none',
 				'text-align'     => 'left'
 			),
@@ -218,8 +244,31 @@ if(!function_exists('simpletheme_kirki_customizer_typography_main')) {
 			),
 		) );
 
-
-
+		/*
+		 * Blockquote Headings
+		 */
+		Simpletheme_Kirki::add_field( 'simpletheme', array(
+			'type'        => 'typography',
+			'settings'    => 'body_blockquote_text_font',
+			'label'       => esc_attr__( 'Blockquote Text', 'simpletheme' ),
+			'section'     => 'typography_main',
+			'default'     => array(
+				'font-family'    => 'inherit',
+				'font-size'      => '1em',
+				'variant'        => 'regular',
+				'line-height'    => '1.5',
+				'letter-spacing' => '0',
+				'subsets'        => array( 'latin-ext' ),
+				'text-transform' => 'none',
+				'text-align'     => 'left'
+			),
+			'priority'    => 10,
+			'output'      => array(
+				array(
+					'element' => 'blockquote',
+				),
+			),
+		) );
 
 
 

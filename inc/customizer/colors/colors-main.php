@@ -34,16 +34,16 @@ if(!function_exists('simpletheme_kirki_customizer_colors_main')) {
 
 		Simpletheme_Kirki::add_field( 'simpletheme', array(
 			'type'        => 'color',
-			'settings'    => 'body_text_color',
+			'settings'    => 'body_textss_color',
 			'label'       => __( 'Text Color', 'simpletheme' ),
 			'section'     => 'colors_main',
-			'default'     => '#444555',
+			'default'     => '#000000',
 			'priority'    => 10,
 			'choices'     => array( 'alpha' => true ),
 			'output'         => array(
 		    	array(
 		    		'element' => 'body',
-		    		'property' => 'color'
+		    		'property' => 'color',
 		    	),
 		    ),
 		) );
@@ -391,13 +391,13 @@ if(!function_exists('simpletheme_kirki_customizer_colors_main')) {
 		    'priority'    => 10,
 		    'choices'     => array(
 		        'bgcolor'       => esc_attr__( 'Background', 'simpletheme' ),
-		        'textcolor'     => esc_attr__( 'Text', 'simpletheme' ),
+		        'txtcolor'     => esc_attr__( 'Text', 'simpletheme' ),
 		        'headingcolor'  => esc_attr__( 'Headings', 'simpletheme' ),
 		        //'focus'   => esc_attr__( 'Focus', 'simpletheme' ),
 		    ),
 		    'default'     => array(
 		        'bgcolor'       => 'rgba(255,255,255,0)',
-		        'textcolor'     => '#444444',
+		        'txtcolor'     => '#444444',
 		        'headingcolor'  => '#444444',
 		        //'focus'   => '#e7e7e7',
 		    ),
@@ -408,7 +408,7 @@ if(!function_exists('simpletheme_kirki_customizer_colors_main')) {
 		    		'property' => 'background-color',
 		    	),
 		    	array(
-		    		'choice'   => 'textcolor',
+		    		'choice'   => 'txtcolor',
 		    		'element'  => 'blockquote',
 		    		'property' => 'color',
 		    	),
@@ -432,11 +432,11 @@ if(!function_exists('simpletheme_kirki_customizer_colors_main')) {
 		    'priority'    => 10,
 		    'choices'     => array(
 		        'bgcolor'       => esc_attr__( 'Background', 'simpletheme' ),
-		        'textcolor'     => esc_attr__( 'Text', 'simpletheme' ),
+		        'txtcolor'     => esc_attr__( 'Text', 'simpletheme' ),
 		    ),
 		    'default'     => array(
 		        'bgcolor'       => '#f7f7f7',
-		        'textcolor'     => '#444444',
+		        'txtcolor'     => 'rgba(68,6,6,0.6)',
 		    ),
 		    'output'      => array(
 		    	array(
@@ -445,7 +445,7 @@ if(!function_exists('simpletheme_kirki_customizer_colors_main')) {
 		    		'property' => 'background-color',
 		    	),
 		    	array(
-		    		'choice'   => 'textcolor',
+		    		'choice'   => 'txtcolor',
 		    		'element'  => '.highlight, code, kbd',
 		    		'property' => 'color',
 		    	),
