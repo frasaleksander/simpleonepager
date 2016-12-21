@@ -25,11 +25,11 @@ if(!function_exists('simpletheme_kirki_customizer_typography_main')) {
 				'font-family'    => 'Open Sans',
 				'variant'        => 'regular',
 				'font-size'      => '1.1rem',
-				'line-height'    => '1.4',
+				'line-height'    => '1.6',
 				'letter-spacing' => '0',
 				'subsets'        => array( 'latin-ext' ),
 				'text-transform' => 'none',
-				'text-align'     => 'left'
+				'text-align'     => 'left',
 			),
 			'priority'    => 10,
 			'output'      => array(
@@ -174,6 +174,46 @@ if(!function_exists('simpletheme_kirki_customizer_typography_main')) {
 			'output'      => array(
 				array(
 					'element' => 'h6',
+				),
+			),
+		) );
+
+		Simpletheme_Kirki::add_field( 'simpletheme', array(
+			'type'        => 'typography',
+			'settings'    => 'body-code-font',
+			'label'       => esc_attr__( 'Code', 'simpletheme' ),
+			'section'     => 'typography_main',
+			'default'     => array(
+				'font-family'    => 'Roboto Mono',
+				'variant'        => 'regular',
+				'font-size'      => '1em',
+				'line-height'    => '1.5',
+				'letter-spacing' => '0',
+				'subsets'        => array( 'latin-ext' ),
+				'text-transform' => 'none',
+				'text-align'     => 'left'
+			),
+			'priority'    => 10,
+			'output'      => array(
+				array(
+					'element' => '.highlight, code, kbd',
+				),
+			),
+		) );
+
+		Simpletheme_Kirki::add_field( 'simpletheme', array(
+			'type'        => 'typography',
+			'settings'    => 'body-blockquote-headings-font',
+			'label'       => esc_attr__( 'Blockquote Headings', 'simpletheme' ),
+			'section'     => 'typography_main',
+			'default'     => array(
+				'text-transform' => 'none',
+				'text-align'     => 'left'
+			),
+			'priority'    => 10,
+			'output'      => array(
+				array(
+					'element' => 'blockquote h1, blockquote h2, blockquote h3, blockquote h4, blockquote h5, blockquote h6',
 				),
 			),
 		) );

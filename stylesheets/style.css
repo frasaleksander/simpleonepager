@@ -235,241 +235,242 @@ select {
 button,
 html input[type="button"],
 input[type="reset"],
-input[type="submit"] {
+input[type="submit"],
+.btn, .button {
   -webkit-appearance: button;
   cursor: pointer;
 }
 
-/* line 185, ../sass/_normalize.scss */
+/* line 186, ../sass/_normalize.scss */
 button[disabled],
 html input[disabled] {
   cursor: default;
 }
 
-/* line 190, ../sass/_normalize.scss */
+/* line 191, ../sass/_normalize.scss */
 button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
 
-/* line 196, ../sass/_normalize.scss */
+/* line 197, ../sass/_normalize.scss */
 input {
   line-height: normal;
 }
 
-/* line 200, ../sass/_normalize.scss */
+/* line 201, ../sass/_normalize.scss */
 input[type="checkbox"],
 input[type="radio"] {
   box-sizing: border-box;
   padding: 0;
 }
 
-/* line 206, ../sass/_normalize.scss */
+/* line 207, ../sass/_normalize.scss */
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
   height: auto;
 }
 
-/* line 211, ../sass/_normalize.scss */
+/* line 212, ../sass/_normalize.scss */
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
-/* line 216, ../sass/_normalize.scss */
+/* line 217, ../sass/_normalize.scss */
 fieldset {
   border: 1px solid #c0c0c0;
   margin: 0 2px;
   padding: 0.35em 0.625em 0.75em;
 }
 
-/* line 222, ../sass/_normalize.scss */
+/* line 223, ../sass/_normalize.scss */
 legend {
   border: 0;
   padding: 0;
 }
 
-/* line 227, ../sass/_normalize.scss */
+/* line 228, ../sass/_normalize.scss */
 textarea {
   overflow: auto;
 }
 
-/* line 231, ../sass/_normalize.scss */
+/* line 232, ../sass/_normalize.scss */
 optgroup {
   font-weight: bold;
 }
 
-/* line 235, ../sass/_normalize.scss */
+/* line 236, ../sass/_normalize.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 240, ../sass/_normalize.scss */
+/* line 241, ../sass/_normalize.scss */
 td,
 th {
   padding: 0;
 }
 
-/* line 245, ../sass/_normalize.scss */
+/* line 246, ../sass/_normalize.scss */
 .skip {
   position: absolute;
   top: -1000000px;
   left: -1000000px;
 }
 
-/* line 252, ../sass/_normalize.scss */
+/* line 253, ../sass/_normalize.scss */
 .max-550 {
   max-width: 550px;
 }
 
-/* line 252, ../sass/_normalize.scss */
+/* line 253, ../sass/_normalize.scss */
 .max-600 {
   max-width: 600px;
 }
 
-/* line 252, ../sass/_normalize.scss */
+/* line 253, ../sass/_normalize.scss */
 .max-650 {
   max-width: 650px;
 }
 
-/* line 252, ../sass/_normalize.scss */
+/* line 253, ../sass/_normalize.scss */
 .max-700 {
   max-width: 700px;
 }
 
-/* line 252, ../sass/_normalize.scss */
+/* line 253, ../sass/_normalize.scss */
 .max-750 {
   max-width: 750px;
 }
 
-/* line 252, ../sass/_normalize.scss */
+/* line 253, ../sass/_normalize.scss */
 .max-800 {
   max-width: 800px;
 }
 
-/* line 252, ../sass/_normalize.scss */
+/* line 253, ../sass/_normalize.scss */
 .max-850 {
   max-width: 850px;
 }
 
-/* line 252, ../sass/_normalize.scss */
+/* line 253, ../sass/_normalize.scss */
 .max-900 {
   max-width: 900px;
 }
 
-/* line 252, ../sass/_normalize.scss */
+/* line 253, ../sass/_normalize.scss */
 .max-950 {
   max-width: 950px;
 }
 
-/* line 252, ../sass/_normalize.scss */
+/* line 253, ../sass/_normalize.scss */
 .max-1000 {
   max-width: 1000px;
 }
 
-/* line 252, ../sass/_normalize.scss */
+/* line 253, ../sass/_normalize.scss */
 .max-1050 {
   max-width: 1050px;
 }
 
-/* line 252, ../sass/_normalize.scss */
+/* line 253, ../sass/_normalize.scss */
 .max-1100 {
   max-width: 1100px;
 }
 
-/* line 252, ../sass/_normalize.scss */
+/* line 253, ../sass/_normalize.scss */
 .max-1150 {
   max-width: 1150px;
 }
 
-/* line 252, ../sass/_normalize.scss */
+/* line 253, ../sass/_normalize.scss */
 .max-1200 {
   max-width: 1200px;
 }
 
-/* line 252, ../sass/_normalize.scss */
+/* line 253, ../sass/_normalize.scss */
 .max-1250 {
   max-width: 1250px;
 }
 
-/* line 252, ../sass/_normalize.scss */
+/* line 253, ../sass/_normalize.scss */
 .max-1300 {
   max-width: 1300px;
 }
 
-/* line 252, ../sass/_normalize.scss */
+/* line 253, ../sass/_normalize.scss */
 .max-1350 {
   max-width: 1350px;
 }
 
-/* line 252, ../sass/_normalize.scss */
+/* line 253, ../sass/_normalize.scss */
 .max-1400 {
   max-width: 1400px;
 }
 
-/* line 252, ../sass/_normalize.scss */
+/* line 253, ../sass/_normalize.scss */
 .max-1450 {
   max-width: 1450px;
 }
 
-/* line 252, ../sass/_normalize.scss */
+/* line 253, ../sass/_normalize.scss */
 .max-1500 {
   max-width: 1500px;
 }
 
-/* line 252, ../sass/_normalize.scss */
+/* line 253, ../sass/_normalize.scss */
 .max-1550 {
   max-width: 1550px;
 }
 
-/* line 252, ../sass/_normalize.scss */
+/* line 253, ../sass/_normalize.scss */
 .max-1600 {
   max-width: 1600px;
 }
 
-/* line 252, ../sass/_normalize.scss */
+/* line 253, ../sass/_normalize.scss */
 .max-1650 {
   max-width: 1650px;
 }
 
-/* line 252, ../sass/_normalize.scss */
+/* line 253, ../sass/_normalize.scss */
 .max-1700 {
   max-width: 1700px;
 }
 
-/* line 252, ../sass/_normalize.scss */
+/* line 253, ../sass/_normalize.scss */
 .max-1750 {
   max-width: 1750px;
 }
 
-/* line 252, ../sass/_normalize.scss */
+/* line 253, ../sass/_normalize.scss */
 .max-1800 {
   max-width: 1800px;
 }
 
-/* line 252, ../sass/_normalize.scss */
+/* line 253, ../sass/_normalize.scss */
 .max-1850 {
   max-width: 1850px;
 }
 
-/* line 252, ../sass/_normalize.scss */
+/* line 253, ../sass/_normalize.scss */
 .max-1900 {
   max-width: 1900px;
 }
 
-/* line 252, ../sass/_normalize.scss */
+/* line 253, ../sass/_normalize.scss */
 .max-1950 {
   max-width: 1950px;
 }
 
-/* line 252, ../sass/_normalize.scss */
+/* line 253, ../sass/_normalize.scss */
 .max-2000 {
   max-width: 2000px;
 }
 
-/* line 257, ../sass/_normalize.scss */
+/* line 258, ../sass/_normalize.scss */
 .margin-auto {
   margin-left: auto;
   margin-right: auto;
@@ -515,42 +516,47 @@ blockquote {
 }
 
 /* line 16, ../sass/typography/_copy.scss */
+blockquote, blockquote p {
+  line-height: 1.6;
+}
+
+/* line 20, ../sass/typography/_copy.scss */
 address {
   margin: 0 0 1.5em;
 }
 
-/* line 20, ../sass/typography/_copy.scss */
+/* line 24, ../sass/typography/_copy.scss */
 code, kbd, tt, var {
   font-size: 15px;
   font-size: 0.9375rem;
 }
 
-/* line 27, ../sass/typography/_copy.scss */
+/* line 31, ../sass/typography/_copy.scss */
 .highlight {
   margin: 1em 0;
   font-size: 1rem;
   padding: 1rem;
 }
 
-/* line 33, ../sass/typography/_copy.scss */
+/* line 37, ../sass/typography/_copy.scss */
 pre, xmp, plaintext, listing {
   display: block;
   white-space: pre;
 }
 
-/* line 38, ../sass/typography/_copy.scss */
+/* line 42, ../sass/typography/_copy.scss */
 abbr, acronym {
   border-bottom: 1px dotted #666;
   cursor: help;
 }
 
-/* line 43, ../sass/typography/_copy.scss */
+/* line 47, ../sass/typography/_copy.scss */
 mark, ins {
   background: #fff9c0;
   text-decoration: none;
 }
 
-/* line 48, ../sass/typography/_copy.scss */
+/* line 52, ../sass/typography/_copy.scss */
 big {
   font-size: 125%;
 }

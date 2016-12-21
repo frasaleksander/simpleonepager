@@ -37,7 +37,7 @@ if(!function_exists('simpletheme_kirki_customizer_colors_main')) {
 			'settings'    => 'body_text_color',
 			'label'       => __( 'Text Color', 'simpletheme' ),
 			'section'     => 'colors_main',
-			'default'     => '#444444',
+			'default'     => '#444555',
 			'priority'    => 10,
 			'choices'     => array( 'alpha' => true ),
 			'output'         => array(
