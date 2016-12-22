@@ -59,6 +59,9 @@ function simpletheme_header_style() { ?>
 		.cf7-simpletheme-layout-1>div:nth-child(2) {
 			width:33%;
 		}
+		.cf7-simpletheme-layout-1 input[type="submit"] {
+			width:33.3%;
+		}
 		div.wpcf7-response-output {
 			margin:0;
 			padding:0;
@@ -68,6 +71,7 @@ function simpletheme_header_style() { ?>
 		}
 		span.wpcf7-not-valid-tip {
 			margin-bottom:1rem;
+			font-size: 0.7em;
 		}
 	</style>
 <?php 

@@ -796,11 +796,6 @@ textarea {
 a {
   outline: 0;
   text-decoration: none;
-  display: inline-block;
-  vertical-align: middle;
-  *vertical-align: auto;
-  *zoom: 1;
-  *display: inline;
 }
 /* line 4, ../sass/navigation/_links.scss */
 a:hover, a:focus, a:active {
