@@ -39,7 +39,37 @@ if ( ! function_exists( 'simpletheme_header_style' ) ) :
  *
  * @see simpletheme_custom_header_setup().
  */
-function simpletheme_header_style() {
-	//echo 'la' . get_theme_mod('body_text_color');
+function simpletheme_header_style() { ?>
+	
+	<style id="simpletheme-customizer-style">
+		.cf7-simpletheme-layout-1 {
+			display:table;
+			width:100%;
+			table-layout: fixed;
+		}
+		.cf7-simpletheme-layout-1>div {
+			vertical-align:top;
+			display:table-cell;
+			width:50%;
+		}
+		.cf7-simpletheme-layout-1>div:nth-child(1) {
+			width:64%;
+			padding-right:1em;
+		}
+		.cf7-simpletheme-layout-1>div:nth-child(2) {
+			width:33%;
+		}
+		div.wpcf7-response-output {
+			margin:0;
+			padding:0;
+		}
+		div.wpcf7-validation-errors {
+			border:0;
+		}
+		span.wpcf7-not-valid-tip {
+			margin-bottom:1rem;
+		}
+	</style>
+<?php 
 }
 endif;

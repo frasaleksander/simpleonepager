@@ -1,6 +1,13 @@
 window.jQuery = window.$ = require('jquery');
-var WOW = require('wowjs');
+require('wowjs');
 var Waypoint = require('waypoints/lib/jquery.waypoints.js');
+require('./smooth-scroll/smooth-scroll.js');
+//require('./wow.init/wow.init.js')(WOW);
+console.log(window.WOW);
+
+
+
+
 
 (function($){
 
@@ -9,3 +16,4 @@ var Waypoint = require('waypoints/lib/jquery.waypoints.js');
 		
 	});
 })(window.jQuery);
+

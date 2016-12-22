@@ -134,7 +134,7 @@ dfn {
 
 /* line 94, ../sass/_normalize.scss */
 h1, h2, h3, h4, h5, h6 {
-  margin: 0 0 0.5rem 0;
+  margin: 0 0 1rem 0;
 }
 
 /* line 98, ../sass/_normalize.scss */
@@ -305,172 +305,173 @@ optgroup {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+  table-layout: fixed;
 }
 
-/* line 241, ../sass/_normalize.scss */
+/* line 242, ../sass/_normalize.scss */
 td,
 th {
   padding: 0;
 }
 
-/* line 246, ../sass/_normalize.scss */
+/* line 247, ../sass/_normalize.scss */
 .skip {
   position: absolute;
   top: -1000000px;
   left: -1000000px;
 }
 
-/* line 253, ../sass/_normalize.scss */
+/* line 254, ../sass/_normalize.scss */
 .max-550 {
   max-width: 550px;
 }
 
-/* line 253, ../sass/_normalize.scss */
+/* line 254, ../sass/_normalize.scss */
 .max-600 {
   max-width: 600px;
 }
 
-/* line 253, ../sass/_normalize.scss */
+/* line 254, ../sass/_normalize.scss */
 .max-650 {
   max-width: 650px;
 }
 
-/* line 253, ../sass/_normalize.scss */
+/* line 254, ../sass/_normalize.scss */
 .max-700 {
   max-width: 700px;
 }
 
-/* line 253, ../sass/_normalize.scss */
+/* line 254, ../sass/_normalize.scss */
 .max-750 {
   max-width: 750px;
 }
 
-/* line 253, ../sass/_normalize.scss */
+/* line 254, ../sass/_normalize.scss */
 .max-800 {
   max-width: 800px;
 }
 
-/* line 253, ../sass/_normalize.scss */
+/* line 254, ../sass/_normalize.scss */
 .max-850 {
   max-width: 850px;
 }
 
-/* line 253, ../sass/_normalize.scss */
+/* line 254, ../sass/_normalize.scss */
 .max-900 {
   max-width: 900px;
 }
 
-/* line 253, ../sass/_normalize.scss */
+/* line 254, ../sass/_normalize.scss */
 .max-950 {
   max-width: 950px;
 }
 
-/* line 253, ../sass/_normalize.scss */
+/* line 254, ../sass/_normalize.scss */
 .max-1000 {
   max-width: 1000px;
 }
 
-/* line 253, ../sass/_normalize.scss */
+/* line 254, ../sass/_normalize.scss */
 .max-1050 {
   max-width: 1050px;
 }
 
-/* line 253, ../sass/_normalize.scss */
+/* line 254, ../sass/_normalize.scss */
 .max-1100 {
   max-width: 1100px;
 }
 
-/* line 253, ../sass/_normalize.scss */
+/* line 254, ../sass/_normalize.scss */
 .max-1150 {
   max-width: 1150px;
 }
 
-/* line 253, ../sass/_normalize.scss */
+/* line 254, ../sass/_normalize.scss */
 .max-1200 {
   max-width: 1200px;
 }
 
-/* line 253, ../sass/_normalize.scss */
+/* line 254, ../sass/_normalize.scss */
 .max-1250 {
   max-width: 1250px;
 }
 
-/* line 253, ../sass/_normalize.scss */
+/* line 254, ../sass/_normalize.scss */
 .max-1300 {
   max-width: 1300px;
 }
 
-/* line 253, ../sass/_normalize.scss */
+/* line 254, ../sass/_normalize.scss */
 .max-1350 {
   max-width: 1350px;
 }
 
-/* line 253, ../sass/_normalize.scss */
+/* line 254, ../sass/_normalize.scss */
 .max-1400 {
   max-width: 1400px;
 }
 
-/* line 253, ../sass/_normalize.scss */
+/* line 254, ../sass/_normalize.scss */
 .max-1450 {
   max-width: 1450px;
 }
 
-/* line 253, ../sass/_normalize.scss */
+/* line 254, ../sass/_normalize.scss */
 .max-1500 {
   max-width: 1500px;
 }
 
-/* line 253, ../sass/_normalize.scss */
+/* line 254, ../sass/_normalize.scss */
 .max-1550 {
   max-width: 1550px;
 }
 
-/* line 253, ../sass/_normalize.scss */
+/* line 254, ../sass/_normalize.scss */
 .max-1600 {
   max-width: 1600px;
 }
 
-/* line 253, ../sass/_normalize.scss */
+/* line 254, ../sass/_normalize.scss */
 .max-1650 {
   max-width: 1650px;
 }
 
-/* line 253, ../sass/_normalize.scss */
+/* line 254, ../sass/_normalize.scss */
 .max-1700 {
   max-width: 1700px;
 }
 
-/* line 253, ../sass/_normalize.scss */
+/* line 254, ../sass/_normalize.scss */
 .max-1750 {
   max-width: 1750px;
 }
 
-/* line 253, ../sass/_normalize.scss */
+/* line 254, ../sass/_normalize.scss */
 .max-1800 {
   max-width: 1800px;
 }
 
-/* line 253, ../sass/_normalize.scss */
+/* line 254, ../sass/_normalize.scss */
 .max-1850 {
   max-width: 1850px;
 }
 
-/* line 253, ../sass/_normalize.scss */
+/* line 254, ../sass/_normalize.scss */
 .max-1900 {
   max-width: 1900px;
 }
 
-/* line 253, ../sass/_normalize.scss */
+/* line 254, ../sass/_normalize.scss */
 .max-1950 {
   max-width: 1950px;
 }
 
-/* line 253, ../sass/_normalize.scss */
+/* line 254, ../sass/_normalize.scss */
 .max-2000 {
   max-width: 2000px;
 }
 
-/* line 258, ../sass/_normalize.scss */
+/* line 259, ../sass/_normalize.scss */
 .margin-auto {
   margin-left: auto;
   margin-right: auto;
@@ -695,7 +696,7 @@ input[type="submit"],
   font-size: 0.9rem;
   line-height: 1;
   border-radius: 0;
-  padding: .5em 1em;
+  padding: .75em 1.25em;
   margin: 0 0 1rem;
   -webkit-appearance: none;
   transition: background-color .25s ease-out,color .25s ease-out;
@@ -736,6 +737,7 @@ textarea {
   padding: 0.5em;
   outline: none;
   margin: 0 0 1rem 0;
+  width: 100%;
 }
 /* line 24, ../sass/forms/_fields.scss */
 input[type="text"]:focus, input[type="text"]:active,

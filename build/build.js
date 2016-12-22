@@ -1,7 +1,14 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 window.jQuery = window.$ = require('jquery');
-var WOW = require('wowjs');
+require('wowjs');
 var Waypoint = require('waypoints/lib/jquery.waypoints.js');
+require('./smooth-scroll/smooth-scroll.js');
+//require('./wow.init/wow.init.js')(WOW);
+console.log(window.WOW);
+
+
+
+
 
 (function($){
 
@@ -10,7 +17,24 @@ var Waypoint = require('waypoints/lib/jquery.waypoints.js');
 		
 	});
 })(window.jQuery);
-},{"jquery":2,"waypoints/lib/jquery.waypoints.js":3,"wowjs":4}],2:[function(require,module,exports){
+
+
+},{"./smooth-scroll/smooth-scroll.js":2,"jquery":3,"waypoints/lib/jquery.waypoints.js":4,"wowjs":5}],2:[function(require,module,exports){
+(function($) {
+  $('a[href*="#"]:not([href="#"])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html, body').animate({
+          scrollTop: target.offset().top - 95
+        }, 500);
+        return false;
+      }
+    }
+  });
+})(window.jQuery);
+},{}],3:[function(require,module,exports){
 /*!
  * jQuery JavaScript Library v3.1.1
  * https://jquery.com/
@@ -10232,7 +10256,7 @@ if ( !noGlobal ) {
 return jQuery;
 } );
 
-},{}],3:[function(require,module,exports){
+},{}],4:[function(require,module,exports){
 /*!
 Waypoints - 4.0.1
 Copyright © 2011-2016 Caleb Troughton
@@ -10895,7 +10919,7 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
   }
 }())
 ;
-},{}],4:[function(require,module,exports){
+},{}],5:[function(require,module,exports){
 (function() {
   var MutationObserver, Util, WeakMap, getComputedStyle, getComputedStyleRX,
     bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; },
