@@ -14,6 +14,14 @@ Simpletheme_Kirki::add_config( 'simpletheme', array(
 ) );
 
 /* PANELS */
+Simpletheme_Kirki::add_panel( 'style_panel', array(
+	'priority'       => 40,
+	'capability'     => 'edit_theme_options',
+	'theme_supports' => '',
+	'title'          => __('Style', 'simpletheme'),
+	'description'    => __('Style settings for simpletheme', 'simpletheme'),
+) );
+
 Simpletheme_Kirki::add_panel( 'colors_panel', array(
 	'priority'       => 40,
 	'capability'     => 'edit_theme_options',
@@ -30,10 +38,12 @@ Simpletheme_Kirki::add_panel( 'typography_panel', array(
 	'description'    => __('Typography settings for simpletheme', 'simpletheme'),
 ) );
 
-//function located in /inc/customizer/colors/colors-main.php
-simpletheme_kirki_customizer_colors_main();
-//function located in /inc/customizer/typography/typography-main.php
-simpletheme_kirki_customizer_typography_main();
+//function located in /inc/customizer/style/style-common.php
+simpletheme_kirki_customizer_style_common();
+//function located in /inc/customizer/colors/colors-common.php
+simpletheme_kirki_customizer_colors_common();
+//function located in /inc/customizer/typography/typography-common.php
+simpletheme_kirki_customizer_typography_common();
 
 
 

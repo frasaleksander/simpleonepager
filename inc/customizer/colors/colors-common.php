@@ -1,15 +1,15 @@
 <?php
 
-if(!function_exists('simpletheme_kirki_customizer_colors_main')) {
+if(!function_exists('simpletheme_kirki_customizer_colors_common')) {
 	
-	function simpletheme_kirki_customizer_colors_main() {
+	function simpletheme_kirki_customizer_colors_common() {
 
 		/* CREATE SECTION */
-		Simpletheme_Kirki::add_section( 'colors_main', array(
+		Simpletheme_Kirki::add_section( 'colors_common', array(
 		    'priority'       => 10,
 		    'capability'     => 'edit_theme_options',
 		    'theme_supports' => 'custom-header',
-		    'title'          => __('Main Colors', 'simpletheme'),
+		    'title'          => __('common Colors', 'simpletheme'),
 		    'description'    =>  __('Colors that are being used throughout the whole theme.', 'simpletheme'),
 		    'panel'          => 'colors_panel',
 		) );
@@ -20,7 +20,7 @@ if(!function_exists('simpletheme_kirki_customizer_colors_main')) {
 			'type'        => 'color',
 			'settings'    => 'body_background_color',
 			'label'       => __( 'Background Color', 'simpletheme' ),
-			'section'     => 'colors_main',
+			'section'     => 'colors_common',
 			'default'     => '#ffffff',
 			'priority'    => 10,
 			'choices'     => array( 'alpha' => true ),
@@ -34,9 +34,9 @@ if(!function_exists('simpletheme_kirki_customizer_colors_main')) {
 
 		Simpletheme_Kirki::add_field( 'simpletheme', array(
 			'type'        => 'color',
-			'settings'    => 'body_textss_color',
+			'settings'    => 'body_text_color',
 			'label'       => __( 'Text Color', 'simpletheme' ),
-			'section'     => 'colors_main',
+			'section'     => 'colors_common',
 			'default'     => '#000000',
 			'priority'    => 10,
 			'choices'     => array( 'alpha' => true ),
@@ -52,7 +52,7 @@ if(!function_exists('simpletheme_kirki_customizer_colors_main')) {
 			'type'        => 'color',
 			'settings'    => 'body_title_color',
 			'label'       => __( 'Title Color', 'simpletheme' ),
-			'section'     => 'colors_main',
+			'section'     => 'colors_common',
 			'default'     => '#444444',
 			'priority'    => 10,
 			'choices'     => array( 'alpha' => true ),
@@ -71,7 +71,7 @@ if(!function_exists('simpletheme_kirki_customizer_colors_main')) {
 		    'type'        => 'multicolor',
 		    'settings'    => 'body_link_colors',
 		    'label'       => esc_attr__( 'Link Color', 'simpletheme' ),
-		    'section'     => 'colors_main',
+		    'section'     => 'colors_common',
 		    'priority'    => 10,
 		    'choices'     => array(
 		        'color'   => esc_attr__( 'Color', 'simpletheme' ),
@@ -115,7 +115,7 @@ if(!function_exists('simpletheme_kirki_customizer_colors_main')) {
 		    'type'        => 'multicolor',
 		    'settings'    => 'body_input_background_color',
 		    'label'       => esc_attr__( 'Input Background Color', 'simpletheme' ),
-		    'section'     => 'colors_main',
+		    'section'     => 'colors_common',
 		    'priority'    => 10,
 		    'choices'     => array(
 		        'color'   => esc_attr__( 'Color', 'simpletheme' ),
@@ -160,7 +160,7 @@ if(!function_exists('simpletheme_kirki_customizer_colors_main')) {
 		    'type'        => 'multicolor',
 		    'settings'    => 'body_input_text_color',
 		    'label'       => esc_attr__( 'Input Text Color', 'simpletheme' ),
-		    'section'     => 'colors_main',
+		    'section'     => 'colors_common',
 		    'priority'    => 10,
 		    'choices'     => array(
 		        'color'   => esc_attr__( 'Color', 'simpletheme' ),
@@ -205,7 +205,7 @@ if(!function_exists('simpletheme_kirki_customizer_colors_main')) {
 		    'type'        => 'multicolor',
 		    'settings'    => 'body_input_border_color',
 		    'label'       => esc_attr__( 'Input Border Color', 'simpletheme' ),
-		    'section'     => 'colors_main',
+		    'section'     => 'colors_common',
 		    'priority'    => 10,
 		    'choices'     => array(
 		        'color'   => esc_attr__( 'Color', 'simpletheme' ),
@@ -251,7 +251,7 @@ if(!function_exists('simpletheme_kirki_customizer_colors_main')) {
 		    'type'        => 'multicolor',
 		    'settings'    => 'body_button_background_color',
 		    'label'       => esc_attr__( 'Button Background Color', 'simpletheme' ),
-		    'section'     => 'colors_main',
+		    'section'     => 'colors_common',
 		    'priority'    => 10,
 		    'choices'     => array(
 		        'color'   => esc_attr__( 'Color', 'simpletheme' ),
@@ -297,7 +297,7 @@ if(!function_exists('simpletheme_kirki_customizer_colors_main')) {
 		    'type'        => 'multicolor',
 		    'settings'    => 'body_button_text_color',
 		    'label'       => esc_attr__( 'Button Text Color', 'simpletheme' ),
-		    'section'     => 'colors_main',
+		    'section'     => 'colors_common',
 		    'priority'    => 10,
 		    'choices'     => array(
 		        'color'   => esc_attr__( 'Color', 'simpletheme' ),
@@ -342,7 +342,7 @@ if(!function_exists('simpletheme_kirki_customizer_colors_main')) {
 		    'type'        => 'multicolor',
 		    'settings'    => 'body_button_border_color',
 		    'label'       => esc_attr__( 'Button Border Color', 'simpletheme' ),
-		    'section'     => 'colors_main',
+		    'section'     => 'colors_common',
 		    'priority'    => 10,
 		    'choices'     => array(
 		        'color'   => esc_attr__( 'Color', 'simpletheme' ),
@@ -387,7 +387,7 @@ if(!function_exists('simpletheme_kirki_customizer_colors_main')) {
 		    'type'        => 'multicolor',
 		    'settings'    => 'body_blockquote_color',
 		    'label'       => esc_attr__( 'Blockquote Color', 'simpletheme' ),
-		    'section'     => 'colors_main',
+		    'section'     => 'colors_common',
 		    'priority'    => 10,
 		    'choices'     => array(
 		        'bgcolor'       => esc_attr__( 'Background', 'simpletheme' ),
@@ -428,7 +428,7 @@ if(!function_exists('simpletheme_kirki_customizer_colors_main')) {
 		    'type'        => 'multicolor',
 		    'settings'    => 'body_code_color',
 		    'label'       => esc_attr__( 'Code Color', 'simpletheme' ),
-		    'section'     => 'colors_main',
+		    'section'     => 'colors_common',
 		    'priority'    => 10,
 		    'choices'     => array(
 		        'bgcolor'       => esc_attr__( 'Background', 'simpletheme' ),

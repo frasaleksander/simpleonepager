@@ -1,16 +1,16 @@
 <?php
 
-if(!function_exists('simpletheme_kirki_customizer_typography_main')) {
+if(!function_exists('simpletheme_kirki_customizer_typography_common')) {
 
-	function simpletheme_kirki_customizer_typography_main() {
+	function simpletheme_kirki_customizer_typography_common() {
 
 		/* CREATE SECTION */
-		Simpletheme_Kirki::add_section( 'typography_main', array(
+		Simpletheme_Kirki::add_section( 'typography_common', array(
 		    'priority'       => 10,
 		    'capability'     => 'edit_theme_options',
 		    'theme_supports' => 'custom-header',
-		    'title'          => __('Main Typography', 'simpletheme'),
-		    'description'    =>  __('Typography that is being used throughout the whole theme. Other typography settings rewrite main settings.', 'simpletheme'),
+		    'title'          => __('Common Typography', 'simpletheme'),
+		    'description'    =>  __('Typography that is being used throughout the whole theme. Other typography settings rewrite common settings.', 'simpletheme'),
 		    'panel'          => 'typography_panel',
 		) );
 
@@ -20,7 +20,7 @@ if(!function_exists('simpletheme_kirki_customizer_typography_main')) {
 			'type'        => 'typography',
 			'settings'    => 'body_text_font',
 			'label'       => esc_attr__( 'Text', 'simpletheme' ),
-			'section'     => 'typography_main',
+			'section'     => 'typography_common',
 			'default'     => array(
 				'font-family'    => 'Open Sans',
 				'variant'        => 'regular',
@@ -44,7 +44,7 @@ if(!function_exists('simpletheme_kirki_customizer_typography_main')) {
 			'type'        => 'typography',
 			'settings'    => 'body_h1_font',
 			'label'       => esc_attr__( 'H1', 'simpletheme' ),
-			'section'     => 'typography_main',
+			'section'     => 'typography_common',
 			'default'     => array(
 				'font-family'    => 'Open Sans',
 				'font-size'      => '3rem',
@@ -67,7 +67,7 @@ if(!function_exists('simpletheme_kirki_customizer_typography_main')) {
 			'type'        => 'typography',
 			'settings'    => 'body_h2_font',
 			'label'       => esc_attr__( 'H2', 'simpletheme' ),
-			'section'     => 'typography_main',
+			'section'     => 'typography_common',
 			'default'     => array(
 				'font-family'    => 'Open Sans',
 				'font-size'      => '2.5rem',
@@ -90,7 +90,7 @@ if(!function_exists('simpletheme_kirki_customizer_typography_main')) {
 			'type'        => 'typography',
 			'settings'    => 'body_h3_font',
 			'label'       => esc_attr__( 'H3', 'simpletheme' ),
-			'section'     => 'typography_main',
+			'section'     => 'typography_common',
 			'default'     => array(
 				'font-family'    => 'Open Sans',
 				'font-size'      => '1.9375rem',
@@ -113,7 +113,7 @@ if(!function_exists('simpletheme_kirki_customizer_typography_main')) {
 			'type'        => 'typography',
 			'settings'    => 'body_h4_font',
 			'label'       => esc_attr__( 'H4', 'simpletheme' ),
-			'section'     => 'typography_main',
+			'section'     => 'typography_common',
 			'default'     => array(
 				'font-family'    => 'inherit',
 				'font-size'      => '1.5625rem',
@@ -136,7 +136,7 @@ if(!function_exists('simpletheme_kirki_customizer_typography_main')) {
 			'type'        => 'typography',
 			'settings'    => 'body_h5_font',
 			'label'       => esc_attr__( 'H5', 'simpletheme' ),
-			'section'     => 'typography_main',
+			'section'     => 'typography_common',
 			'default'     => array(
 				'font-family'    => 'Open Sans',
 				'variant'        => '700',
@@ -159,7 +159,7 @@ if(!function_exists('simpletheme_kirki_customizer_typography_main')) {
 			'type'        => 'typography',
 			'settings'    => 'body_h6_font',
 			'label'       => esc_attr__( 'H6', 'simpletheme' ),
-			'section'     => 'typography_main',
+			'section'     => 'typography_common',
 			'default'     => array(
 				'font-family'    => 'Open Sans',
 				'font-size'      => '1rem',
@@ -182,7 +182,7 @@ if(!function_exists('simpletheme_kirki_customizer_typography_main')) {
 			'type'        => 'typography',
 			'settings'    => 'body_code_font',
 			'label'       => esc_attr__( 'Code', 'simpletheme' ),
-			'section'     => 'typography_main',
+			'section'     => 'typography_common',
 			'default'     => array(
 				'font-family'    => 'Roboto Mono',
 				'variant'        => 'regular',
@@ -208,7 +208,7 @@ if(!function_exists('simpletheme_kirki_customizer_typography_main')) {
 			'type'        => 'typography',
 			'settings'    => 'body_blockquote_headings_font',
 			'label'       => esc_attr__( 'Blockquote Headings (H1, H2, H3, H4, H5, H6)', 'simpletheme' ),
-			'section'     => 'typography_main',
+			'section'     => 'typography_common',
 			'default'     => array(
 				'font-family'    => 'Open Sans',
 				'variant'        => '700',
@@ -233,7 +233,7 @@ if(!function_exists('simpletheme_kirki_customizer_typography_main')) {
 			'type'        => 'typography',
 			'settings'    => 'body_blockquote_text_font',
 			'label'       => esc_attr__( 'Blockquote Text', 'simpletheme' ),
-			'section'     => 'typography_main',
+			'section'     => 'typography_common',
 			'default'     => array(
 				'font-family'    => 'Open Sans',
 				'font-size'      => '1em',

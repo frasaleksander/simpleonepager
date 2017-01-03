@@ -150,8 +150,9 @@ require get_template_directory() . '/inc/extras.php';
  */
 require_once get_template_directory() . '/inc/kirki/include-kirki.php';
 require_once get_template_directory() . '/inc/kirki/simpletheme-kirki.php';
-require_once get_template_directory() . '/inc/customizer/colors/colors-main.php';
-require_once get_template_directory() . '/inc/customizer/typography/typography-main.php';
+require_once get_template_directory() . '/inc/customizer/style/style-common.php';
+require_once get_template_directory() . '/inc/customizer/colors/colors-common.php';
+require_once get_template_directory() . '/inc/customizer/typography/typography-common.php';
 require_once get_template_directory() . '/inc/customizer/customizer-helpers.php';
 require_once get_template_directory() . '/inc/customizer/customizer.php';
 require_once get_template_directory() . '/inc/customizer/kirki-customizer.php';
