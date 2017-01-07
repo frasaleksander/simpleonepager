@@ -34,13 +34,18 @@ html {
 }
 
 /* line 8, ../sass/_normalize.scss */
+html, body, #page {
+  position: relative;
+}
+
+/* line 12, ../sass/_normalize.scss */
 html {
   font-family: sans-serif;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
 }
 
-/* line 14, ../sass/_normalize.scss */
+/* line 18, ../sass/_normalize.scss */
 body {
   margin: 0;
   font-size: 1em;
@@ -49,13 +54,13 @@ body {
   overflow-x: hidden;
 }
 
-/* line 22, ../sass/_normalize.scss */
+/* line 26, ../sass/_normalize.scss */
 blockquote, dd, div, dl, dt, form, h1, h2, h3, h4, h5, h6, li, ol, p, pre, td, th, ul {
   padding: 0;
   margin: 0;
 }
 
-/* line 27, ../sass/_normalize.scss */
+/* line 31, ../sass/_normalize.scss */
 article,
 aside,
 details,
@@ -71,7 +76,7 @@ summary {
   display: block;
 }
 
-/* line 42, ../sass/_normalize.scss */
+/* line 46, ../sass/_normalize.scss */
 audio,
 canvas,
 progress,
@@ -80,24 +85,24 @@ video {
   vertical-align: baseline;
 }
 
-/* line 50, ../sass/_normalize.scss */
+/* line 54, ../sass/_normalize.scss */
 audio:not([controls]) {
   display: none;
   height: 0;
 }
 
-/* line 55, ../sass/_normalize.scss */
+/* line 59, ../sass/_normalize.scss */
 [hidden],
 template {
   display: none;
 }
 
-/* line 60, ../sass/_normalize.scss */
+/* line 64, ../sass/_normalize.scss */
 a {
   background-color: transparent;
 }
 
-/* line 64, ../sass/_normalize.scss */
+/* line 68, ../sass/_normalize.scss */
 a,
 a:active,
 a:hover,
@@ -109,46 +114,46 @@ a:focus {
   cursor: pointer;
 }
 
-/* line 75, ../sass/_normalize.scss */
+/* line 79, ../sass/_normalize.scss */
 a img,
 img {
   border: 0;
   outline: 0;
 }
 
-/* line 81, ../sass/_normalize.scss */
+/* line 85, ../sass/_normalize.scss */
 abbr[title] {
   border-bottom: 1px dotted;
 }
 
-/* line 85, ../sass/_normalize.scss */
+/* line 89, ../sass/_normalize.scss */
 b,
 strong {
   font-weight: bold;
 }
 
-/* line 90, ../sass/_normalize.scss */
+/* line 94, ../sass/_normalize.scss */
 dfn {
   font-style: italic;
 }
 
-/* line 94, ../sass/_normalize.scss */
+/* line 98, ../sass/_normalize.scss */
 h1, h2, h3, h4, h5, h6 {
   margin: 0 0 1rem 0;
 }
 
-/* line 98, ../sass/_normalize.scss */
+/* line 102, ../sass/_normalize.scss */
 mark {
   background: #ff0;
   color: #000;
 }
 
-/* line 103, ../sass/_normalize.scss */
+/* line 107, ../sass/_normalize.scss */
 small {
   font-size: 80%;
 }
 
-/* line 107, ../sass/_normalize.scss */
+/* line 111, ../sass/_normalize.scss */
 sub,
 sup {
   font-size: 75%;
@@ -157,49 +162,49 @@ sup {
   vertical-align: baseline;
 }
 
-/* line 115, ../sass/_normalize.scss */
+/* line 119, ../sass/_normalize.scss */
 sup {
   top: -0.5em;
 }
 
-/* line 119, ../sass/_normalize.scss */
+/* line 123, ../sass/_normalize.scss */
 sub {
   bottom: -0.25em;
 }
 
-/* line 123, ../sass/_normalize.scss */
+/* line 127, ../sass/_normalize.scss */
 img {
   border: 0;
 }
 
-/* line 127, ../sass/_normalize.scss */
+/* line 131, ../sass/_normalize.scss */
 svg:not(:root) {
   overflow: hidden;
 }
 
-/* line 131, ../sass/_normalize.scss */
+/* line 135, ../sass/_normalize.scss */
 figure {
   margin: 1em 40px;
 }
 
-/* line 135, ../sass/_normalize.scss */
+/* line 139, ../sass/_normalize.scss */
 hr {
   box-sizing: content-box;
   height: 0;
 }
 
-/* line 140, ../sass/_normalize.scss */
+/* line 144, ../sass/_normalize.scss */
 pre {
   overflow: auto;
 }
 
-/* line 144, ../sass/_normalize.scss */
+/* line 148, ../sass/_normalize.scss */
 code {
   font-weight: 400;
   padding: .125rem .3125rem .0625rem;
 }
 
-/* line 149, ../sass/_normalize.scss */
+/* line 153, ../sass/_normalize.scss */
 code,
 kbd,
 pre,
@@ -209,7 +214,7 @@ samp {
   padding: .125rem .3125rem .0625rem;
 }
 
-/* line 158, ../sass/_normalize.scss */
+/* line 162, ../sass/_normalize.scss */
 button,
 input,
 optgroup,
@@ -220,18 +225,18 @@ textarea {
   margin: 0;
 }
 
-/* line 168, ../sass/_normalize.scss */
+/* line 172, ../sass/_normalize.scss */
 button {
   overflow: visible;
 }
 
-/* line 172, ../sass/_normalize.scss */
+/* line 176, ../sass/_normalize.scss */
 button,
 select {
   text-transform: none;
 }
 
-/* line 177, ../sass/_normalize.scss */
+/* line 181, ../sass/_normalize.scss */
 button,
 html input[type="button"],
 input[type="reset"],
@@ -241,237 +246,737 @@ input[type="submit"],
   cursor: pointer;
 }
 
-/* line 186, ../sass/_normalize.scss */
+/* line 190, ../sass/_normalize.scss */
 button[disabled],
 html input[disabled] {
   cursor: default;
 }
 
-/* line 191, ../sass/_normalize.scss */
+/* line 195, ../sass/_normalize.scss */
 button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
 
-/* line 197, ../sass/_normalize.scss */
+/* line 201, ../sass/_normalize.scss */
 input {
   line-height: normal;
 }
 
-/* line 201, ../sass/_normalize.scss */
+/* line 205, ../sass/_normalize.scss */
 input[type="checkbox"],
 input[type="radio"] {
   box-sizing: border-box;
   padding: 0;
 }
 
-/* line 207, ../sass/_normalize.scss */
+/* line 211, ../sass/_normalize.scss */
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
   height: auto;
 }
 
-/* line 212, ../sass/_normalize.scss */
+/* line 216, ../sass/_normalize.scss */
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
-/* line 217, ../sass/_normalize.scss */
+/* line 221, ../sass/_normalize.scss */
 fieldset {
   border: 1px solid #c0c0c0;
   margin: 0 2px;
   padding: 0.35em 0.625em 0.75em;
 }
 
-/* line 223, ../sass/_normalize.scss */
+/* line 227, ../sass/_normalize.scss */
 legend {
   border: 0;
   padding: 0;
 }
 
-/* line 228, ../sass/_normalize.scss */
+/* line 232, ../sass/_normalize.scss */
 textarea {
   overflow: auto;
 }
 
-/* line 232, ../sass/_normalize.scss */
+/* line 236, ../sass/_normalize.scss */
 optgroup {
   font-weight: bold;
 }
 
-/* line 236, ../sass/_normalize.scss */
+/* line 240, ../sass/_normalize.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
   table-layout: fixed;
 }
 
-/* line 242, ../sass/_normalize.scss */
+/* line 246, ../sass/_normalize.scss */
 td,
 th {
   padding: 0;
 }
 
-/* line 247, ../sass/_normalize.scss */
+/* line 251, ../sass/_normalize.scss */
 .skip {
   position: absolute;
   top: -1000000px;
   left: -1000000px;
 }
 
-/* line 254, ../sass/_normalize.scss */
+/* line 258, ../sass/_normalize.scss */
 .max-550 {
   max-width: 550px;
 }
 
-/* line 254, ../sass/_normalize.scss */
+/* line 258, ../sass/_normalize.scss */
 .max-600 {
   max-width: 600px;
 }
 
-/* line 254, ../sass/_normalize.scss */
+/* line 258, ../sass/_normalize.scss */
 .max-650 {
   max-width: 650px;
 }
 
-/* line 254, ../sass/_normalize.scss */
+/* line 258, ../sass/_normalize.scss */
 .max-700 {
   max-width: 700px;
 }
 
-/* line 254, ../sass/_normalize.scss */
+/* line 258, ../sass/_normalize.scss */
 .max-750 {
   max-width: 750px;
 }
 
-/* line 254, ../sass/_normalize.scss */
+/* line 258, ../sass/_normalize.scss */
 .max-800 {
   max-width: 800px;
 }
 
-/* line 254, ../sass/_normalize.scss */
+/* line 258, ../sass/_normalize.scss */
 .max-850 {
   max-width: 850px;
 }
 
-/* line 254, ../sass/_normalize.scss */
+/* line 258, ../sass/_normalize.scss */
 .max-900 {
   max-width: 900px;
 }
 
-/* line 254, ../sass/_normalize.scss */
+/* line 258, ../sass/_normalize.scss */
 .max-950 {
   max-width: 950px;
 }
 
-/* line 254, ../sass/_normalize.scss */
+/* line 258, ../sass/_normalize.scss */
 .max-1000 {
   max-width: 1000px;
 }
 
-/* line 254, ../sass/_normalize.scss */
+/* line 258, ../sass/_normalize.scss */
 .max-1050 {
   max-width: 1050px;
 }
 
-/* line 254, ../sass/_normalize.scss */
+/* line 258, ../sass/_normalize.scss */
 .max-1100 {
   max-width: 1100px;
 }
 
-/* line 254, ../sass/_normalize.scss */
+/* line 258, ../sass/_normalize.scss */
 .max-1150 {
   max-width: 1150px;
 }
 
-/* line 254, ../sass/_normalize.scss */
+/* line 258, ../sass/_normalize.scss */
 .max-1200 {
   max-width: 1200px;
 }
 
-/* line 254, ../sass/_normalize.scss */
+/* line 258, ../sass/_normalize.scss */
 .max-1250 {
   max-width: 1250px;
 }
 
-/* line 254, ../sass/_normalize.scss */
+/* line 258, ../sass/_normalize.scss */
 .max-1300 {
   max-width: 1300px;
 }
 
-/* line 254, ../sass/_normalize.scss */
+/* line 258, ../sass/_normalize.scss */
 .max-1350 {
   max-width: 1350px;
 }
 
-/* line 254, ../sass/_normalize.scss */
+/* line 258, ../sass/_normalize.scss */
 .max-1400 {
   max-width: 1400px;
 }
 
-/* line 254, ../sass/_normalize.scss */
+/* line 258, ../sass/_normalize.scss */
 .max-1450 {
   max-width: 1450px;
 }
 
-/* line 254, ../sass/_normalize.scss */
+/* line 258, ../sass/_normalize.scss */
 .max-1500 {
   max-width: 1500px;
 }
 
-/* line 254, ../sass/_normalize.scss */
+/* line 258, ../sass/_normalize.scss */
 .max-1550 {
   max-width: 1550px;
 }
 
-/* line 254, ../sass/_normalize.scss */
+/* line 258, ../sass/_normalize.scss */
 .max-1600 {
   max-width: 1600px;
 }
 
-/* line 254, ../sass/_normalize.scss */
+/* line 258, ../sass/_normalize.scss */
 .max-1650 {
   max-width: 1650px;
 }
 
-/* line 254, ../sass/_normalize.scss */
+/* line 258, ../sass/_normalize.scss */
 .max-1700 {
   max-width: 1700px;
 }
 
-/* line 254, ../sass/_normalize.scss */
+/* line 258, ../sass/_normalize.scss */
 .max-1750 {
   max-width: 1750px;
 }
 
-/* line 254, ../sass/_normalize.scss */
+/* line 258, ../sass/_normalize.scss */
 .max-1800 {
   max-width: 1800px;
 }
 
-/* line 254, ../sass/_normalize.scss */
+/* line 258, ../sass/_normalize.scss */
 .max-1850 {
   max-width: 1850px;
 }
 
-/* line 254, ../sass/_normalize.scss */
+/* line 258, ../sass/_normalize.scss */
 .max-1900 {
   max-width: 1900px;
 }
 
-/* line 254, ../sass/_normalize.scss */
+/* line 258, ../sass/_normalize.scss */
 .max-1950 {
   max-width: 1950px;
 }
 
-/* line 254, ../sass/_normalize.scss */
+/* line 258, ../sass/_normalize.scss */
 .max-2000 {
   max-width: 2000px;
 }
 
-/* line 259, ../sass/_normalize.scss */
+/* line 264, ../sass/_normalize.scss */
+.width-1-percent {
+  width: 1%;
+}
+
+/* line 264, ../sass/_normalize.scss */
+.width-2-percent {
+  width: 2%;
+}
+
+/* line 264, ../sass/_normalize.scss */
+.width-3-percent {
+  width: 3%;
+}
+
+/* line 264, ../sass/_normalize.scss */
+.width-4-percent {
+  width: 4%;
+}
+
+/* line 264, ../sass/_normalize.scss */
+.width-5-percent {
+  width: 5%;
+}
+
+/* line 264, ../sass/_normalize.scss */
+.width-6-percent {
+  width: 6%;
+}
+
+/* line 264, ../sass/_normalize.scss */
+.width-7-percent {
+  width: 7%;
+}
+
+/* line 264, ../sass/_normalize.scss */
+.width-8-percent {
+  width: 8%;
+}
+
+/* line 264, ../sass/_normalize.scss */
+.width-9-percent {
+  width: 9%;
+}
+
+/* line 264, ../sass/_normalize.scss */
+.width-10-percent {
+  width: 10%;
+}
+
+/* line 264, ../sass/_normalize.scss */
+.width-11-percent {
+  width: 11%;
+}
+
+/* line 264, ../sass/_normalize.scss */
+.width-12-percent {
+  width: 12%;
+}
+
+/* line 264, ../sass/_normalize.scss */
+.width-13-percent {
+  width: 13%;
+}
+
+/* line 264, ../sass/_normalize.scss */
+.width-14-percent {
+  width: 14%;
+}
+
+/* line 264, ../sass/_normalize.scss */
+.width-15-percent {
+  width: 15%;
+}
+
+/* line 264, ../sass/_normalize.scss */
+.width-16-percent {
+  width: 16%;
+}
+
+/* line 264, ../sass/_normalize.scss */
+.width-17-percent {
+  width: 17%;
+}
+
+/* line 264, ../sass/_normalize.scss */
+.width-18-percent {
+  width: 18%;
+}
+
+/* line 264, ../sass/_normalize.scss */
+.width-19-percent {
+  width: 19%;
+}
+
+/* line 264, ../sass/_normalize.scss */
+.width-20-percent {
+  width: 20%;
+}
+
+/* line 264, ../sass/_normalize.scss */
+.width-21-percent {
+  width: 21%;
+}
+
+/* line 264, ../sass/_normalize.scss */
+.width-22-percent {
+  width: 22%;
+}
+
+/* line 264, ../sass/_normalize.scss */
+.width-23-percent {
+  width: 23%;
+}
+
+/* line 264, ../sass/_normalize.scss */
+.width-24-percent {
+  width: 24%;
+}
+
+/* line 264, ../sass/_normalize.scss */
+.width-25-percent {
+  width: 25%;
+}
+
+/* line 264, ../sass/_normalize.scss */
+.width-26-percent {
+  width: 26%;
+}
+
+/* line 264, ../sass/_normalize.scss */
+.width-27-percent {
+  width: 27%;
+}
+
+/* line 264, ../sass/_normalize.scss */
+.width-28-percent {
+  width: 28%;
+}
+
+/* line 264, ../sass/_normalize.scss */
+.width-29-percent {
+  width: 29%;
+}
+
+/* line 264, ../sass/_normalize.scss */
+.width-30-percent {
+  width: 30%;
+}
+
+/* line 264, ../sass/_normalize.scss */
+.width-31-percent {
+  width: 31%;
+}
+
+/* line 264, ../sass/_normalize.scss */
+.width-32-percent {
+  width: 32%;
+}
+
+/* line 264, ../sass/_normalize.scss */
+.width-33-percent {
+  width: 33%;
+}
+
+/* line 264, ../sass/_normalize.scss */
+.width-34-percent {
+  width: 34%;
+}
+
+/* line 264, ../sass/_normalize.scss */
+.width-35-percent {
+  width: 35%;
+}
+
+/* line 264, ../sass/_normalize.scss */
+.width-36-percent {
+  width: 36%;
+}
+
+/* line 264, ../sass/_normalize.scss */
+.width-37-percent {
+  width: 37%;
+}
+
+/* line 264, ../sass/_normalize.scss */
+.width-38-percent {
+  width: 38%;
+}
+
+/* line 264, ../sass/_normalize.scss */
+.width-39-percent {
+  width: 39%;
+}
+
+/* line 264, ../sass/_normalize.scss */
+.width-40-percent {
+  width: 40%;
+}
+
+/* line 264, ../sass/_normalize.scss */
+.width-41-percent {
+  width: 41%;
+}
+
+/* line 264, ../sass/_normalize.scss */
+.width-42-percent {
+  width: 42%;
+}
+
+/* line 264, ../sass/_normalize.scss */
+.width-43-percent {
+  width: 43%;
+}
+
+/* line 264, ../sass/_normalize.scss */
+.width-44-percent {
+  width: 44%;
+}
+
+/* line 264, ../sass/_normalize.scss */
+.width-45-percent {
+  width: 45%;
+}
+
+/* line 264, ../sass/_normalize.scss */
+.width-46-percent {
+  width: 46%;
+}
+
+/* line 264, ../sass/_normalize.scss */
+.width-47-percent {
+  width: 47%;
+}
+
+/* line 264, ../sass/_normalize.scss */
+.width-48-percent {
+  width: 48%;
+}
+
+/* line 264, ../sass/_normalize.scss */
+.width-49-percent {
+  width: 49%;
+}
+
+/* line 264, ../sass/_normalize.scss */
+.width-50-percent {
+  width: 50%;
+}
+
+/* line 264, ../sass/_normalize.scss */
+.width-51-percent {
+  width: 51%;
+}
+
+/* line 264, ../sass/_normalize.scss */
+.width-52-percent {
+  width: 52%;
+}
+
+/* line 264, ../sass/_normalize.scss */
+.width-53-percent {
+  width: 53%;
+}
+
+/* line 264, ../sass/_normalize.scss */
+.width-54-percent {
+  width: 54%;
+}
+
+/* line 264, ../sass/_normalize.scss */
+.width-55-percent {
+  width: 55%;
+}
+
+/* line 264, ../sass/_normalize.scss */
+.width-56-percent {
+  width: 56%;
+}
+
+/* line 264, ../sass/_normalize.scss */
+.width-57-percent {
+  width: 57%;
+}
+
+/* line 264, ../sass/_normalize.scss */
+.width-58-percent {
+  width: 58%;
+}
+
+/* line 264, ../sass/_normalize.scss */
+.width-59-percent {
+  width: 59%;
+}
+
+/* line 264, ../sass/_normalize.scss */
+.width-60-percent {
+  width: 60%;
+}
+
+/* line 264, ../sass/_normalize.scss */
+.width-61-percent {
+  width: 61%;
+}
+
+/* line 264, ../sass/_normalize.scss */
+.width-62-percent {
+  width: 62%;
+}
+
+/* line 264, ../sass/_normalize.scss */
+.width-63-percent {
+  width: 63%;
+}
+
+/* line 264, ../sass/_normalize.scss */
+.width-64-percent {
+  width: 64%;
+}
+
+/* line 264, ../sass/_normalize.scss */
+.width-65-percent {
+  width: 65%;
+}
+
+/* line 264, ../sass/_normalize.scss */
+.width-66-percent {
+  width: 66%;
+}
+
+/* line 264, ../sass/_normalize.scss */
+.width-67-percent {
+  width: 67%;
+}
+
+/* line 264, ../sass/_normalize.scss */
+.width-68-percent {
+  width: 68%;
+}
+
+/* line 264, ../sass/_normalize.scss */
+.width-69-percent {
+  width: 69%;
+}
+
+/* line 264, ../sass/_normalize.scss */
+.width-70-percent {
+  width: 70%;
+}
+
+/* line 264, ../sass/_normalize.scss */
+.width-71-percent {
+  width: 71%;
+}
+
+/* line 264, ../sass/_normalize.scss */
+.width-72-percent {
+  width: 72%;
+}
+
+/* line 264, ../sass/_normalize.scss */
+.width-73-percent {
+  width: 73%;
+}
+
+/* line 264, ../sass/_normalize.scss */
+.width-74-percent {
+  width: 74%;
+}
+
+/* line 264, ../sass/_normalize.scss */
+.width-75-percent {
+  width: 75%;
+}
+
+/* line 264, ../sass/_normalize.scss */
+.width-76-percent {
+  width: 76%;
+}
+
+/* line 264, ../sass/_normalize.scss */
+.width-77-percent {
+  width: 77%;
+}
+
+/* line 264, ../sass/_normalize.scss */
+.width-78-percent {
+  width: 78%;
+}
+
+/* line 264, ../sass/_normalize.scss */
+.width-79-percent {
+  width: 79%;
+}
+
+/* line 264, ../sass/_normalize.scss */
+.width-80-percent {
+  width: 80%;
+}
+
+/* line 264, ../sass/_normalize.scss */
+.width-81-percent {
+  width: 81%;
+}
+
+/* line 264, ../sass/_normalize.scss */
+.width-82-percent {
+  width: 82%;
+}
+
+/* line 264, ../sass/_normalize.scss */
+.width-83-percent {
+  width: 83%;
+}
+
+/* line 264, ../sass/_normalize.scss */
+.width-84-percent {
+  width: 84%;
+}
+
+/* line 264, ../sass/_normalize.scss */
+.width-85-percent {
+  width: 85%;
+}
+
+/* line 264, ../sass/_normalize.scss */
+.width-86-percent {
+  width: 86%;
+}
+
+/* line 264, ../sass/_normalize.scss */
+.width-87-percent {
+  width: 87%;
+}
+
+/* line 264, ../sass/_normalize.scss */
+.width-88-percent {
+  width: 88%;
+}
+
+/* line 264, ../sass/_normalize.scss */
+.width-89-percent {
+  width: 89%;
+}
+
+/* line 264, ../sass/_normalize.scss */
+.width-90-percent {
+  width: 90%;
+}
+
+/* line 264, ../sass/_normalize.scss */
+.width-91-percent {
+  width: 91%;
+}
+
+/* line 264, ../sass/_normalize.scss */
+.width-92-percent {
+  width: 92%;
+}
+
+/* line 264, ../sass/_normalize.scss */
+.width-93-percent {
+  width: 93%;
+}
+
+/* line 264, ../sass/_normalize.scss */
+.width-94-percent {
+  width: 94%;
+}
+
+/* line 264, ../sass/_normalize.scss */
+.width-95-percent {
+  width: 95%;
+}
+
+/* line 264, ../sass/_normalize.scss */
+.width-96-percent {
+  width: 96%;
+}
+
+/* line 264, ../sass/_normalize.scss */
+.width-97-percent {
+  width: 97%;
+}
+
+/* line 264, ../sass/_normalize.scss */
+.width-98-percent {
+  width: 98%;
+}
+
+/* line 264, ../sass/_normalize.scss */
+.width-99-percent {
+  width: 99%;
+}
+
+/* line 264, ../sass/_normalize.scss */
+.width-100-percent {
+  width: 100%;
+}
+
+/* line 269, ../sass/_normalize.scss */
 .margin-auto {
   margin-left: auto;
   margin-right: auto;
@@ -820,49 +1325,84 @@ a > img {
 ## Menus
 --------------------------------------------------------------*/
 /* line 1, ../sass/navigation/_menus_my.scss */
+#navhead {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 1.0% 2.0%;
+}
+
+/* line 11, ../sass/navigation/_menus_my.scss */
+.logo-container {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+}
+/* line 12, ../sass/navigation/_menus_my.scss */
+.logo-container a {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+}
+/* line 16, ../sass/navigation/_menus_my.scss */
+.logo-container img {
+  max-width: 9em;
+  max-height: 4.5em;
+  cursor: pointer;
+}
+
+/* line 24, ../sass/navigation/_menus_my.scss */
 .main-navigation {
   position: relative;
-  font-weight: bold;
 }
-/* line 3, ../sass/navigation/_menus_my.scss */
+/* line 26, ../sass/navigation/_menus_my.scss */
 .main-navigation ul {
   list-style: none;
 }
-/* line 6, ../sass/navigation/_menus_my.scss */
+/* line 29, ../sass/navigation/_menus_my.scss */
 .main-navigation .menu {
   margin: 0;
   padding: 0;
 }
-/* line 11, ../sass/navigation/_menus_my.scss */
+/* line 33, ../sass/navigation/_menus_my.scss */
 .main-navigation #primary-menu {
   color: #fff;
 }
-/* line 13, ../sass/navigation/_menus_my.scss */
+/* line 35, ../sass/navigation/_menus_my.scss */
 .main-navigation #primary-menu a {
   color: #fff;
-  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
 }
 
-/* line 21, ../sass/navigation/_menus_my.scss */
+/* line 43, ../sass/navigation/_menus_my.scss */
 .menu-toggle {
   display: none;
 }
 
 @media (min-width: 780px) {
-  /* line 26, ../sass/navigation/_menus_my.scss */
+  /*
+   * nav-style-1
+   */
+  /* line 53, ../sass/navigation/_menus_my.scss */
   .nav-style-1 {
     text-transform: uppercase;
   }
-  /* line 28, ../sass/navigation/_menus_my.scss */
+  /* line 55, ../sass/navigation/_menus_my.scss */
   .nav-style-1 > [class*="menu-"] {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 50%;
     right: 0;
-    bottom: 0;
-    text-align: center;
+    -moz-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    -webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%);
   }
-  /* line 36, ../sass/navigation/_menus_my.scss */
+  /* line 63, ../sass/navigation/_menus_my.scss */
   .nav-style-1 #primary-menu {
     margin-left: -1em;
     display: inline-block;
@@ -870,16 +1410,9 @@ a > img {
     *vertical-align: auto;
     *zoom: 1;
     *display: inline;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -moz-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
   }
-  /* line 39, ../sass/navigation/_menus_my.scss */
-  .nav-style-1 #primary-menu li {
+  /* line 68, ../sass/navigation/_menus_my.scss */
+  .nav-style-1 #primary-menu > li {
     display: inline-block;
     vertical-align: middle;
     *vertical-align: auto;
@@ -888,6 +1421,10 @@ a > img {
     margin-left: 1em;
     letter-spacing: 1px;
   }
+
+  /*
+   * END nav-style-1
+   */
 }
 /*--------------------------------------------------------------
 # Accessibility
@@ -1042,57 +1579,32 @@ a > img {
 /*--------------------------------------------------------------
 ## Comments
 --------------------------------------------------------------*/
-/* line 1, ../sass/site/primary/_header.scss */
-.logo-container {
-  display: inline-block;
-  vertical-align: middle;
-  *vertical-align: auto;
-  *zoom: 1;
-  *display: inline;
-}
 /* line 3, ../sass/site/primary/_header.scss */
-.logo-container img {
-  max-width: 10em;
-  max-height: 5em;
-  cursor: pointer;
-}
-
-/* line 10, ../sass/site/primary/_header.scss */
-#masthead {
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  z-index: 1000;
-  padding: 2em 2.5%;
-}
-
-/* line 20, ../sass/site/primary/_header.scss */
 .top-headings {
   position: absolute;
   top: 45%;
   left: 50%;
   width: 80%;
-  -moz-transform: translate(-45%, -50%);
-  -ms-transform: translate(-45%, -50%);
-  -webkit-transform: translate(-45%, -50%);
-  transform: translate(-45%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   max-width: 1000px;
-  text-align: left;
+  text-align: center;
 }
-/* line 28, ../sass/site/primary/_header.scss */
+/* line 11, ../sass/site/primary/_header.scss */
 .top-headings h1, .top-headings h2, .top-headings h3, .top-headings h4, .top-headings h5, .top-headings h6 {
   text-transform: uppercase;
   line-height: 1.625 !important;
 }
 
 @media (min-width: 780px) {
-  /* line 35, ../sass/site/primary/_header.scss */
+  /* line 18, ../sass/site/primary/_header.scss */
   .sow-slider-base ul.sow-slider-images li.sow-slider-image .sow-slider-image-overlay {
     background-size: 110%;
   }
 
-  /* line 38, ../sass/site/primary/_header.scss */
+  /* line 21, ../sass/site/primary/_header.scss */
   .sow-slider-base ul.sow-slider-images li.sow-slider-image.cycle-slide-active .sow-slider-image-overlay {
     -moz-transition: all 10s ease 0s;
     -o-transition: all 10s ease 0s;

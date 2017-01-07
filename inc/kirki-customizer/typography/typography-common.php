@@ -1,33 +1,33 @@
 <?php
 
-if(!function_exists('simpletheme_kirki_customizer_typography_common')) {
+$SimplethemeCustomizer->buildWholeSection('typography_common', function(){
 
-	function simpletheme_kirki_customizer_typography_common() {
+
 
 		/* CREATE SECTION */
 		Simpletheme_Kirki::add_section( 'typography_common', array(
 		    'priority'       => 10,
-		    'capability'     => 'edit_theme_options',
-		    'theme_supports' => 'custom-header',
-		    'title'          => __('Common Typography', 'simpletheme'),
-		    'description'    =>  __('Typography that is being used throughout the whole theme. Other typography settings rewrite common settings.', 'simpletheme'),
+		    'capability'     => CAPATIBILITY_EDIT_THEME_OPTIONS,
+		    'theme_supports' => '',
+		    'title'          => simpletheme_translate('Common Typography'),
+		    'description'    =>  simpletheme_translate('Typography that is being used throughout the whole theme. Other typography settings rewrite common settings.'),
 		    'panel'          => 'typography_panel',
 		) );
 
 		/* CREATE FIELDS */
 
-		Simpletheme_Kirki::add_field( 'simpletheme', array(
+		Simpletheme_Kirki::add_field( THEME_TEXTDOMAIN, array(
 			'type'        => 'typography',
 			'settings'    => 'body_text_font',
-			'label'       => esc_attr__( 'Text', 'simpletheme' ),
+			'label'       => simpletheme_esc_attr( 'Text' ),
 			'section'     => 'typography_common',
 			'default'     => array(
-				'font-family'    => 'Open Sans',
+				//'font-family'    => 'Open Sans',
 				'variant'        => 'regular',
-				'font-size'      => '1.1rem',
+				//'subsets'        => array( 'latin-ext' ),
+                'font-size'      => '1.1rem',
 				'line-height'    => '1.6',
-				'letter-spacing' => '0',
-				'subsets'        => array( 'latin-ext' ),
+				//'letter-spacing' => '0',
 				'text-transform' => 'none',
 				'text-align'     => 'left',
 			),
@@ -40,17 +40,17 @@ if(!function_exists('simpletheme_kirki_customizer_typography_common')) {
 		) );
 
 
-		Simpletheme_Kirki::add_field( 'simpletheme', array(
+		Simpletheme_Kirki::add_field( THEME_TEXTDOMAIN, array(
 			'type'        => 'typography',
 			'settings'    => 'body_h1_font',
-			'label'       => esc_attr__( 'H1', 'simpletheme' ),
+			'label'       => simpletheme_esc_attr( 'H1' ),
 			'section'     => 'typography_common',
 			'default'     => array(
 				'font-family'    => 'Open Sans',
 				'font-size'      => '3rem',
 				'variant'        => '700',
 				'line-height'    => '1',
-				'letter-spacing' => '0',
+				//'letter-spacing' => '0',
 				'subsets'        => array( 'latin-ext' ),
 				'text-transform' => 'uppercase',
 				'text-align'     => 'left'
@@ -63,10 +63,10 @@ if(!function_exists('simpletheme_kirki_customizer_typography_common')) {
 			),
 		) );
 
-		Simpletheme_Kirki::add_field( 'simpletheme', array(
+		Simpletheme_Kirki::add_field( THEME_TEXTDOMAIN, array(
 			'type'        => 'typography',
 			'settings'    => 'body_h2_font',
-			'label'       => esc_attr__( 'H2', 'simpletheme' ),
+			'label'       => simpletheme_esc_attr( 'H2' ),
 			'section'     => 'typography_common',
 			'default'     => array(
 				'font-family'    => 'Open Sans',
@@ -86,10 +86,10 @@ if(!function_exists('simpletheme_kirki_customizer_typography_common')) {
 			),
 		) );
 
-		Simpletheme_Kirki::add_field( 'simpletheme', array(
+		Simpletheme_Kirki::add_field( THEME_TEXTDOMAIN, array(
 			'type'        => 'typography',
 			'settings'    => 'body_h3_font',
-			'label'       => esc_attr__( 'H3', 'simpletheme' ),
+			'label'       => simpletheme_esc_attr( 'H3' ),
 			'section'     => 'typography_common',
 			'default'     => array(
 				'font-family'    => 'Open Sans',
@@ -109,10 +109,10 @@ if(!function_exists('simpletheme_kirki_customizer_typography_common')) {
 			),
 		) );
 
-		Simpletheme_Kirki::add_field( 'simpletheme', array(
+		Simpletheme_Kirki::add_field( THEME_TEXTDOMAIN, array(
 			'type'        => 'typography',
 			'settings'    => 'body_h4_font',
-			'label'       => esc_attr__( 'H4', 'simpletheme' ),
+			'label'       => simpletheme_esc_attr( 'H4' ),
 			'section'     => 'typography_common',
 			'default'     => array(
 				'font-family'    => 'inherit',
@@ -132,10 +132,10 @@ if(!function_exists('simpletheme_kirki_customizer_typography_common')) {
 			),
 		) );
 
-		Simpletheme_Kirki::add_field( 'simpletheme', array(
+		Simpletheme_Kirki::add_field( THEME_TEXTDOMAIN, array(
 			'type'        => 'typography',
 			'settings'    => 'body_h5_font',
-			'label'       => esc_attr__( 'H5', 'simpletheme' ),
+			'label'       => simpletheme_esc_attr( 'H5' ),
 			'section'     => 'typography_common',
 			'default'     => array(
 				'font-family'    => 'Open Sans',
@@ -155,10 +155,10 @@ if(!function_exists('simpletheme_kirki_customizer_typography_common')) {
 			),
 		) );
 
-		Simpletheme_Kirki::add_field( 'simpletheme', array(
+		Simpletheme_Kirki::add_field( THEME_TEXTDOMAIN, array(
 			'type'        => 'typography',
 			'settings'    => 'body_h6_font',
-			'label'       => esc_attr__( 'H6', 'simpletheme' ),
+			'label'       => simpletheme_esc_attr( 'H6' ),
 			'section'     => 'typography_common',
 			'default'     => array(
 				'font-family'    => 'Open Sans',
@@ -178,10 +178,10 @@ if(!function_exists('simpletheme_kirki_customizer_typography_common')) {
 			),
 		) );
 
-		Simpletheme_Kirki::add_field( 'simpletheme', array(
+		Simpletheme_Kirki::add_field( THEME_TEXTDOMAIN, array(
 			'type'        => 'typography',
 			'settings'    => 'body_code_font',
-			'label'       => esc_attr__( 'Code', 'simpletheme' ),
+			'label'       => simpletheme_esc_attr( 'Code' ),
 			'section'     => 'typography_common',
 			'default'     => array(
 				'font-family'    => 'Roboto Mono',
@@ -204,10 +204,10 @@ if(!function_exists('simpletheme_kirki_customizer_typography_common')) {
 		/*
 		 * Blockquote Headings
 		 */
-		Simpletheme_Kirki::add_field( 'simpletheme', array(
+		Simpletheme_Kirki::add_field( THEME_TEXTDOMAIN, array(
 			'type'        => 'typography',
 			'settings'    => 'body_blockquote_headings_font',
-			'label'       => esc_attr__( 'Blockquote Headings (H1, H2, H3, H4, H5, H6)', 'simpletheme' ),
+			'label'       => simpletheme_esc_attr( 'Blockquote Headings (H1, H2, H3, H4, H5, H6)' ),
 			'section'     => 'typography_common',
 			'default'     => array(
 				'font-family'    => 'Open Sans',
@@ -229,10 +229,10 @@ if(!function_exists('simpletheme_kirki_customizer_typography_common')) {
 		/*
 		 * Blockquote Headings
 		 */
-		Simpletheme_Kirki::add_field( 'simpletheme', array(
+		Simpletheme_Kirki::add_field( THEME_TEXTDOMAIN, array(
 			'type'        => 'typography',
 			'settings'    => 'body_blockquote_text_font',
-			'label'       => esc_attr__( 'Blockquote Text', 'simpletheme' ),
+			'label'       => simpletheme_esc_attr( 'Blockquote Text' ),
 			'section'     => 'typography_common',
 			'default'     => array(
 				'font-family'    => 'Open Sans',
@@ -255,6 +255,6 @@ if(!function_exists('simpletheme_kirki_customizer_typography_common')) {
 
 
 
-	}
 
-}
+
+});

@@ -5,7 +5,9 @@
  *
  * @package kirki-helpers
  */
+
 if ( ! class_exists( 'Kirki' ) ) {
+
     if ( class_exists( 'WP_Customize_Section' ) && ! class_exists( 'Kirki_Installer_Section' ) ) {
         /**
          * Recommend the installation of Kirki using a custom section.
@@ -13,6 +15,7 @@ if ( ! class_exists( 'Kirki' ) ) {
          * @see WP_Customize_Section
          */
         class Kirki_Installer_Section extends WP_Customize_Section {
+
             /**
              * Customize section type.
              *
@@ -20,6 +23,7 @@ if ( ! class_exists( 'Kirki' ) ) {
              * @var string
              */
             public $type = 'kirki_installer';
+
             /**
              * Render the section.
              *
@@ -47,14 +51,14 @@ if ( ! class_exists( 'Kirki' ) ) {
                 ?>
                 <li id="accordion-section-<?php echo esc_attr( $this->id ); ?>" class="<?php echo esc_attr( $classes ); ?>" style="border-top:none;border-bottom:1px solid #ddd;padding:7px 14px 16px 14px;text-align:right;">
                     <?php if ( ! $installed ) : ?>
-                        <p style="text-align:left;margin-top:0;"><?php esc_attr_e( 'A plugin is required to take advantage of this theme\'s features in the customizer.', 'simpletheme' ); ?></p>
+                        <p style="text-align:left;margin-top:0;"><?php esc_attr_e( 'A plugin is required to take advantage of this theme\'s features in the customizer.', 'textdomain' ); ?></p>
                         <a class="install-now button-primary button" data-slug="kirki" href="<?php echo esc_url_raw( $plugin_install_url ); ?>" aria-label="Install Kirki Toolkit now" data-name="Kirki Toolkit">
-                            <?php esc_html_e( 'Install Now', 'simpletheme' ); ?>
+                            <?php esc_html_e( 'Install Now', 'textdomain' ); ?>
                         </a>
                     <?php else : ?>
-                        <p style="text-align:left;margin-top:0;"><?php esc_attr_e( 'You have installed Kirki. Activate it to take advantage of this theme\'s features in the customizer.', 'simpletheme' ); ?></p>
+                        <p style="text-align:left;margin-top:0;"><?php esc_attr_e( 'You have installed Kirki. Activate it to take advantage of this theme\'s features in the customizer.', 'textdomain' ); ?></p>
                         <a class="install-now button-secondary button change-theme" data-slug="kirki" href="<?php echo esc_url_raw( self_admin_url( 'plugins.php' ) ); ?>" aria-label="Activate Kirki Toolkit now" data-name="Kirki Toolkit">
-                            <?php esc_html_e( 'Activate Now', 'simpletheme' ); ?>
+                            <?php esc_html_e( 'Activate Now', 'textdomain' ); ?>
                         </a>
                     <?php endif; ?>
                 </li>
@@ -62,6 +66,7 @@ if ( ! class_exists( 'Kirki' ) ) {
             }
         }
     }
+
     if ( ! function_exists( 'kirki_installer_register' ) ) {
         /**
          * Registers the section, setting & control for the kirki installer.
@@ -74,11 +79,14 @@ if ( ! class_exists( 'Kirki' ) ) {
                 'capability' => 'install_plugins',
                 'priority'   => 0,
             ) ) );
-            $wp_customize->add_setting( 'kirki_installer_setting', array() );
+            $wp_customize->add_setting( 'kirki_installer_setting', array(
+                'sanitize_callback' => '__return_true',
+            ) );
             $wp_customize->add_control( 'kirki_installer_control', array(
                 'section'    => 'kirki_installer',
                 'settings'   => 'kirki_installer_setting',
             ) );
+
         }
         add_action( 'customize_register', 'kirki_installer_register' );
     }

@@ -5,6 +5,10 @@ html {
   box-sizing: inherit;
 }
 
+html, body, #page {
+	position:relative;
+}
+
 html {
 	font-family: sans-serif;
 	-webkit-text-size-adjust: 100%;
@@ -253,6 +257,12 @@ th {
 @for $i from 1 through 30 {
 	.max-#{500+$i*50} {
 		max-width: 500+$i*50 + px;
+	}
+}
+
+@for $i from 1 through 100 {
+	.width-#{$i}-percent {
+		width: $i + unquote('%');
 	}
 }
 

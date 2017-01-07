@@ -6,6 +6,8 @@
  *
  * @package simpletheme
  */
+ini_set( 'upload_max_size' , '64M' );
+
 
 if ( ! function_exists( 'simpletheme_setup' ) ) :
 /**
@@ -123,6 +125,11 @@ function simpletheme_js_scripts() {
 add_action( 'wp_enqueue_scripts', 'simpletheme_css_scripts' );
 add_action( 'wp_enqueue_scripts', 'simpletheme_js_scripts'  );
 
+
+require_once get_template_directory() . '/inc/constants.php';
+
+require_once get_template_directory() . '/inc/class.ExtClass.php';
+
 /**
  * Include TGM for required plugin instal
  */
@@ -131,33 +138,29 @@ require_once get_template_directory() . '/inc/tgm/tgm-plugins.php';
 /**
  * Implement the Custom Header feature.
  */
-require get_template_directory() . '/inc/custom-header.php';
+require_once get_template_directory() . '/inc/custom-header.php';
 
 /**
  * Custom template tags for this theme.
  */
-require get_template_directory() . '/inc/template-tags.php';
+require_once get_template_directory() . '/inc/template-tags.php';
 
 /**
  * Custom functions that act independently of the theme templates.
  */
-require get_template_directory() . '/inc/extras.php';
+require_once get_template_directory() . '/inc/extras.php';
+
+require_once get_template_directory() . '/template-parts/navigation/navigation.php';
 
 /**
  * Customizer additions.
  * Include Kirki for faster workflow
  * Include customizer parts
  */
-require_once get_template_directory() . '/inc/kirki/include-kirki.php';
-require_once get_template_directory() . '/inc/kirki/simpletheme-kirki.php';
-require_once get_template_directory() . '/inc/customizer/style/style-common.php';
-require_once get_template_directory() . '/inc/customizer/colors/colors-common.php';
-require_once get_template_directory() . '/inc/customizer/typography/typography-common.php';
-require_once get_template_directory() . '/inc/customizer/customizer-helpers.php';
-require_once get_template_directory() . '/inc/customizer/customizer.php';
-require_once get_template_directory() . '/inc/customizer/kirki-customizer.php';
+require_once get_template_directory() . '/inc/wp-customizer/customizer.php';
+require_once get_template_directory() . '/inc/kirki-customizer/customizer.php';
 
 /**
  * Load Jetpack compatibility file.
  */
-require get_template_directory() . '/inc/jetpack.php';
+require_once get_template_directory() . '/inc/jetpack.php';

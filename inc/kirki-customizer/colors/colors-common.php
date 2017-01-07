@@ -1,25 +1,23 @@
 <?php
 
-if(!function_exists('simpletheme_kirki_customizer_colors_common')) {
-	
-	function simpletheme_kirki_customizer_colors_common() {
+$SimplethemeCustomizer->buildWholeSection('colors_common', function(){
 
 		/* CREATE SECTION */
 		Simpletheme_Kirki::add_section( 'colors_common', array(
 		    'priority'       => 10,
-		    'capability'     => 'edit_theme_options',
-		    'theme_supports' => 'custom-header',
-		    'title'          => __('common Colors', 'simpletheme'),
-		    'description'    =>  __('Colors that are being used throughout the whole theme.', 'simpletheme'),
+		    'capability'     => CAPATIBILITY_EDIT_THEME_OPTIONS,
+		    'theme_supports' => '',
+		    'title'          => simpletheme_translate('Common Colors'),
+		    'description'    => simpletheme_translate('Colors that are being used throughout the whole theme.'),
 		    'panel'          => 'colors_panel',
 		) );
 
 		/* CREATE FIELDS */
 
-		Simpletheme_Kirki::add_field( 'simpletheme', array(
+		Simpletheme_Kirki::add_field( THEME_TEXTDOMAIN, array(
 			'type'        => 'color',
 			'settings'    => 'body_background_color',
-			'label'       => __( 'Background Color', 'simpletheme' ),
+			'label'       => simpletheme_translate('Background Color'),
 			'section'     => 'colors_common',
 			'default'     => '#ffffff',
 			'priority'    => 10,
@@ -32,10 +30,10 @@ if(!function_exists('simpletheme_kirki_customizer_colors_common')) {
 				)
 		) );
 
-		Simpletheme_Kirki::add_field( 'simpletheme', array(
+		Simpletheme_Kirki::add_field( THEME_TEXTDOMAIN, array(
 			'type'        => 'color',
 			'settings'    => 'body_text_color',
-			'label'       => __( 'Text Color', 'simpletheme' ),
+			'label'       => simpletheme_translate('Text Color'),
 			'section'     => 'colors_common',
 			'default'     => '#000000',
 			'priority'    => 10,
@@ -48,10 +46,10 @@ if(!function_exists('simpletheme_kirki_customizer_colors_common')) {
 		    ),
 		) );
 
-		Simpletheme_Kirki::add_field( 'simpletheme', array(
+		Simpletheme_Kirki::add_field( THEME_TEXTDOMAIN, array(
 			'type'        => 'color',
 			'settings'    => 'body_title_color',
-			'label'       => __( 'Title Color', 'simpletheme' ),
+			'label'       => simpletheme_translate('Title Color'),
 			'section'     => 'colors_common',
 			'default'     => '#444444',
 			'priority'    => 10,
@@ -67,17 +65,17 @@ if(!function_exists('simpletheme_kirki_customizer_colors_common')) {
 		/*
 		 * Link Color
 		 */
-		Simpletheme_Kirki::add_field( 'simpletheme', array(
+		Simpletheme_Kirki::add_field( THEME_TEXTDOMAIN, array(
 		    'type'        => 'multicolor',
 		    'settings'    => 'body_link_colors',
-		    'label'       => esc_attr__( 'Link Color', 'simpletheme' ),
+		    'label'       => simpletheme_esc_attr( 'Link Color'),
 		    'section'     => 'colors_common',
 		    'priority'    => 10,
 		    'choices'     => array(
-		        'color'   => esc_attr__( 'Color', 'simpletheme' ),
-		        'hover'   => esc_attr__( 'Hover', 'simpletheme' ),
-		        'active'  => esc_attr__( 'Active', 'simpletheme' ),
-		        'visited'   => esc_attr__( 'Visited', 'simpletheme' ),
+		        'color'   => simpletheme_esc_attr('Color'),
+		        'hover'   => simpletheme_esc_attr('Hover'),
+		        'active'  => simpletheme_esc_attr('Active'),
+		        'visited' => simpletheme_esc_attr('Visited'),
 		    ),
 		    'default'     => array(
 		        'color'   => '#2199e8',
@@ -111,17 +109,17 @@ if(!function_exists('simpletheme_kirki_customizer_colors_common')) {
 		/*
 		 * Input Background Color 
 		 */
-		Simpletheme_Kirki::add_field( 'simpletheme', array(
+		Simpletheme_Kirki::add_field( THEME_TEXTDOMAIN, array(
 		    'type'        => 'multicolor',
 		    'settings'    => 'body_input_background_color',
-		    'label'       => esc_attr__( 'Input Background Color', 'simpletheme' ),
+		    'label'       => simpletheme_esc_attr( 'Input Background Color' ),
 		    'section'     => 'colors_common',
 		    'priority'    => 10,
 		    'choices'     => array(
-		        'color'   => esc_attr__( 'Color', 'simpletheme' ),
-		        'hover'   => esc_attr__( 'Hover', 'simpletheme' ),
-		        'invalid' => esc_attr__( 'Invalid', 'simpletheme' ),
-		        'focus'   => esc_attr__( 'Focus', 'simpletheme' ),
+		        'color'   => simpletheme_esc_attr( 'Color' ),
+		        'hover'   => simpletheme_esc_attr( 'Hover' ),
+		        'invalid' => simpletheme_esc_attr( 'Invalid' ),
+		        'focus'   => simpletheme_esc_attr( 'Focus' ),
 		    ),
 		    'default'     => array(
 		        'color'   => '#ffffff',
@@ -156,17 +154,17 @@ if(!function_exists('simpletheme_kirki_customizer_colors_common')) {
 		/*
 		 * Input Text Color 
 		 */
-		Simpletheme_Kirki::add_field( 'simpletheme', array(
+		Simpletheme_Kirki::add_field( THEME_TEXTDOMAIN, array(
 		    'type'        => 'multicolor',
 		    'settings'    => 'body_input_text_color',
-		    'label'       => esc_attr__( 'Input Text Color', 'simpletheme' ),
+		    'label'       => simpletheme_esc_attr( 'Input Text Color' ),
 		    'section'     => 'colors_common',
 		    'priority'    => 10,
 		    'choices'     => array(
-		        'color'   => esc_attr__( 'Color', 'simpletheme' ),
-		        'hover'   => esc_attr__( 'Hover', 'simpletheme' ),
-		        'invalid' => esc_attr__( 'Invalid', 'simpletheme' ),
-		        'focus'   => esc_attr__( 'Focus', 'simpletheme' ),
+		        'color'   => simpletheme_esc_attr( 'Color' ),
+		        'hover'   => simpletheme_esc_attr( 'Hover' ),
+		        'invalid' => simpletheme_esc_attr( 'Invalid' ),
+		        'focus'   => simpletheme_esc_attr( 'Focus' ),
 		    ),
 		    'default'     => array(
 		        'color'   => '#444444',
@@ -201,17 +199,17 @@ if(!function_exists('simpletheme_kirki_customizer_colors_common')) {
 		/*
 		 * Input Border Color 
 		 */
-		Simpletheme_Kirki::add_field( 'simpletheme', array(
+		Simpletheme_Kirki::add_field( THEME_TEXTDOMAIN, array(
 		    'type'        => 'multicolor',
 		    'settings'    => 'body_input_border_color',
-		    'label'       => esc_attr__( 'Input Border Color', 'simpletheme' ),
+		    'label'       => simpletheme_esc_attr( 'Input Border Color' ),
 		    'section'     => 'colors_common',
 		    'priority'    => 10,
 		    'choices'     => array(
-		        'color'   => esc_attr__( 'Color', 'simpletheme' ),
-		        'hover'   => esc_attr__( 'Hover', 'simpletheme' ),
-		        'invalid' => esc_attr__( 'Invalid', 'simpletheme' ),
-		        'focus'   => esc_attr__( 'Focus', 'simpletheme' ),
+		        'color'   => simpletheme_esc_attr( 'Color' ),
+		        'hover'   => simpletheme_esc_attr( 'Hover' ),
+		        'invalid' => simpletheme_esc_attr( 'Invalid' ),
+		        'focus'   => simpletheme_esc_attr( 'Focus' ),
 		    ),
 		    'default'     => array(
 		        'color'   => '#e7e7e7',
@@ -247,17 +245,17 @@ if(!function_exists('simpletheme_kirki_customizer_colors_common')) {
 		/*
 		 * Button Background Color 
 		 */
-		Simpletheme_Kirki::add_field( 'simpletheme', array(
+		Simpletheme_Kirki::add_field( THEME_TEXTDOMAIN, array(
 		    'type'        => 'multicolor',
 		    'settings'    => 'body_button_background_color',
-		    'label'       => esc_attr__( 'Button Background Color', 'simpletheme' ),
+		    'label'       => simpletheme_esc_attr( 'Button Background Color' ),
 		    'section'     => 'colors_common',
 		    'priority'    => 10,
 		    'choices'     => array(
-		        'color'   => esc_attr__( 'Color', 'simpletheme' ),
-		        'hover'   => esc_attr__( 'Hover', 'simpletheme' ),
-		        'active'  => esc_attr__( 'Active', 'simpletheme' ),
-		        'focus'   => esc_attr__( 'Focus', 'simpletheme' ),
+		        'color'   => simpletheme_esc_attr( 'Color' ),
+		        'hover'   => simpletheme_esc_attr( 'Hover' ),
+		        'active'  => simpletheme_esc_attr( 'Active' ),
+		        'focus'   => simpletheme_esc_attr( 'Focus' ),
 		    ),
 		    'default'     => array(
 		        'color'   => '#e6e6e6',
@@ -293,17 +291,17 @@ if(!function_exists('simpletheme_kirki_customizer_colors_common')) {
 		/*
 		 * Button Text Color 
 		 */
-		Simpletheme_Kirki::add_field( 'simpletheme', array(
+		Simpletheme_Kirki::add_field( THEME_TEXTDOMAIN, array(
 		    'type'        => 'multicolor',
 		    'settings'    => 'body_button_text_color',
-		    'label'       => esc_attr__( 'Button Text Color', 'simpletheme' ),
+		    'label'       => simpletheme_esc_attr( 'Button Text Color' ),
 		    'section'     => 'colors_common',
 		    'priority'    => 10,
 		    'choices'     => array(
-		        'color'   => esc_attr__( 'Color', 'simpletheme' ),
-		        'hover'   => esc_attr__( 'Hover', 'simpletheme' ),
-		        'active'  => esc_attr__( 'Active', 'simpletheme' ),
-		        'focus'   => esc_attr__( 'Focus', 'simpletheme' ),
+		        'color'   => simpletheme_esc_attr( 'Color' ),
+		        'hover'   => simpletheme_esc_attr( 'Hover' ),
+		        'active'  => simpletheme_esc_attr( 'Active' ),
+		        'focus'   => simpletheme_esc_attr( 'Focus' ),
 		    ),
 		    'default'     => array(
 		        'color'   => '#444444',
@@ -338,17 +336,17 @@ if(!function_exists('simpletheme_kirki_customizer_colors_common')) {
 		/*
 		 * Button Border Color 
 		 */
-		Simpletheme_Kirki::add_field( 'simpletheme', array(
+		Simpletheme_Kirki::add_field( THEME_TEXTDOMAIN, array(
 		    'type'        => 'multicolor',
 		    'settings'    => 'body_button_border_color',
-		    'label'       => esc_attr__( 'Button Border Color', 'simpletheme' ),
+		    'label'       => simpletheme_esc_attr( 'Button Border Color' ),
 		    'section'     => 'colors_common',
 		    'priority'    => 10,
 		    'choices'     => array(
-		        'color'   => esc_attr__( 'Color', 'simpletheme' ),
-		        'hover'   => esc_attr__( 'Hover', 'simpletheme' ),
-		        'active'  => esc_attr__( 'Active', 'simpletheme' ),
-		        'focus'   => esc_attr__( 'Focus', 'simpletheme' ),
+		        'color'   => simpletheme_esc_attr( 'Color' ),
+		        'hover'   => simpletheme_esc_attr( 'Hover' ),
+		        'active'  => simpletheme_esc_attr( 'Active' ),
+		        'focus'   => simpletheme_esc_attr( 'Focus' ),
 		    ),
 		    'default'     => array(
 		        'color'   => '#e7e7e7',
@@ -383,17 +381,17 @@ if(!function_exists('simpletheme_kirki_customizer_colors_common')) {
 		/*
 		 * Blockquote Color
 		 */
-		Simpletheme_Kirki::add_field( 'simpletheme', array(
+		Simpletheme_Kirki::add_field( THEME_TEXTDOMAIN, array(
 		    'type'        => 'multicolor',
 		    'settings'    => 'body_blockquote_color',
-		    'label'       => esc_attr__( 'Blockquote Color', 'simpletheme' ),
+		    'label'       => simpletheme_esc_attr( 'Blockquote Color' ),
 		    'section'     => 'colors_common',
 		    'priority'    => 10,
 		    'choices'     => array(
-		        'bgcolor'       => esc_attr__( 'Background', 'simpletheme' ),
-		        'txtcolor'     => esc_attr__( 'Text', 'simpletheme' ),
-		        'headingcolor'  => esc_attr__( 'Headings', 'simpletheme' ),
-		        //'focus'   => esc_attr__( 'Focus', 'simpletheme' ),
+		        'bgcolor'       => simpletheme_esc_attr( 'Background' ),
+		        'txtcolor'     => simpletheme_esc_attr( 'Text' ),
+		        'headingcolor'  => simpletheme_esc_attr( 'Headings' ),
+		        //'focus'   => simpletheme_esc_attr( 'Focus' ),
 		    ),
 		    'default'     => array(
 		        'bgcolor'       => 'rgba(255,255,255,0)',
@@ -424,18 +422,18 @@ if(!function_exists('simpletheme_kirki_customizer_colors_common')) {
 		/*
 		 * Code Color
 		 */
-		Simpletheme_Kirki::add_field( 'simpletheme', array(
+		Simpletheme_Kirki::add_field( THEME_TEXTDOMAIN, array(
 		    'type'        => 'multicolor',
 		    'settings'    => 'body_code_color',
-		    'label'       => esc_attr__( 'Code Color', 'simpletheme' ),
+		    'label'       => simpletheme_esc_attr( 'Code Color' ),
 		    'section'     => 'colors_common',
 		    'priority'    => 10,
 		    'choices'     => array(
-		        'bgcolor'       => esc_attr__( 'Background', 'simpletheme' ),
-		        'txtcolor'     => esc_attr__( 'Text', 'simpletheme' ),
+		        'bgcolor'      => simpletheme_esc_attr( 'Background' ),
+		        'txtcolor'     => simpletheme_esc_attr( 'Text' ),
 		    ),
 		    'default'     => array(
-		        'bgcolor'       => '#f7f7f7',
+		        'bgcolor'      => '#f7f7f7',
 		        'txtcolor'     => 'rgba(68,6,6,0.6)',
 		    ),
 		    'output'      => array(
@@ -453,7 +451,7 @@ if(!function_exists('simpletheme_kirki_customizer_colors_common')) {
 		    ),
 		) );
 
+});
 
-// END
-	}
-}
+
+//END

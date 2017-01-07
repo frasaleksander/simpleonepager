@@ -1,0 +1,60 @@
+<?php
+require_once get_template_directory() . '/inc/kirki-customizer/kirki-include.php';
+require_once get_template_directory() . '/inc/kirki-customizer/simpletheme-kirki.php';
+require_once get_template_directory() . '/inc/kirki-customizer/class.SimplethemeCustomizer.php';
+require_once get_template_directory() . '/inc/kirki-customizer/constants.php';
+require_once get_template_directory() . '/inc/kirki-customizer/variables.php';
+require_once get_template_directory() . '/inc/kirki-customizer/config.php';
+require_once get_template_directory() . '/inc/kirki-customizer/style/style-common.php';
+require_once get_template_directory() . '/inc/kirki-customizer/colors/colors-common.php';
+require_once get_template_directory() . '/inc/kirki-customizer/typography/typography-common.php';
+
+if(class_exists('Simpletheme_Kirki')) {
+
+//function located in /inc/kirki-customizer/kirki-config.php
+$SimplethemeCustomizer->config();
+
+$la = new ExtClass();
+$la->a = 2;
+$la->b = function() {
+	return $la->a;
+};
+echo $la->b();
+
+/* PANELS */
+
+Simpletheme_Kirki::add_panel( 'colors_panel', array(
+	'priority'       => 40,
+	'capability'     => CAPATIBILITY_EDIT_THEME_OPTIONS,
+	'theme_supports' => '',
+	'title'          => simpletheme_translate('Colors'),
+	'description'    => simpletheme_translate('Color settings for simpletheme'),
+) );
+
+Simpletheme_Kirki::add_panel( 'typography_panel', array(
+	'priority'       => 41,
+	'capability'     => CAPATIBILITY_EDIT_THEME_OPTIONS,
+	'theme_supports' => '',
+	'title'          => simpletheme_translate('Typography'),
+	'description'    => simpletheme_translate('Typography settings for simpletheme'),
+) );
+
+Simpletheme_Kirki::add_panel( 'style_panel', array(
+	'priority'       => 40,
+	'capability'     => CAPATIBILITY_EDIT_THEME_OPTIONS,
+	'theme_supports' => '',
+	'title'          => simpletheme_translate('Style'),
+	'description'    => simpletheme_translate('Style settings for simpletheme'),
+) );
+
+
+//function located in /inc/kirki-customizer/style/style-common.php
+$SimplethemeCustomizer->addWholeSection('style_common');
+//function located in /inc/kirki-customizer/colors/colors-common.php
+$SimplethemeCustomizer->addWholeSection('colors_common');
+//function located in /inc/kirki-customizer/typography/typography-common.php
+$SimplethemeCustomizer->addWholeSection('typography_common');
+
+
+
+} //if(class_exists('Simpletheme_Kirki')) {

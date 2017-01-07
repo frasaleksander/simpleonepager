@@ -37,3 +37,20 @@ function simpletheme_pingback_header() {
 	}
 }
 add_action( 'wp_head', 'simpletheme_pingback_header' );
+
+
+if(!function_exists('simpletheme_translate')) {
+
+	function simpletheme_translate($text) {
+		return __($text, THEME_TEXTDOMAIN);
+	}
+
+}
+
+if(!function_exists('simpletheme_esc_attr')) {
+
+	function simpletheme_esc_attr($text) {
+		return esc_attr(simpletheme_translate($text));
+	}
+
+}
