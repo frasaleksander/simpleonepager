@@ -1,15 +1,15 @@
 <?php
 
-$SimplethemeCustomizer->buildWholeSection('colors_common', function(){
+$SimplethemeCustomizer->buildWholeSection( 'colors_common', 'colors_panel', function($section_id, $panel_id){
 
 		/* CREATE SECTION */
-		Simpletheme_Kirki::add_section( 'colors_common', array(
+		Simpletheme_Kirki::add_section( $section_id, array(
 		    'priority'       => 10,
 		    'capability'     => CAPATIBILITY_EDIT_THEME_OPTIONS,
 		    'theme_supports' => '',
 		    'title'          => simpletheme_translate('Common Colors'),
 		    'description'    => simpletheme_translate('Colors that are being used throughout the whole theme.'),
-		    'panel'          => 'colors_panel',
+		    'panel'          => $panel_id,
 		) );
 
 		/* CREATE FIELDS */
@@ -18,7 +18,7 @@ $SimplethemeCustomizer->buildWholeSection('colors_common', function(){
 			'type'        => 'color',
 			'settings'    => 'body_background_color',
 			'label'       => simpletheme_translate('Background Color'),
-			'section'     => 'colors_common',
+			'section'     =>  $section_id,
 			'default'     => '#ffffff',
 			'priority'    => 10,
 			'choices'     => array( 'alpha' => true ),
@@ -34,7 +34,7 @@ $SimplethemeCustomizer->buildWholeSection('colors_common', function(){
 			'type'        => 'color',
 			'settings'    => 'body_text_color',
 			'label'       => simpletheme_translate('Text Color'),
-			'section'     => 'colors_common',
+			'section'     =>  $section_id,
 			'default'     => '#000000',
 			'priority'    => 10,
 			'choices'     => array( 'alpha' => true ),
@@ -50,7 +50,7 @@ $SimplethemeCustomizer->buildWholeSection('colors_common', function(){
 			'type'        => 'color',
 			'settings'    => 'body_title_color',
 			'label'       => simpletheme_translate('Title Color'),
-			'section'     => 'colors_common',
+			'section'     =>  $section_id,
 			'default'     => '#444444',
 			'priority'    => 10,
 			'choices'     => array( 'alpha' => true ),
@@ -69,7 +69,7 @@ $SimplethemeCustomizer->buildWholeSection('colors_common', function(){
 		    'type'        => 'multicolor',
 		    'settings'    => 'body_link_colors',
 		    'label'       => simpletheme_esc_attr( 'Link Color'),
-		    'section'     => 'colors_common',
+		    'section'     =>  $section_id,
 		    'priority'    => 10,
 		    'choices'     => array(
 		        'color'   => simpletheme_esc_attr('Color'),
@@ -113,7 +113,7 @@ $SimplethemeCustomizer->buildWholeSection('colors_common', function(){
 		    'type'        => 'multicolor',
 		    'settings'    => 'body_input_background_color',
 		    'label'       => simpletheme_esc_attr( 'Input Background Color' ),
-		    'section'     => 'colors_common',
+		    'section'     =>  $section_id,
 		    'priority'    => 10,
 		    'choices'     => array(
 		        'color'   => simpletheme_esc_attr( 'Color' ),
@@ -158,7 +158,7 @@ $SimplethemeCustomizer->buildWholeSection('colors_common', function(){
 		    'type'        => 'multicolor',
 		    'settings'    => 'body_input_text_color',
 		    'label'       => simpletheme_esc_attr( 'Input Text Color' ),
-		    'section'     => 'colors_common',
+		    'section'     =>  $section_id,
 		    'priority'    => 10,
 		    'choices'     => array(
 		        'color'   => simpletheme_esc_attr( 'Color' ),
@@ -203,7 +203,7 @@ $SimplethemeCustomizer->buildWholeSection('colors_common', function(){
 		    'type'        => 'multicolor',
 		    'settings'    => 'body_input_border_color',
 		    'label'       => simpletheme_esc_attr( 'Input Border Color' ),
-		    'section'     => 'colors_common',
+		    'section'     =>  $section_id,
 		    'priority'    => 10,
 		    'choices'     => array(
 		        'color'   => simpletheme_esc_attr( 'Color' ),
@@ -249,7 +249,7 @@ $SimplethemeCustomizer->buildWholeSection('colors_common', function(){
 		    'type'        => 'multicolor',
 		    'settings'    => 'body_button_background_color',
 		    'label'       => simpletheme_esc_attr( 'Button Background Color' ),
-		    'section'     => 'colors_common',
+		    'section'     =>  $section_id,
 		    'priority'    => 10,
 		    'choices'     => array(
 		        'color'   => simpletheme_esc_attr( 'Color' ),
@@ -295,7 +295,7 @@ $SimplethemeCustomizer->buildWholeSection('colors_common', function(){
 		    'type'        => 'multicolor',
 		    'settings'    => 'body_button_text_color',
 		    'label'       => simpletheme_esc_attr( 'Button Text Color' ),
-		    'section'     => 'colors_common',
+		    'section'     =>  $section_id,
 		    'priority'    => 10,
 		    'choices'     => array(
 		        'color'   => simpletheme_esc_attr( 'Color' ),
@@ -340,7 +340,7 @@ $SimplethemeCustomizer->buildWholeSection('colors_common', function(){
 		    'type'        => 'multicolor',
 		    'settings'    => 'body_button_border_color',
 		    'label'       => simpletheme_esc_attr( 'Button Border Color' ),
-		    'section'     => 'colors_common',
+		    'section'     =>  $section_id,
 		    'priority'    => 10,
 		    'choices'     => array(
 		        'color'   => simpletheme_esc_attr( 'Color' ),
@@ -385,7 +385,7 @@ $SimplethemeCustomizer->buildWholeSection('colors_common', function(){
 		    'type'        => 'multicolor',
 		    'settings'    => 'body_blockquote_color',
 		    'label'       => simpletheme_esc_attr( 'Blockquote Color' ),
-		    'section'     => 'colors_common',
+		    'section'     =>  $section_id,
 		    'priority'    => 10,
 		    'choices'     => array(
 		        'bgcolor'       => simpletheme_esc_attr( 'Background' ),
@@ -426,7 +426,7 @@ $SimplethemeCustomizer->buildWholeSection('colors_common', function(){
 		    'type'        => 'multicolor',
 		    'settings'    => 'body_code_color',
 		    'label'       => simpletheme_esc_attr( 'Code Color' ),
-		    'section'     => 'colors_common',
+		    'section'     =>  $section_id,
 		    'priority'    => 10,
 		    'choices'     => array(
 		        'bgcolor'      => simpletheme_esc_attr( 'Background' ),

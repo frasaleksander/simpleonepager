@@ -10,18 +10,26 @@ class SimplethemeCustomizer extends ExtClass {
 
 	public function __construct() {}
 
-	public function buildWholeSection($sectionName, $callableFunction) {
+	public function buildWholeSection($sectionId, $panelId, $callableFunction) {
 		if(!is_callable($callableFunction)) {
-			return null;
+			die("nop");
 		}
-	   	$this->sections[$sectionName] = $callableFunction;
+	   	$this->sections[$sectionId] = array( 
+	   		"panel_id" => $panelId, 
+	   		"callable_function" => $callableFunction 
+	   	);
 	}
 
-	public function addWholeSection($sectionName) {
-		if(!is_callable($this->sections[$sectionName])) { 
-			return null;
+	public function addWholeSection($sectionId) {
+
+		if(!is_callable($this->sections[$sectionId]["callable_function"])) { 
+			print_r($this->sections[$sectionId]["callable_function"]);
+			//die();
+			throw new Exception("There is no section with ${sectionId} ID!");
 		}
-		call_user_func_array($this->sections[$sectionName], array());
+		$panel_id = $this->sections[$sectionId]["panel_id"];
+		$callable_function = $this->sections[$sectionId]["callable_function"];
+		call_user_func_array($callable_function, array($sectionId, $panel_id));
 	}
 
 } 

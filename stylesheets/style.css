@@ -1583,13 +1583,13 @@ a > img {
 .top-headings {
   position: absolute;
   top: 45%;
-  left: 50%;
+  left: 10%;
   width: 80%;
-  -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  max-width: 1000px;
+  -moz-transform: translate(0%, -50%);
+  -ms-transform: translate(0%, -50%);
+  -webkit-transform: translate(0%, -50%);
+  transform: translate(0%, -50%);
+  max-width: 400px;
   text-align: center;
 }
 /* line 11, ../sass/site/primary/_header.scss */

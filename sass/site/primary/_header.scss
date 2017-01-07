@@ -3,10 +3,10 @@
 .top-headings {
 	position:absolute;
 	top:45%;
-	left:50%;
+	left:10%;
 	width:80%;
-	@include transform(translate(-50%,-50%));
-	max-width:1000px;
+	@include transform(translate(0%,-50%));
+	max-width:400px;
 	text-align:center;
 	h1,h2,h3,h4,h5,h6 {
 		text-transform:uppercase;

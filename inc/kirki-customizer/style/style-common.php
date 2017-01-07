@@ -1,9 +1,12 @@
 <?php
 
-$SimplethemeCustomizer->buildWholeSection('style_common', function(){
+$SimplethemeCustomizer->buildWholeSection(
+	'style_common', 
+	'style_panel', 
+	function($section_id, $panel_id) {
 
 		/* CREATE SECTION */
-		Simpletheme_Kirki::add_section( 'style_common', array(
+		Simpletheme_Kirki::add_section($section_id, array(
 		    'priority'       => 10,
 		    'capability'     => CAPATIBILITY_EDIT_THEME_OPTIONS,
 		    'theme_supports' => '',
@@ -18,7 +21,7 @@ $SimplethemeCustomizer->buildWholeSection('style_common', function(){
 			'type'        => 'dimension',
 			'settings'    => 'site_width',
 			'label'       => simpletheme_translate( 'Site Width'),
-			'section'     => 'style_common',
+			'section'     => $section_id,
 			'default'     => '1000px',
 			'priority'    => 10,
 			'output'      => array(

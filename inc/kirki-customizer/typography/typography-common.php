@@ -1,17 +1,16 @@
 <?php
 
-$SimplethemeCustomizer->buildWholeSection('typography_common', function(){
-
+$SimplethemeCustomizer->buildWholeSection('typography_common', 'typography_panel', function($section_id, $panel_id){
 
 
 		/* CREATE SECTION */
-		Simpletheme_Kirki::add_section( 'typography_common', array(
+		Simpletheme_Kirki::add_section( $section_id, array(
 		    'priority'       => 10,
 		    'capability'     => CAPATIBILITY_EDIT_THEME_OPTIONS,
 		    'theme_supports' => '',
 		    'title'          => simpletheme_translate('Common Typography'),
 		    'description'    =>  simpletheme_translate('Typography that is being used throughout the whole theme. Other typography settings rewrite common settings.'),
-		    'panel'          => 'typography_panel',
+		    'panel'          => $panel_id,
 		) );
 
 		/* CREATE FIELDS */
@@ -20,7 +19,7 @@ $SimplethemeCustomizer->buildWholeSection('typography_common', function(){
 			'type'        => 'typography',
 			'settings'    => 'body_text_font',
 			'label'       => simpletheme_esc_attr( 'Text' ),
-			'section'     => 'typography_common',
+			'section'     => $section_id,
 			'default'     => array(
 				//'font-family'    => 'Open Sans',
 				'variant'        => 'regular',
@@ -44,7 +43,7 @@ $SimplethemeCustomizer->buildWholeSection('typography_common', function(){
 			'type'        => 'typography',
 			'settings'    => 'body_h1_font',
 			'label'       => simpletheme_esc_attr( 'H1' ),
-			'section'     => 'typography_common',
+			'section'     => $section_id,
 			'default'     => array(
 				'font-family'    => 'Open Sans',
 				'font-size'      => '3rem',
@@ -67,7 +66,7 @@ $SimplethemeCustomizer->buildWholeSection('typography_common', function(){
 			'type'        => 'typography',
 			'settings'    => 'body_h2_font',
 			'label'       => simpletheme_esc_attr( 'H2' ),
-			'section'     => 'typography_common',
+			'section'     => $section_id,
 			'default'     => array(
 				'font-family'    => 'Open Sans',
 				'font-size'      => '2.5rem',
@@ -90,7 +89,7 @@ $SimplethemeCustomizer->buildWholeSection('typography_common', function(){
 			'type'        => 'typography',
 			'settings'    => 'body_h3_font',
 			'label'       => simpletheme_esc_attr( 'H3' ),
-			'section'     => 'typography_common',
+			'section'     => $section_id,
 			'default'     => array(
 				'font-family'    => 'Open Sans',
 				'font-size'      => '1.9375rem',
@@ -113,7 +112,7 @@ $SimplethemeCustomizer->buildWholeSection('typography_common', function(){
 			'type'        => 'typography',
 			'settings'    => 'body_h4_font',
 			'label'       => simpletheme_esc_attr( 'H4' ),
-			'section'     => 'typography_common',
+			'section'     => $section_id,
 			'default'     => array(
 				'font-family'    => 'inherit',
 				'font-size'      => '1.5625rem',
@@ -136,7 +135,7 @@ $SimplethemeCustomizer->buildWholeSection('typography_common', function(){
 			'type'        => 'typography',
 			'settings'    => 'body_h5_font',
 			'label'       => simpletheme_esc_attr( 'H5' ),
-			'section'     => 'typography_common',
+			'section'     => $section_id,
 			'default'     => array(
 				'font-family'    => 'Open Sans',
 				'variant'        => '700',
@@ -159,7 +158,7 @@ $SimplethemeCustomizer->buildWholeSection('typography_common', function(){
 			'type'        => 'typography',
 			'settings'    => 'body_h6_font',
 			'label'       => simpletheme_esc_attr( 'H6' ),
-			'section'     => 'typography_common',
+			'section'     => $section_id,
 			'default'     => array(
 				'font-family'    => 'Open Sans',
 				'font-size'      => '1rem',
@@ -182,7 +181,7 @@ $SimplethemeCustomizer->buildWholeSection('typography_common', function(){
 			'type'        => 'typography',
 			'settings'    => 'body_code_font',
 			'label'       => simpletheme_esc_attr( 'Code' ),
-			'section'     => 'typography_common',
+			'section'     => $section_id,
 			'default'     => array(
 				'font-family'    => 'Roboto Mono',
 				'variant'        => 'regular',
@@ -208,7 +207,7 @@ $SimplethemeCustomizer->buildWholeSection('typography_common', function(){
 			'type'        => 'typography',
 			'settings'    => 'body_blockquote_headings_font',
 			'label'       => simpletheme_esc_attr( 'Blockquote Headings (H1, H2, H3, H4, H5, H6)' ),
-			'section'     => 'typography_common',
+			'section'     => $section_id,
 			'default'     => array(
 				'font-family'    => 'Open Sans',
 				'variant'        => '700',
@@ -233,7 +232,7 @@ $SimplethemeCustomizer->buildWholeSection('typography_common', function(){
 			'type'        => 'typography',
 			'settings'    => 'body_blockquote_text_font',
 			'label'       => simpletheme_esc_attr( 'Blockquote Text' ),
-			'section'     => 'typography_common',
+			'section'     => $section_id,
 			'default'     => array(
 				'font-family'    => 'Open Sans',
 				'font-size'      => '1em',
