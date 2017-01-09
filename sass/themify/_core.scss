@@ -1,0 +1,16 @@
+// Base Class Definition
+// -------------------------
+
+[class^="#{$ti-css-prefix}-"], [class*=" #{$ti-css-prefix}-"] {
+	font-family: 'themify';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: #{$ti-line-height-base};
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}

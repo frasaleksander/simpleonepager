@@ -1,7 +1,5 @@
 <?php
 
-$GLOBALS['simpletheme_customizer_css'] = array();
-
 function simpletheme_get_option( $setting, $default ) {
     $options = get_option( 'option_name', array() );
     $value = $default;

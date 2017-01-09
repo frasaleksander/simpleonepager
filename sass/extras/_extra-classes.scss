@@ -1,0 +1,49 @@
+.skip {
+	position:absolute;
+	top:-1000000px;
+	left:-1000000px;
+}
+
+@for $i from 1 through 30 {
+	.max-#{500+$i*50} {
+		max-width: 500+$i*50 + px;
+	}
+}
+
+@for $i from 1 through 100 {
+	.width-#{$i}-percent {
+		width: $i + unquote('%') !important;
+	}
+}
+
+@for $i from 0 through 20 {
+	.mb-#{$i*5}px {
+		margin-bottom: ($i*5) + px !important;
+	}
+}
+
+.margin-auto {
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.text-center {
+	text-align:center;
+}
+
+.text-left {
+	text-align:left;
+}
+
+.text-right {
+	text-align:right;
+}
+
+.text-justify {
+	text-align:justify;
+}
+
+//TODO: prestavi to nekam drugam
+.panel-grid {
+	position:relative;
+}

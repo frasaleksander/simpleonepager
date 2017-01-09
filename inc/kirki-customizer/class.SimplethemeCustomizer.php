@@ -12,7 +12,7 @@ class SimplethemeCustomizer extends ExtClass {
 
 	public function buildWholeSection($sectionId, $panelId, $callableFunction) {
 		if(!is_callable($callableFunction)) {
-			die("nop");
+			throw new Exception("Function is not callable!");
 		}
 	   	$this->sections[$sectionId] = array( 
 	   		"panel_id" => $panelId, 

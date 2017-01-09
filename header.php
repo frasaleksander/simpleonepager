@@ -46,7 +46,7 @@ $logo_src = wp_get_attachment_image_src( $custom_logo_id , 'full' );
 			endif; ?>
 		</div><!-- .site-branding -->
 
-		<nav id="site-navigation" class="main-navigation nav-style-1" role="navigation">
+		<nav id="site-navigation" class="main-navigation nav-style-1" role="main-navigation">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'simpletheme' ); ?></button>
 			<?php if($logo_src): ?>
 		    <div class="logo-container">

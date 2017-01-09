@@ -1,0 +1,45 @@
+
+.main-navigation.nav-style-1 {
+	color:#fff;
+	a {
+		color:#fff;
+	}
+} 
+
+@media (min-width:$mobile-break) {
+	
+	/*
+	 * nav-style-1
+	 */
+
+	.main-navigation.nav-style-1 {
+		text-transform:uppercase;
+		&>[class*="menu-"] {
+			position:absolute;
+			top:50%;
+			right:0;
+			@include transform(translate(0,-50%));
+		}
+		#primary-menu {
+			//margin-left:-0.8em;
+			@include inline-block;
+			
+			&>li {
+				@include inline-block();
+				letter-spacing:1px;
+			}
+			a {
+				line-height:3;
+				@include inline-block();
+				padding:0 0.8em;
+			}
+		}
+		
+	}
+
+	/*
+	 * END nav-style-1
+	 */
+
+
+}

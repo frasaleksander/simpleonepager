@@ -30,51 +30,11 @@
 		margin:0;
 		padding:0;
 	}
-	#primary-menu {
-		color:#fff;
-		a {
-			color:#fff;
-			//text-shadow:0px 2px 2px rgba(0,0,0,0.3);
-		}
-	}
-
 }
 
 .menu-toggle {
 	display:none;	
 }
 
-@media (min-width:$mobile-break) {
-	
-	/*
-	 * nav-style-1
-	 */
+@import "nav-style-1";
 
-	.nav-style-1 {
-		text-transform:uppercase;
-		&>[class*="menu-"] {
-			position:absolute;
-			top:50%;
-			//left:0;
-			right:0;
-			//bottom:0;
-			@include transform(translate(0,-50%));
-		}
-		#primary-menu {
-			
-			margin-left:-1em;
-			@include inline-block;
-			
-			&>li {
-				@include inline-block();
-				margin-left:1em;
-				letter-spacing:1px;
-			}
-			
-		}
-	}
-
-	/*
-	 * END nav-style-1
-	 */
-}

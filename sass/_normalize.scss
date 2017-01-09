@@ -247,27 +247,3 @@ td,
 th {
 	padding: 0;
 }
-
-.skip {
-	position:absolute;
-	top:-1000000px;
-	left:-1000000px;
-}
-
-@for $i from 1 through 30 {
-	.max-#{500+$i*50} {
-		max-width: 500+$i*50 + px;
-	}
-}
-
-@for $i from 1 through 100 {
-	.width-#{$i}-percent {
-		width: $i + unquote('%');
-	}
-}
-
-.margin-auto {
-	margin-left:auto;
-	margin-right:auto;
-}
-

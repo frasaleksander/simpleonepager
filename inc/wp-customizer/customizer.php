@@ -17,7 +17,7 @@ function simpletheme_customize_register( $wp_customize ) {
 
 	/* remove default colors section */
 	$wp_customize->remove_section('colors');
-
+	$wp_customize->remove_section('custom-css');
 }
 
 add_action( 'customize_register', 'simpletheme_customize_register' );

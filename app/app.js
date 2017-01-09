@@ -1,19 +1,20 @@
 window.jQuery = window.$ = require('jquery');
-require('wowjs');
-var Waypoint = require('waypoints/lib/jquery.waypoints.js');
+
+window.Waypoint = require('waypoints/lib/jquery.waypoints.js');
+
+window.ScreenSizeObserver = require('fa-screensizeobserver');
+
 require('./smooth-scroll/smooth-scroll.js');
-//require('./wow.init/wow.init.js')(WOW);
-console.log(window.WOW);
 
+require('./main-menu/main-menu.js');
 
+require('wowjs');
 
 
 
 (function($){
-
 	$(document).ready(function(){
 		$('li>ul, li>ol').parent().addClass('has-submenu');
-		
 	});
 })(window.jQuery);
 
