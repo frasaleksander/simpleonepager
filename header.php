@@ -14,6 +14,9 @@ $bloghref = esc_url( home_url( '/' ) );
 $description = get_bloginfo( 'description', 'display' );
 $custom_logo_id = get_theme_mod( 'custom_logo' );
 $logo_src = wp_get_attachment_image_src( $custom_logo_id , 'full' );
+$site_logo = simpletheme_get_theme_mod('site_logo_normal');
+$sticky_logo = simpletheme_get_theme_mod('site_logo_sticky');
+$show_logo = simpletheme_get_theme_mod('site_logo_normal_visibility');
 
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
@@ -25,6 +28,9 @@ $logo_src = wp_get_attachment_image_src( $custom_logo_id , 'full' );
 </head>
 
 <body <?php body_class(); ?>>
+<?php 
+	simpletheme_siteloader_view();
+?>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'simpletheme' ); ?></a>
 
@@ -47,14 +53,17 @@ $logo_src = wp_get_attachment_image_src( $custom_logo_id , 'full' );
 		</div><!-- .site-branding -->
 
 		<nav id="site-navigation" class="main-navigation nav-style-1" role="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'simpletheme' ); ?></button>
-			<?php if($logo_src): ?>
+			<button class="menu-toggle main-menu-button" aria-controls="primary-menu" aria-expanded="false"><?php 
+			//esc_html_e( 'Primary Menu', 'simpletheme' ); 
+			echo '<i class="ti-menu"></i>';
+			?></button>
+			<?php if($site_logo && $show_logo): ?>
 		    <div class="logo-container">
 		        <a href="<?php echo $bloghref; ?>" title="<?php echo $blogname . ' - ' . $description; ?>">
-		    	<img src="<?php echo $logo_src[0]; ?>" alt="<?php echo $blogname  . ' - ' . $description; ?>" >
+		    	<img src="<?php echo $site_logo; ?>" alt="<?php echo $blogname  . ' - ' . $description; ?>" >
 		        </a>
 		    </div><!-- logo-container -->
-		    <?php endif; //if($logo_src): ?>
+		    <?php endif; //if($site_logo): ?>
 			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->

@@ -1535,7 +1535,6 @@ https://github.com/yahoo/pure/blob/master/LICENSE.md
   border-collapse: collapse;
   border-spacing: 0;
   empty-cells: show;
-  border: 1px solid #cbcbcb;
 }
 /* line 15, ../sass/purecss/purecss/_tables.scss */
 .pure-table caption {
@@ -1546,7 +1545,6 @@ https://github.com/yahoo/pure/blob/master/LICENSE.md
 }
 /* line 22, ../sass/purecss/purecss/_tables.scss */
 .pure-table td, .pure-table th {
-  border-left: 1px solid #cbcbcb;
   /*  inner column border */
   border-width: 0 0 0 1px;
   font-size: inherit;
@@ -1580,8 +1578,8 @@ striping:
    odd  - #f2f2f2 (light gray)
 */
 /* line 62, ../sass/purecss/purecss/_tables.scss */
-.pure-table-odd td, .pure-table-striped tr:nth-child(2n-1) td {
-  background-color: #f2f2f2;
+.pure-table-odd td, .pure-table-striped tr:nth-child(2n-2) td {
+  background-color: rgba(73, 138, 171, 0.5);
 }
 
 /* nth-child selector for modern browsers */
@@ -7942,6 +7940,72 @@ striping:
   position: relative;
 }
 
+/* line 51, ../sass/extras/_extra-classes.scss */
+.panel-grid-cell {
+  margin: 0 !important;
+}
+
+@-moz-keyframes spin {
+  from {
+    -moz-transform: rotate(0deg);
+  }
+  to {
+    -moz-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* line 68, ../sass/extras/_extra-classes.scss */
+.position-relative {
+  position: relative;
+}
+
+/* line 72, ../sass/extras/_extra-classes.scss */
+.site-loader-icon-spin {
+  -ms-transform-origin: 50% 50%;
+  /* IE 9 */
+  -webkit-transform-origin: 50% 50%;
+  /* Chrome, Safari, Opera */
+  transform-origin: 50% 50%;
+  -webkit-animation-name: spin;
+  -webkit-animation-duration: 700ms;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-name: spin;
+  -moz-animation-duration: 700ms;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: linear;
+  -ms-animation-name: spin;
+  -ms-animation-duration: 700ms;
+  -ms-animation-iteration-count: infinite;
+  -ms-animation-timing-function: linear;
+  animation-name: spin;
+  animation-duration: 700ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+/* line 95, ../sass/extras/_extra-classes.scss */
+.text-over-image {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+}
+
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
@@ -8312,8 +8376,8 @@ a > img {
 }
 /* line 16, ../sass/navigation/_menus_my.scss */
 .logo-container img {
-  max-width: 9em;
-  max-height: 4.5em;
+  max-width: 10rem;
+  max-height: 5rem;
   cursor: pointer;
 }
 
@@ -8548,7 +8612,7 @@ a > img {
 /*--------------------------------------------------------------
 ## Comments
 --------------------------------------------------------------*/
-/* line 3, ../sass/site/primary/_header.scss */
+/* line 1, ../sass/site/primary/_header.scss */
 .top-headings {
   position: absolute;
   top: 50%;
@@ -8563,12 +8627,12 @@ a > img {
 }
 
 @media (min-width: 780px) {
-  /* line 14, ../sass/site/primary/_header.scss */
+  /* line 12, ../sass/site/primary/_header.scss */
   .sow-slider-base ul.sow-slider-images li.sow-slider-image .sow-slider-image-overlay {
     background-size: 110%;
   }
 
-  /* line 17, ../sass/site/primary/_header.scss */
+  /* line 15, ../sass/site/primary/_header.scss */
   .sow-slider-base ul.sow-slider-images li.sow-slider-image.cycle-slide-active .sow-slider-image-overlay {
     -moz-transition: all 10s ease 0s;
     -o-transition: all 10s ease 0s;

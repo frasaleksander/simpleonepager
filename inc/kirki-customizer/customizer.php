@@ -10,9 +10,16 @@ require_once get_template_directory() . '/inc/kirki-customizer/colors/colors-com
 require_once get_template_directory() . '/inc/kirki-customizer/style/style-common.php';
 require_once get_template_directory() . '/inc/kirki-customizer/typography/typography-common.php';
 require_once get_template_directory() . '/inc/kirki-customizer/page-elements/page-elements.php';
+require_once get_template_directory() . '/inc/kirki-customizer/site-loader/site-loader.php';
 require_once get_template_directory() . '/inc/kirki-customizer/custom-css/custom-css.php';
 require_once get_template_directory() . '/inc/kirki-customizer/custom-javascript/custom-javascript.php';
-require_once get_template_directory() . '/inc/kirki-customizer/custom-css/custom-css.php';
+
+
+
+
+
+
+
 
 if(class_exists('Simpletheme_Kirki')) {
 
@@ -67,10 +74,19 @@ $SimplethemeCustomizer->addWholeSection('page_description');
 $SimplethemeCustomizer->addWholeSection('custom_javascript');
 //
 $SimplethemeCustomizer->addWholeSection('custom_css');
-
+//
+$SimplethemeCustomizer->addWholeSection('site_logo');
+//
+$SimplethemeCustomizer->addWholeSection('site_loader');
 
 
 $SimplethemeCustomizer->outputCustomJavascript();
 $SimplethemeCustomizer->outputCustomCSS();
+
+
+
+
+
+
 
 } //if(class_exists('Simpletheme_Kirki')) {
