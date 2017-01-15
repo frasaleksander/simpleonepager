@@ -1,8 +1,5 @@
 <?php
 
-$SimplethemeCustomizer->buildWholeSection('site_logo', 'page_elements_panel', 
-
-	function($section_id, $panel_id){
 
 		/* CREATE SECTION */
 		Simpletheme_Kirki::add_section( $section_id, array(
@@ -325,10 +322,3 @@ $SimplethemeCustomizer->buildWholeSection('site_logo', 'page_elements_panel',
 			),
 		) );
 
-
-
-
-
-
-
-});

@@ -9,10 +9,11 @@ function simpletheme_get_option( $setting, $default ) {
     return $value;
 }
 
-function simpletheme_get_theme_mod($setting, $default='') {
-	$value = get_theme_mod($setting, array());
-	if(!$value) {
-		$value = $default;
-	}
-    return $value;
+function simpletheme_get_theme_mod($name, $default='') {
+    $mods = get_theme_mods();
+    if(!isset($mods[$name])) {
+        //echo $default . ";";
+        return $default;
+    }
+    return get_theme_mod($name, $default);
 }

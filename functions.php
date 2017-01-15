@@ -28,10 +28,17 @@ function simpletheme_setup() {
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
+	/*
+	 * Custom Logo
+	 */
+	/*
 	add_theme_support( 'custom-logo', array(
-	   'width'       => 300,
-	   'flex-width' => true,
-	 ));
+		'width'       => 300,
+		'flex-width' => true,
+	));*/
+
+
+
 	/*
 	 * Let WordPress manage the document title.
 	 * By adding theme support, we declare that this theme does not use a
@@ -158,7 +165,7 @@ require_once get_template_directory() . '/template-parts/navigation/navigation.p
  * Include customizer parts
  */
 require_once get_template_directory() . '/inc/wp-customizer/customizer.php';
-require_once get_template_directory() . '/inc/kirki-customizer/customizer.php';
+require_once SIMPLETHEME_CUSTOMIZER_PATH . '/customizer.php';
 
 /**
  * Load Jetpack compatibility file.

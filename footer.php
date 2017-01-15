@@ -21,6 +21,6 @@
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
-
+<?php SimplethemeCustomizer::show('custom_javascript'); ?>
 </body>
 </html>

@@ -1,15 +1,11 @@
 <?php
 
-$SimplethemeCustomizer->buildWholeSection('page_title', 'page_elements_panel', 
-
-	function($section_id, $panel_id){
-
 		/* CREATE SECTION */
 		Simpletheme_Kirki::add_section( $section_id, array(
 		    'priority'       => 10,
 		    'capability'     => CAPATIBILITY_EDIT_THEME_OPTIONS,
 		    'theme_supports' => '',
-		    'title'          => simpletheme_translate('Page Title'),
+		    'title'          => simpletheme_translate('Page Description'),
 		    'description'    => simpletheme_translate('Color, Typography, Margins ...'),
 		    'panel'          => $panel_id,
 		) );
@@ -18,12 +14,12 @@ $SimplethemeCustomizer->buildWholeSection('page_title', 'page_elements_panel',
 
 		Simpletheme_Kirki::add_field( THEME_TEXTDOMAIN, array(
 			'type'        => 'typography',
-			'settings'    => 'page_title_typography_common',
-			'label'       => simpletheme_esc_attr( 'Page Title Typography' ),
+			'settings'    => 'page_description_typography_common',
+			'label'       => simpletheme_esc_attr( 'Page Description Typography' ),
 			'section'     => $section_id,
 			'default'     => array(
 				'font-family'    => 'Open Sans',
-				'variant'        => '700',
+				'variant'        => 'regular',
 				'subsets'        => array( 'latin-ext' ),
 				'color'          => '#444444'
 				
@@ -31,7 +27,7 @@ $SimplethemeCustomizer->buildWholeSection('page_title', 'page_elements_panel',
 			'priority'    => 10,
 			'output'      => array(
 				array(
-					'element' => '.page-title, #page-title',
+					'element' => '.page-description, #page-description',
 				),
 			),
 		) );
@@ -40,12 +36,12 @@ $SimplethemeCustomizer->buildWholeSection('page_title', 'page_elements_panel',
 
 		Simpletheme_Kirki::add_field( THEME_TEXTDOMAIN, array(
 			'type'        => 'typography',
-			'settings'    => 'page_title_typography_large_desktop',
-			'label'       => simpletheme_esc_attr( 'Page Title Typography - Large Desktop' ),
+			'settings'    => 'page_description_typography_large_desktop',
+			'label'       => simpletheme_esc_attr( 'Page Description Typography - Large Desktop' ),
 			'section'     => $section_id,
 			'default'     => array(
-                'font-size'      => '5rem',
-				'line-height'    => '1.1',
+                'font-size'      => '1.625rem',
+				'line-height'    => '1.6',
 				'letter-spacing' => '0',
 				'text-transform' => 'uppercase',
 				'text-align'     => 'left',
@@ -54,26 +50,26 @@ $SimplethemeCustomizer->buildWholeSection('page_title', 'page_elements_panel',
 			'priority'    => 10,
 			'output'      => array(
 				array(
-					'element' => '.page-title, #page-title',
+					'element' => '.page-description, #page-description',
 				),
 			),
 		) );
 
 		Simpletheme_Kirki::add_field( THEME_TEXTDOMAIN, array(
 			'type'        => 'spacing',
-			'settings'    => 'page_title_margins_large_desktop',
-			'label'       => simpletheme_esc_attr( 'Page Title Margins - Large Desktop' ),
+			'settings'    => 'page_description_margins_large_desktop',
+			'label'       => simpletheme_esc_attr( 'Page Description Margins - Large Desktop' ),
 			'section'     => $section_id,
 			'default'     => array(
                 'top'     => '0rem',
-                'bottom'  => '1.7rem',
+                'bottom'  => '1.9rem',
                 'left'    => '0rem',
                 'right'   => '0rem',				
 			),
 			'priority'    => 10,
 			'output'      => array(
 				array(
-					'element' => '.page-title, #page-title',
+					'element' => '.page-description, #page-description',
 					'property' => 'margin',
 				),
 			),
@@ -83,12 +79,12 @@ $SimplethemeCustomizer->buildWholeSection('page_title', 'page_elements_panel',
 
 		Simpletheme_Kirki::add_field( THEME_TEXTDOMAIN, array(
 			'type'        => 'typography',
-			'settings'    => 'page_title_typography_desktop',
-			'label'       => simpletheme_esc_attr( 'Page Title Typography - Desktop' ),
+			'settings'    => 'page_description_typography_desktop',
+			'label'       => simpletheme_esc_attr( 'Page Description Typography - Desktop' ),
 			'section'     => $section_id,
 			'default'     => array(
-                'font-size'      => '4.5rem',
-				'line-height'    => '1.1',
+                'font-size'      => '1.4rem',
+				'line-height'    => '1.6',
 				'letter-spacing' => '0',
 				'text-transform' => 'uppercase',
 				'text-align'     => 'left',
@@ -98,19 +94,19 @@ $SimplethemeCustomizer->buildWholeSection('page_title', 'page_elements_panel',
 			'output'      => array(
 				array(
 					'media_query' => '@media (max-width: ' . DESKTOP_WIDTH_MAX . 'px)',
-					'element' => '.page-title, #page-title',
+					'element' => '.page-description, #page-description',
 				),
 			),
 		) );
 
 		Simpletheme_Kirki::add_field( THEME_TEXTDOMAIN, array(
 			'type'        => 'spacing',
-			'settings'    => 'page_title_margins_desktop',
-			'label'       => simpletheme_esc_attr( 'Page Title Margins - Desktop' ),
+			'settings'    => 'page_description_margins_desktop',
+			'label'       => simpletheme_esc_attr( 'Page Description Margins - Desktop' ),
 			'section'     => $section_id,
 			'default'     => array(
                 'top'     => '0rem',
-                'bottom'  => '1.5rem',
+                'bottom'  => '1.9rem',
                 'left'    => '0rem',
                 'right'   => '0rem',				
 			),
@@ -118,7 +114,7 @@ $SimplethemeCustomizer->buildWholeSection('page_title', 'page_elements_panel',
 			'output'      => array(
 				array(
 					'media_query' => '@media (max-width: ' . DESKTOP_WIDTH_MAX . 'px)',
-					'element' => '.page-title, #page-title',
+					'element' => '.page-description, #page-description',
 					'property' => 'margin',
 				),
 			),
@@ -128,12 +124,12 @@ $SimplethemeCustomizer->buildWholeSection('page_title', 'page_elements_panel',
 
 		Simpletheme_Kirki::add_field( THEME_TEXTDOMAIN, array(
 			'type'        => 'typography',
-			'settings'    => 'page_title_typography_tablet',
-			'label'       => simpletheme_esc_attr( 'Page Title Typography - Tablet' ),
+			'settings'    => 'page_description_typography_tablet',
+			'label'       => simpletheme_esc_attr( 'Page Description Typography - Tablet' ),
 			'section'     => $section_id,
 			'default'     => array(
-                'font-size'      => '3.5rem',
-				'line-height'    => '1.1',
+                'font-size'      => '1.25rem',
+				'line-height'    => '1.5',
 				'letter-spacing' => '0',
 				'text-transform' => 'uppercase',
 				'text-align'     => 'left',
@@ -143,19 +139,19 @@ $SimplethemeCustomizer->buildWholeSection('page_title', 'page_elements_panel',
 			'output'      => array(
 				array(
 					'media_query' => '@media (max-width: ' . TABLET_WIDTH_MAX . 'px)',
-					'element' => '.page-title, #page-title',
+					'element' => '.page-description, #page-description',
 				),
 			),
 		) );
 
 		Simpletheme_Kirki::add_field( THEME_TEXTDOMAIN, array(
 			'type'        => 'spacing',
-			'settings'    => 'page_title_margins_tablet',
-			'label'       => simpletheme_esc_attr( 'Page Title Margins - Tablet' ),
+			'settings'    => 'page_description_margins_tablet',
+			'label'       => simpletheme_esc_attr( 'Page Description Margins - Tablet' ),
 			'section'     => $section_id,
 			'default'     => array(
                 'top'     => '0rem',
-                'bottom'  => '1.25rem',
+                'bottom'  => '1.9rem',
                 'left'    => '0rem',
                 'right'   => '0rem',				
 			),
@@ -163,7 +159,7 @@ $SimplethemeCustomizer->buildWholeSection('page_title', 'page_elements_panel',
 			'output'      => array(
 				array(
 					'media_query' => '@media (max-width: ' . TABLET_WIDTH_MAX . 'px)',
-					'element' => '.page-title, #page-title',
+					'element' => '.page-description, #page-description',
 					'property' => 'margin',
 				),
 			),
@@ -173,12 +169,12 @@ $SimplethemeCustomizer->buildWholeSection('page_title', 'page_elements_panel',
 
 		Simpletheme_Kirki::add_field( THEME_TEXTDOMAIN, array(
 			'type'        => 'typography',
-			'settings'    => 'page_title_typography_mobile',
-			'label'       => simpletheme_esc_attr( 'Page Title Typography - Mobile' ),
+			'settings'    => 'page_description_typography_mobile',
+			'label'       => simpletheme_esc_attr( 'Page Description Typography - Mobile' ),
 			'section'     => $section_id,
 			'default'     => array(
-                'font-size'      => '3.5rem',
-				'line-height'    => '1.1',
+                'font-size'      => '1.25rem',
+				'line-height'    => '1.5',
 				'letter-spacing' => '0',
 				'text-transform' => 'uppercase',
 				'text-align'     => 'left',
@@ -188,19 +184,19 @@ $SimplethemeCustomizer->buildWholeSection('page_title', 'page_elements_panel',
 			'output'      => array(
 				array(
 					'media_query' => '@media (max-width: ' . MOBILE_WIDTH_MAX . 'px)',
-					'element' => '.page-title, #page-title',
+					'element' => '.page-description, #page-description',
 				),
 			),
 		) );
 
 		Simpletheme_Kirki::add_field( THEME_TEXTDOMAIN, array(
 			'type'        => 'spacing',
-			'settings'    => 'page_title_margins_mobile',
-			'label'       => simpletheme_esc_attr( 'Page Title Margins - Mobile' ),
+			'settings'    => 'page_description_margins_mobile',
+			'label'       => simpletheme_esc_attr( 'Page Description Margins - Mobile' ),
 			'section'     => $section_id,
 			'default'     => array(
                 'top'     => '0rem',
-                'bottom'  => '1.5rem',
+                'bottom'  => '1.9rem',
                 'left'    => '0rem',
                 'right'   => '0rem',				
 			),
@@ -208,11 +204,8 @@ $SimplethemeCustomizer->buildWholeSection('page_title', 'page_elements_panel',
 			'output'      => array(
 				array(
 					'media_query' => '@media (max-width: ' . MOBILE_WIDTH_MAX . 'px)',
-					'element' => '.page-title, #page-title',
+					'element' => '.page-description, #page-description',
 					'property' => 'margin',
 				),
 			),
 		) );
-
-
-});
