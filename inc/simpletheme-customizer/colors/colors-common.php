@@ -390,34 +390,7 @@ $SimplethemeCustomizer->buildWholeSection( 'colors_common', 'colors_panel', func
 		/*
 		 * Code Color
 		 */
-		Simpletheme_Kirki::add_field( THEME_TEXTDOMAIN, array(
-		    'type'        => 'multicolor',
-		    'settings'    => 'body_code_color',
-		    'label'       => simpletheme_esc_attr( 'Code Color' ),
-		    'section'     =>  $section_id,
-		    'priority'    => 10,
-		    'choices'     => array(
-		        'bgcolor'      => simpletheme_esc_attr( 'Background' ),
-		        'txtcolor'     => simpletheme_esc_attr( 'Text' ),
-		    ),
-		    'default'     => array(
-		        'bgcolor'      => '#f7f7f7',
-		        'txtcolor'     => 'rgba(68,6,6,0.6)',
-		    ),
-		    'output'      => array(
-		    	array(
-		    		'choice'   => 'bgcolor',
-		    		'element'  => '.highlight, code, kbd',
-		    		'property' => 'background-color',
-		    	),
-		    	array(
-		    		'choice'   => 'txtcolor',
-		    		'element'  => '.highlight, code, kbd',
-		    		'property' => 'color',
-		    	),
-		
-		    ),
-		) );
+
 
 });
 

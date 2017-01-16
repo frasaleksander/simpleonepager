@@ -67,6 +67,7 @@ SimplethemeCustomizer::requireSection('h3', 'basic_html_panel');
 SimplethemeCustomizer::requireSection('h4', 'basic_html_panel');
 SimplethemeCustomizer::requireSection('h5', 'basic_html_panel');
 SimplethemeCustomizer::requireSection('h6', 'basic_html_panel');
+SimplethemeCustomizer::requireSection('code', 'basic_html_panel');
 SimplethemeCustomizer::requireSection('page_title', 'page_elements_panel');
 SimplethemeCustomizer::requireSection('page_description', 'page_elements_panel');
 SimplethemeCustomizer::requireSection('site_logo', 'page_elements_panel');
