@@ -1,9 +1,9 @@
 <?php
 
 		$button_css_selector = 'button, input[type="button"], input[type="reset"], input[type="submit"], .btn';
-		$button_css_selector_hover = hover_css_selector($button_css_selector);
-		$button_css_selector_active = active_css_selector($button_css_selector);
-		$button_css_selector_focus = focus_css_selector($button_css_selector);
+		$button_css_selector_hover = css_selector_hover($button_css_selector);
+		$button_css_selector_active = css_selector_active($button_css_selector);
+		$button_css_selector_focus = css_selector_focus($button_css_selector);
 		//echo $button_css_selector_hover;
 
 		/* CREATE SECTION */

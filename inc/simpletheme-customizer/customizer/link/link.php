@@ -1,4 +1,10 @@
 <?php
+		$a_css_selector = 'a';
+		$a_css_selector_hover = css_selector_hover($a_css_selector);
+		$a_css_selector_link = css_selector_link($a_css_selector);
+		$a_css_selector_active = css_selector_active($a_css_selector);
+		$a_css_selector_visited = css_selector_visited($a_css_selector);
+		
 		/* CREATE SECTION */
 		Simpletheme_Kirki::add_section( $section_id, array(
 		    'priority'       => 10,
@@ -35,22 +41,22 @@
 		    'output'      => array(
 		    	array(
 		    		'choice'   => 'color',
-		    		'element'  => 'a,a:link',
+		    		'element'  => $a_css_selector . ',' . $a_css_selector_link,
 		    		'property' => 'color',
 		    	),
 		    	array(
 		    		'choice'   => 'hover',
-		    		'element'  => 'a:hover',
+		    		'element'  => $a_css_selector_hover,
 		    		'property' => 'color',
 		    	),
 		    	array(
 		    		'choice'   => 'active',
-		    		'element'  => 'a:active',
+		    		'element'  => $a_css_selector_active,
 		    		'property' => 'color',
 		    	),
 		    	array(
 		    		'choice'   => 'visited',
-		    		'element'  => 'a:visited',
+		    		'element'  => $a_css_selector_visited,
 		    		'property' => 'color',
 		    	),
 		    ),

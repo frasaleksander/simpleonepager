@@ -24,18 +24,22 @@ function pseudo_css_selector($selector, $x) {
     }, explode(',', $selector)));
 }
 
-function hover_css_selector($selector) {
+function css_selector_hover($selector) {
     return pseudo_css_selector($selector, ':hover');
 }
 
-function active_css_selector($selector) {
+function css_selector_active($selector) {
     return pseudo_css_selector($selector, ':active');
 }
 
-function focus_css_selector($selector) {
+function css_selector_focus($selector) {
     return pseudo_css_selector($selector, ':focus');
 }
 
-function visited_css_selector($selector) {
+function css_selector_visited($selector) {
     return pseudo_css_selector($selector, ':visited');
+}
+
+function css_selector_link($selector) {
+    return pseudo_css_selector($selector, ':link');
 }
