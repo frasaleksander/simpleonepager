@@ -27,6 +27,7 @@ SimplethemeCustomizer::config();
  * PANELS 
  */
 SimplethemeCustomizer::requirePanel('page_elements_panel');
+SimplethemeCustomizer::requirePanel('basic_html_panel');
 
 Simpletheme_Kirki::add_panel( 'colors_panel', array(
 	'priority'       => 41,
@@ -56,14 +57,21 @@ Simpletheme_Kirki::add_panel( 'style_panel', array(
 $SimplethemeCustomizer->addWholeSection('style_common');
 $SimplethemeCustomizer->addWholeSection('colors_common');
 $SimplethemeCustomizer->addWholeSection('typography_common');
-
 /*
  * SECTIONS 
  */
+SimplethemeCustomizer::requireSection('paragraph', 'basic_html_panel');
+SimplethemeCustomizer::requireSection('h1', 'basic_html_panel');
+SimplethemeCustomizer::requireSection('h2', 'basic_html_panel');
+SimplethemeCustomizer::requireSection('h3', 'basic_html_panel');
+SimplethemeCustomizer::requireSection('h4', 'basic_html_panel');
+SimplethemeCustomizer::requireSection('h5', 'basic_html_panel');
+SimplethemeCustomizer::requireSection('h6', 'basic_html_panel');
 SimplethemeCustomizer::requireSection('page_title', 'page_elements_panel');
 SimplethemeCustomizer::requireSection('page_description', 'page_elements_panel');
 SimplethemeCustomizer::requireSection('site_logo', 'page_elements_panel');
-SimplethemeCustomizer::requireSection('site_loader');
+SimplethemeCustomizer::requireSection('site_loader', 'page_elements_panel');
+
 SimplethemeCustomizer::requireSection('custom_css');
 SimplethemeCustomizer::requireSection('custom_javascript');
 

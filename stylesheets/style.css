@@ -1578,7 +1578,7 @@ striping:
    odd  - #f2f2f2 (light gray)
 */
 /* line 62, ../sass/purecss/purecss/_tables.scss */
-.pure-table-odd td, .pure-table-striped tr:nth-child(2n-2) td {
+.pure-table-odd td, .pure-table-striped tr:nth-child(2n-1) td {
   background-color: rgba(73, 138, 171, 0.5);
 }
 
@@ -8070,6 +8070,16 @@ striping:
   display: block;
 }
 
+/* line 86, ../sass/extras/_extra-classes.scss */
+.color-white {
+  color: #fff;
+}
+
+/* line 90, ../sass/extras/_extra-classes.scss */
+.color-black {
+  color: #000;
+}
+
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
@@ -8092,63 +8102,62 @@ h1, h2, h3, h4, h5, h6 {
 /* line 1, ../sass/typography/_copy.scss */
 p {
   font-size: inherit;
-  line-height: 1.6;
-  margin-bottom: 1rem;
+  line-height: inherit;
   text-rendering: optimizeLegibility;
 }
 
-/* line 8, ../sass/typography/_copy.scss */
+/* line 7, ../sass/typography/_copy.scss */
 dfn, cite, em, i {
   font-style: italic;
 }
 
-/* line 12, ../sass/typography/_copy.scss */
+/* line 11, ../sass/typography/_copy.scss */
 blockquote {
   margin: 0 1.5em;
 }
 
-/* line 16, ../sass/typography/_copy.scss */
+/* line 15, ../sass/typography/_copy.scss */
 blockquote, blockquote p {
   line-height: 1.6;
 }
 
-/* line 20, ../sass/typography/_copy.scss */
+/* line 19, ../sass/typography/_copy.scss */
 address {
   margin: 0 0 1.5em;
 }
 
-/* line 24, ../sass/typography/_copy.scss */
+/* line 23, ../sass/typography/_copy.scss */
 code, kbd, tt, var {
   font-size: 15px;
   font-size: 0.9375rem;
 }
 
-/* line 31, ../sass/typography/_copy.scss */
+/* line 30, ../sass/typography/_copy.scss */
 .highlight {
   margin: 1em 0;
   font-size: 1rem;
   padding: 1rem;
 }
 
-/* line 37, ../sass/typography/_copy.scss */
+/* line 36, ../sass/typography/_copy.scss */
 pre, xmp, plaintext, listing {
   display: block;
   white-space: pre;
 }
 
-/* line 42, ../sass/typography/_copy.scss */
+/* line 41, ../sass/typography/_copy.scss */
 abbr, acronym {
   border-bottom: 1px dotted #666;
   cursor: help;
 }
 
-/* line 47, ../sass/typography/_copy.scss */
+/* line 46, ../sass/typography/_copy.scss */
 mark, ins {
   background: #fff9c0;
   text-decoration: none;
 }
 
-/* line 52, ../sass/typography/_copy.scss */
+/* line 51, ../sass/typography/_copy.scss */
 big {
   font-size: 125%;
 }
@@ -8289,7 +8298,7 @@ input[type="submit"],
   font-size: 0.9rem;
   line-height: 1;
   border-radius: 0;
-  padding: .75em 1.25em;
+  padding: 0.85em 1.50em;
   margin: 0 0 1rem;
   -webkit-appearance: none;
   transition: background-color .25s ease-out,color .25s ease-out;

@@ -17,7 +17,7 @@ define('DESKTOP_WIDTH_MIN', 1025);
 define('DESKTOP_WIDTH_MAX', 1440);
 define('LARGE_DESKTOP_WIDTH_MIN', 1441);
 
-define('MOBILE_INFO_TEXT', 'Mobile devices - under 768px');
-define('TABLET_INFO_TEXT', 'Tablet Devices - 768px - 1024px');
-define('DESKTOP_INFO_TEXT', 'Desktop Devices - 1025px - 1440px');
-define('LARGE_DESKTOP_INFO_TEXT', 'Large Desktop Devices - over 1440px');
+define('MOBILE_INFO_TEXT', 'Mobile - under ' . TABLET_WIDTH_MIN . 'px');
+define('TABLET_INFO_TEXT', 'Tablet - from ' . TABLET_WIDTH_MIN . 'px to ' . TABLET_WIDTH_MAX . 'px');
+define('DESKTOP_INFO_TEXT', 'Desktop - from ' . DESKTOP_WIDTH_MIN . 'px to ' . DESKTOP_WIDTH_MAX . 'px');
+define('LARGE_DESKTOP_INFO_TEXT', 'Large Desktop - over ' . DESKTOP_WIDTH_MAX . 'px');

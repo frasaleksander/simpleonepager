@@ -30,38 +30,6 @@ $SimplethemeCustomizer->buildWholeSection( 'colors_common', 'colors_panel', func
 				)
 		) );
 
-		Simpletheme_Kirki::add_field( THEME_TEXTDOMAIN, array(
-			'type'        => 'color',
-			'settings'    => 'body_text_color',
-			'label'       => simpletheme_translate('Text Color'),
-			'section'     =>  $section_id,
-			'default'     => '#000000',
-			'priority'    => 10,
-			'choices'     => array( 'alpha' => true ),
-			'output'         => array(
-		    	array(
-		    		'element' => 'body',
-		    		'property' => 'color',
-		    	),
-		    ),
-		) );
-
-		Simpletheme_Kirki::add_field( THEME_TEXTDOMAIN, array(
-			'type'        => 'color',
-			'settings'    => 'body_title_color',
-			'label'       => simpletheme_translate('Title Color'),
-			'section'     =>  $section_id,
-			'default'     => '#444444',
-			'priority'    => 10,
-			'choices'     => array( 'alpha' => true ),
-			'output'      => array(
-				array(
-		    		'element' => 'h1,h2,h3,h4,h5,h6',
-		    		'property' => 'color'
-		    	),
-		    ),
-		) );
-
 		/*
 		 * Link Color
 		 */
