@@ -184,6 +184,42 @@
 		    ),
 		) );
 
+		/*
+		 * Border Radius 
+		 */
+		Simpletheme_Kirki::add_field( THEME_TEXTDOMAIN, array(
+			'type'        => 'dimension',
+			'settings'    => 'button_border_radius',
+			'label'       => simpletheme_esc_attr( 'Button Border Radius'),
+			'section'     => $section_id,
+			'default'     => '0px',
+			'priority'    => 10,
+			'output'      => array(
+				array(
+					'element' => $button_css_selector,
+					'property' => 'border-radius',
+				),
+			),
+		) );
+
+		/*
+		 * Border Width 
+		 */
+		Simpletheme_Kirki::add_field( THEME_TEXTDOMAIN, array(
+			'type'        => 'dimension',
+			'settings'    => 'button_border_width',
+			'label'       => simpletheme_esc_attr( 'Button Border Width'),
+			'section'     => $section_id,
+			'default'     => '1px',
+			'priority'    => 10,
+			'output'      => array(
+				array(
+					'element' => $button_css_selector,
+					'property' => 'border-width',
+				),
+			),
+		) );
+
 		/* LARGE DESKTOP */
 
 		Simpletheme_Kirki::add_field( THEME_TEXTDOMAIN, array(
@@ -196,7 +232,6 @@
 				'line-height'    => '1',
 				'letter-spacing' => '0',
 				'text-transform' => 'none',
-				'text-align'     => 'left',
 				
 			),
 			'priority'    => 10,
@@ -233,8 +268,8 @@
 			'label'       => simpletheme_esc_attr( 'Button Padding - ' . LARGE_DESKTOP_INFO_TEXT ),
 			'section'     => $section_id,
 			'default'     => array(
-                'top'     => '0.85rem',
-                'bottom'  => '0.85rem',
+                'top'     => '0.80rem',
+                'bottom'  => '0.80rem',
                 'left'    => '1.50rem',
                 'right'   => '1.50rem',				
 			),
@@ -259,7 +294,6 @@
 				'line-height'    => '1',
 				'letter-spacing' => '0',
 				'text-transform' => 'none',
-				'text-align'     => 'left',
 				
 			),
 			'priority'    => 10,
@@ -298,8 +332,8 @@
 			'label'       => simpletheme_esc_attr( 'Button Padding - ' . DESKTOP_INFO_TEXT ),
 			'section'     => $section_id,
 			'default'     => array(
-                'top'     => '0.85rem', 
-                'bottom'  => '0.85rem',
+                'top'     => '0.7rem', 
+                'bottom'  => '0.7rem',
                 'left'    => '1.50rem',
                 'right'   => '1.50rem',				
 			),
@@ -326,7 +360,6 @@
 				'line-height'    => '1',
 				'letter-spacing' => '0',
 				'text-transform' => 'none',
-				'text-align'     => 'left',
 				
 			),
 			'priority'    => 10,
@@ -366,8 +399,8 @@
 			'label'       => simpletheme_esc_attr( 'Button Padding - ' . TABLET_INFO_TEXT ),
 			'section'     => $section_id,
 			'default'     => array(
-                'top'     => '0.85rem', 
-                'bottom'  => '0.85rem',
+                'top'     => '0.80rem', 
+                'bottom'  => '0.80rem',
                 'left'    => '1.50rem',
                 'right'   => '1.50rem',	
 			),
@@ -393,7 +426,6 @@
 				'line-height'    => '1',
 				'letter-spacing' => '0',
 				'text-transform' => 'none',
-				'text-align'     => 'left',
 				
 			),
 			'priority'    => 10,
@@ -432,8 +464,8 @@
 			'label'       => simpletheme_esc_attr( 'Button Padding - ' . MOBILE_INFO_TEXT ),
 			'section'     => $section_id,
 			'default'     => array(
-                'top'     => '0.85rem', 
-                'bottom'  => '0.85rem',
+                'top'     => '0.80rem', 
+                'bottom'  => '0.80rem',
                 'left'    => '1.50rem',
                 'right'   => '1.50rem',				
 			),
