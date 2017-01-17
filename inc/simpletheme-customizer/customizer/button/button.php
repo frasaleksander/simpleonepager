@@ -282,6 +282,21 @@
 			),
 		) );
 
+		Simpletheme_Kirki::add_field( THEME_TEXTDOMAIN, array(
+			'type'        => 'dimension',
+			'settings'    => 'button_min_width_large_desktop',
+			'label'       => simpletheme_esc_attr( 'Button Minimum Width - ' . LARGE_DESKTOP_INFO_TEXT ),
+			'section'     => $section_id,
+			'default'     => '7.5rem',
+			'priority'    => 10,
+			'output'      => array(
+				array(
+					'element' => $button_css_selector,
+					'property' => 'min-width',
+				),
+			),
+		) );
+
 		/* DESKTOP */
 
 		Simpletheme_Kirki::add_field( THEME_TEXTDOMAIN, array(
@@ -343,6 +358,22 @@
 					'media_query' => '@media (max-width: ' . DESKTOP_WIDTH_MAX . 'px)',
 					'element' => $button_css_selector,
 					'property' => 'padding',
+				),
+			),
+		) );
+
+		Simpletheme_Kirki::add_field( THEME_TEXTDOMAIN, array(
+			'type'        => 'dimension',
+			'settings'    => 'button_min_width_desktop',
+			'label'       => simpletheme_esc_attr( 'Button Minimum Width - ' . DESKTOP_INFO_TEXT ),
+			'section'     => $section_id,
+			'default'     => '7.5rem',
+			'priority'    => 10,
+			'output'      => array(
+				array(
+					'media_query' => '@media (max-width: ' . DESKTOP_WIDTH_MAX . 'px)',
+					'element' => $button_css_selector,
+					'property' => 'min-width',
 				),
 			),
 		) );
@@ -414,6 +445,22 @@
 			),
 		) );
 
+		Simpletheme_Kirki::add_field( THEME_TEXTDOMAIN, array(
+			'type'        => 'dimension',
+			'settings'    => 'button_min_width_tablet',
+			'label'       => simpletheme_esc_attr( 'Button Minimum Width - ' . TABLET_INFO_TEXT ),
+			'section'     => $section_id,
+			'default'     => '7.5rem',
+			'priority'    => 10,
+			'output'      => array(
+				array(
+					'media_query' => '@media (max-width: ' . TABLET_WIDTH_MAX . 'px)',
+					'element' => $button_css_selector,
+					'property' => 'min-width',
+				),
+			),
+		) );
+
 		/* MOBILE */
 
 		Simpletheme_Kirki::add_field( THEME_TEXTDOMAIN, array(
@@ -475,6 +522,22 @@
 					'media_query' => '@media (max-width: ' . MOBILE_WIDTH_MAX . 'px)',
 					'element' => $button_css_selector,
 					'property' => 'padding',
+				),
+			),
+		) );
+
+		Simpletheme_Kirki::add_field( THEME_TEXTDOMAIN, array(
+			'type'        => 'dimension',
+			'settings'    => 'button_min_width_mobile',
+			'label'       => simpletheme_esc_attr( 'Button Minimum Width - ' . MOBILE_INFO_TEXT ),
+			'section'     => $section_id,
+			'default'     => '100%',
+			'priority'    => 10,
+			'output'      => array(
+				array(
+					'media_query' => '@media (max-width: ' . MOBILE_WIDTH_MAX . 'px)',
+					'element' => $button_css_selector,
+					'property' => 'width',
 				),
 			),
 		) );
