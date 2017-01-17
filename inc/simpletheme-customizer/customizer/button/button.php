@@ -220,6 +220,41 @@
 			),
 		) );
 
+		/* 
+		 * Button Border Style
+		 */
+		Simpletheme_Kirki::add_field( THEME_TEXTDOMAIN, array(
+		    'type'        => 'select',
+		    'settings'    => 'button_border_style',
+		    'label'       =>  simpletheme_esc_attr( 'Button Border Style' ),
+		    'section'     =>  $section_id,
+		    'priority'    => 10,
+		    'choices'     => array(
+		        'none'      => simpletheme_esc_attr( 'none' ),
+		        'solid'     => simpletheme_esc_attr( 'Solid' ),
+		        'dashed'  => simpletheme_esc_attr( 'Dashed' ),
+		    ),
+		    'default'     => 'solid',
+		    'output'      => array(
+		    	array(
+		    		'choice'   => 'none',
+		    		'element'  => $button_css_selector,
+		    		'property' => 'border-style',
+		    	),
+		    	array(
+		    		'choice'   => 'solid',
+		    		'element'  => $button_css_selector,
+		    		'property' => 'border-style',
+		    	),
+		    	array(
+		    		'choice'   => 'dashed',
+		    		'element'  => $button_css_selector,
+		    		'property' => 'border-style',
+		    	),
+		
+		    ),
+		) );
+
 		/* LARGE DESKTOP */
 
 		Simpletheme_Kirki::add_field( THEME_TEXTDOMAIN, array(
@@ -531,13 +566,13 @@
 			'settings'    => 'button_min_width_mobile',
 			'label'       => simpletheme_esc_attr( 'Button Minimum Width - ' . MOBILE_INFO_TEXT ),
 			'section'     => $section_id,
-			'default'     => '100%',
+			'default'     => '7.5rem',
 			'priority'    => 10,
 			'output'      => array(
 				array(
 					'media_query' => '@media (max-width: ' . MOBILE_WIDTH_MAX . 'px)',
 					'element' => $button_css_selector,
-					'property' => 'width',
+					'property' => 'min-width',
 				),
 			),
 		) );

@@ -7,7 +7,12 @@
 	max-width:400px;
 	text-align:center;
 }
-
+@media (max-width:$mobile-break) {
+	.top-headings {
+		left:5%;
+		width:90%;
+	}
+}
 @media (min-width:$mobile-break) {
 	.sow-slider-base ul.sow-slider-images li.sow-slider-image .sow-slider-image-overlay {
 		background-size:110%;

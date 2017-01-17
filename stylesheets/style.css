@@ -8699,13 +8699,20 @@ a > img {
   text-align: center;
 }
 
+@media (max-width: 780px) {
+  /* line 11, ../sass/site/primary/_header.scss */
+  .top-headings {
+    left: 5%;
+    width: 90%;
+  }
+}
 @media (min-width: 780px) {
-  /* line 12, ../sass/site/primary/_header.scss */
+  /* line 17, ../sass/site/primary/_header.scss */
   .sow-slider-base ul.sow-slider-images li.sow-slider-image .sow-slider-image-overlay {
     background-size: 110%;
   }
 
-  /* line 15, ../sass/site/primary/_header.scss */
+  /* line 20, ../sass/site/primary/_header.scss */
   .sow-slider-base ul.sow-slider-images li.sow-slider-image.cycle-slide-active .sow-slider-image-overlay {
     -moz-transition: all 10s ease 0s;
     -o-transition: all 10s ease 0s;

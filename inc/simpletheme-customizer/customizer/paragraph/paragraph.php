@@ -173,7 +173,7 @@
 			'label'       => simpletheme_esc_attr( 'Paragraph Typography - ' . MOBILE_INFO_TEXT ),
 			'section'     => $section_id,
 			'default'     => array(
-                'font-size'      => '0.750rem',
+                'font-size'      => '0.875rem',
 				'line-height'    => '1.6',
 				'letter-spacing' => '0',
 				'text-transform' => 'none',
