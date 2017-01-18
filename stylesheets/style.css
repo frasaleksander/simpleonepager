@@ -8063,19 +8063,11 @@ striping:
 }
 
 /* line 79, ../sass/extras/_extra-classes.scss */
-.text-over-image {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  display: block;
-}
-
-/* line 86, ../sass/extras/_extra-classes.scss */
 .color-white {
   color: #fff;
 }
 
-/* line 90, ../sass/extras/_extra-classes.scss */
+/* line 83, ../sass/extras/_extra-classes.scss */
 .color-black {
   color: #000;
 }
@@ -8278,7 +8270,7 @@ figure {
 
 /* line 1, ../sass/elements/_tables.scss */
 table {
-  margin: 0 0 1.5em;
+  margin: 0 0 3rem;
   width: 100%;
 }
 
@@ -8702,8 +8694,8 @@ a > img {
 @media (max-width: 780px) {
   /* line 11, ../sass/site/primary/_header.scss */
   .top-headings {
-    left: 5%;
-    width: 90%;
+    left: 10%;
+    width: 80%;
   }
 }
 @media (min-width: 780px) {
