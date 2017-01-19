@@ -139,6 +139,15 @@ function simpletheme_register_required_plugins() {
 			'required'  => true,
 			//'force_activation' => true,
 		),
+		array(
+			'name'      => 'Customizer Export/Import',
+			'slug'      => 'customizer-export-import',
+			'required'  => true,
+			//'force_activation' => true,
+		),
+
+
+		
 		
 		// This is an example of the use of 'is_callable' functionality. A user could - for instance -
 		// have WPSEO installed *or* WPSEO Premium. The slug would in that last case be different, i.e.
