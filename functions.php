@@ -116,6 +116,8 @@ add_action( 'widgets_init', 'simpletheme_widgets_init' );
  * Enqueue scripts and styles.
  */
 function simpletheme_css_scripts() {
+	wp_enqueue_style( 'dashicons' );
+
 	wp_enqueue_style(  'animate', get_template_directory_uri() . '/css/animate.css/animate.css' );
 	wp_enqueue_style(  'simpletheme', get_template_directory_uri() . '/stylesheets/style.css' );
 }

@@ -283,7 +283,8 @@
 				array(
 					'media_query' => '@media (max-width: ' . MOBILE_WIDTH_MAX . 'px)',
 					'element'  => '.main-navigation.nav-style-1',
-					'property' => 'min-height'
+					'property' => 'min-height',
+					'value_pattern' => 'calc(1rem + $)',
 				)
 			),
 		) );

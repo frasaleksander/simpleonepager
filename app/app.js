@@ -1,5 +1,7 @@
 window.jQuery = window.$ = require('jquery');
 
+require('./helpers/navigation.js');
+
 window.Waypoint = require('waypoints/lib/jquery.waypoints.js');
 
 window.ScreenSizeObserver = require('fa-screensizeobserver');

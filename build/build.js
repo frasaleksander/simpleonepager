@@ -1,6 +1,8 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 window.jQuery = window.$ = require('jquery');
 
+require('./helpers/navigation.js');
+
 window.Waypoint = require('waypoints/lib/jquery.waypoints.js');
 
 window.ScreenSizeObserver = require('fa-screensizeobserver');
@@ -22,16 +24,134 @@ require('wowjs');
 })(window.jQuery);
 
 
-},{"./main-menu/main-menu.js":3,"./smooth-scroll/smooth-scroll.js":5,"classlist-polyfill":6,"fa-screensizeobserver":7,"jquery":9,"waypoints/lib/jquery.waypoints.js":10,"wowjs":11}],2:[function(require,module,exports){
+},{"./helpers/navigation.js":2,"./main-menu/main-menu.js":4,"./smooth-scroll/smooth-scroll.js":6,"classlist-polyfill":7,"fa-screensizeobserver":8,"jquery":10,"waypoints/lib/jquery.waypoints.js":11,"wowjs":12}],2:[function(require,module,exports){
+/**
+ * File navigation.js.
+ *
+ * Handles toggling the navigation menu for small screens and enables TAB key
+ * navigation support for dropdown menus.
+ */
+( function() {
+	var navhead, container, button, menu, links, subMenus, i, len;
+
+	navhead = document.getElementById('navhead');
+
+	container = document.getElementById( 'site-navigation' );
+	if ( ! container ) {
+		return;
+	}
+
+	button = container.getElementsByTagName( 'button' )[0];
+	if ( 'undefined' === typeof button ) {
+		return;
+	}
+
+	menu = container.getElementsByTagName( 'ul' )[0];
+
+	// Hide menu toggle button if menu is empty and return early.
+	if ( 'undefined' === typeof menu ) {
+		button.style.display = 'none';
+		return;
+	}
+
+	menu.setAttribute( 'aria-expanded', 'false' );
+	if ( -1 === menu.className.indexOf( 'nav-menu' ) ) {
+		menu.className += ' nav-menu';
+	}
+
+	button.onclick = function() {
+		if ( -1 !== container.className.indexOf( 'toggled' ) ) {
+			container.className = container.className.replace( ' toggled', '' );
+			button.setAttribute( 'aria-expanded', 'false' );
+			menu.setAttribute( 'aria-expanded', 'false' );
+			navhead.setAttribute('aria-expanded', 'false');
+		} else {
+			container.className += ' toggled';
+			button.setAttribute( 'aria-expanded', 'true' );
+			menu.setAttribute( 'aria-expanded', 'true' );
+			navhead.setAttribute('aria-expanded', 'true');
+		}
+	};
+
+	// Get all the link elements within the menu.
+	links    = menu.getElementsByTagName( 'a' );
+	subMenus = menu.getElementsByTagName( 'ul' );
+
+	// Set menu items with submenus to aria-haspopup="true".
+	for ( i = 0, len = subMenus.length; i < len; i++ ) {
+		subMenus[i].parentNode.setAttribute( 'aria-haspopup', 'true' );
+	}
+
+	// Each time a menu link is focused or blurred, toggle focus.
+	for ( i = 0, len = links.length; i < len; i++ ) {
+		links[i].addEventListener( 'focus', toggleFocus, true );
+		links[i].addEventListener( 'blur', toggleFocus, true );
+	}
+
+	/**
+	 * Sets or removes .focus class on an element.
+	 */
+	function toggleFocus() {
+		var self = this;
+
+		// Move up through the ancestors of the current link until we hit .nav-menu.
+		while ( -1 === self.className.indexOf( 'nav-menu' ) ) {
+
+			// On li elements toggle the class .focus.
+			if ( 'li' === self.tagName.toLowerCase() ) {
+				if ( -1 !== self.className.indexOf( 'focus' ) ) {
+					self.className = self.className.replace( ' focus', '' );
+				} else {
+					self.className += ' focus';
+				}
+			}
+
+			self = self.parentElement;
+		}
+	}
+
+	/**
+	 * Toggles `focus` class to allow submenu access on tablets.
+	 */
+	( function( container ) {
+		var touchStartFn, i,
+			parentLink = container.querySelectorAll( '.menu-item-has-children > a, .page_item_has_children > a' );
+
+		if ( 'ontouchstart' in window ) {
+			touchStartFn = function( e ) {
+				var menuItem = this.parentNode, i;
+
+				if ( ! menuItem.classList.contains( 'focus' ) ) {
+					e.preventDefault();
+					for ( i = 0; i < menuItem.parentNode.children.length; ++i ) {
+						if ( menuItem === menuItem.parentNode.children[i] ) {
+							continue;
+						}
+						menuItem.parentNode.children[i].classList.remove( 'focus' );
+					}
+					menuItem.classList.add( 'focus' );
+				} else {
+					menuItem.classList.remove( 'focus' );
+				}
+			};
+
+			for ( i = 0; i < parentLink.length; ++i ) {
+				parentLink[i].addEventListener( 'touchstart', touchStartFn, false );
+			}
+		}
+	}( container ) );
+} )();
+
+},{}],3:[function(require,module,exports){
 module.exports = {
 	"menuType" : 1,
 };
-},{}],3:[function(require,module,exports){
+},{}],4:[function(require,module,exports){
 
 var mainMenuConfig = require('./config.js');
 
 require('./mobile/mobile-1.js')(mainMenuConfig);
-},{"./config.js":2,"./mobile/mobile-1.js":4}],4:[function(require,module,exports){
+},{"./config.js":3,"./mobile/mobile-1.js":5}],5:[function(require,module,exports){
 module.exports = function(config) {
 	
 	if(config.menuType != 1) {
@@ -43,22 +163,23 @@ module.exports = function(config) {
 }
 
 
-},{}],5:[function(require,module,exports){
+},{}],6:[function(require,module,exports){
 (function($) {
+  var header = document.getElementById('navhead');
   $('a[href*="#"]:not([href="#"])').click(function() {
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
       var target = $(this.hash);
       target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
       if (target.length) {
         $('html, body').animate({
-          scrollTop: target.offset().top - 0
+          scrollTop: target.offset().top - (($(window).width()<768) ? $(navhead).height() : 0)
         }, 500);
         return false;
       }
     }
   });
 })(window.jQuery);
-},{}],6:[function(require,module,exports){
+},{}],7:[function(require,module,exports){
 /*
  * classList.js: Cross-browser full element.classList implementation.
  * 2014-07-23
@@ -301,7 +422,7 @@ if ("document" in window.self) {
   }
 }
 
-},{}],7:[function(require,module,exports){
+},{}],8:[function(require,module,exports){
 (function(factory) {
     'use strict';
     if ('object' == typeof exports) {
@@ -503,7 +624,7 @@ if ("document" in window.self) {
     return ScreenSizeObserver;
 
 });
-},{"jquery":8}],8:[function(require,module,exports){
+},{"jquery":9}],9:[function(require,module,exports){
 /*!
  * jQuery JavaScript Library v2.2.4
  * http://jquery.com/
@@ -10319,7 +10440,7 @@ if ( !noGlobal ) {
 return jQuery;
 }));
 
-},{}],9:[function(require,module,exports){
+},{}],10:[function(require,module,exports){
 /*!
  * jQuery JavaScript Library v3.1.1
  * https://jquery.com/
@@ -20541,7 +20662,7 @@ if ( !noGlobal ) {
 return jQuery;
 } );
 
-},{}],10:[function(require,module,exports){
+},{}],11:[function(require,module,exports){
 /*!
 Waypoints - 4.0.1
 Copyright © 2011-2016 Caleb Troughton
@@ -21204,7 +21325,7 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
   }
 }())
 ;
-},{}],11:[function(require,module,exports){
+},{}],12:[function(require,module,exports){
 (function() {
   var MutationObserver, Util, WeakMap, getComputedStyle, getComputedStyleRX,
     bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; },

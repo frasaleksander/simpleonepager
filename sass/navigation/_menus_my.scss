@@ -32,9 +32,71 @@
 	}
 }
 
+/*
+ * MOBILE VIEW - TEMPORARY
+ */
+
 .menu-toggle {
-	display:none;	
+	@include transform(rotate(0deg));
+	@include transition(all 0.4s ease 0s);
+	display:none;
+	padding:0.25rem 0.5rem;
+	font-size:2rem;
+	background-color:rgba(0,0,0,0.5);
+	color:#fff;
+	outline:none;
+	border:none;
+	position:absolute;
+	right:0;
+	&:focus, &:active {
+	background-color:rgba(0,0,0,0.5);
+	color:#fff;
+	}
+	@media (max-width:$mobile-break) {
+		display:block;
+		min-width:auto;
+	}
+	&[aria-expanded="true"] {
+		@include transform(rotate(-90deg));
+	}
+
 }
+
+@media(max-width:$mobile-break) {
+	#navhead {
+		position:fixed;
+		top:0;
+		left:0;
+		right:0;
+		background-color:rgba(0,0,0,0.6);
+		padding:0.5rem 2.5%;
+		@include transition(all 1s ease 0s);
+	}
+	#navhead[aria-expanded="true"] {
+		background-color:#231f20;
+	}
+}
+
+@media(max-width:$mobile-break) {
+	#navhead #site-navigation {
+		position:relative;
+		a {
+			@include inline-block();
+			width:100%;
+			padding:0.5rem 0rem;
+		}
+	}
+
+	#navhead #site-navigation #primary-menu {
+		@include transition(all 0.4s ease 0s);
+		margin-top:-100%;
+	}
+
+	#navhead #site-navigation #primary-menu[aria-expanded="true"] {
+		margin-top:1rem;
+	}
+}
+
 
 @import "nav-style-1";
 

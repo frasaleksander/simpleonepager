@@ -58,7 +58,7 @@
 				var page = document.getElementById('page');
 				//console.log(className);
 				page.className = page.className + ' loaded';
-				siteLoader.className = siteLoader + ' loaded';
+				siteLoader.className = siteLoader.className + ' loaded';
 			}, 100);
 
 		}, false);

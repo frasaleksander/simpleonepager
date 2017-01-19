@@ -83,3 +83,56 @@
 .color-black {
 	color:#000;
 }
+
+/*
+ * Image Overlayi
+ */
+
+.zakaj-egret-image-container {
+	position:relative;
+	overflow:hidden;
+}
+
+.zakaj-egret-image-container .zakaj-egret-overlay-image-container {
+	position:absolute;
+	top:100%;
+	left:0;
+	right:0;
+	bottom:-100%;
+	color:#231f20;
+	background-color:rgba(255,255,255,0.85);
+	-webkit-transition:all 0.4s ease 0s;
+	-o-transition:all 0.4s ease 0s;
+	-moz-transition:all 0.4s ease 0s;
+	-ms-transition:all 0.4s ease 0s;
+	transition:all 0.4s ease 0s;
+	padding:1.5rem 2rem;
+
+	
+}
+
+.zakaj-egret-image-container:hover .zakaj-egret-overlay-image-container {
+	top:0;
+	bottom:0;
+}
+
+.zakaj-egret-image-container .zakaj-egret-overlay-image-container p {
+	font-size:0.875em !important;
+}
+
+.zakaj-egret-image-container .zakaj-egret-overlay-image-container h4 {
+	font-size:1.7em !important;
+	line-height:1.1 !important;
+}
+
+.zakaj-egret-image-container .zakaj-egret-overlay-image-container p,
+.zakaj-egret-image-container .zakaj-egret-overlay-image-container h4 {
+	text-shadow:none;
+	color:#231f20 !important;
+	margin:0;
+}
+
+/*
+ * Konec image overlayi
+ */
+

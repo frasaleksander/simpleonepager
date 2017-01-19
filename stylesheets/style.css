@@ -8072,6 +8072,60 @@ striping:
   color: #000;
 }
 
+/*
+ * Image Overlayi
+ */
+/* line 91, ../sass/extras/_extra-classes.scss */
+.zakaj-egret-image-container {
+  position: relative;
+  overflow: hidden;
+}
+
+/* line 96, ../sass/extras/_extra-classes.scss */
+.zakaj-egret-image-container .zakaj-egret-overlay-image-container {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  bottom: -100%;
+  color: #231f20;
+  background-color: rgba(255, 255, 255, 0.85);
+  -webkit-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
+  -moz-transition: all 0.4s ease 0s;
+  -ms-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
+  padding: 1.5rem 2rem;
+}
+
+/* line 114, ../sass/extras/_extra-classes.scss */
+.zakaj-egret-image-container:hover .zakaj-egret-overlay-image-container {
+  top: 0;
+  bottom: 0;
+}
+
+/* line 119, ../sass/extras/_extra-classes.scss */
+.zakaj-egret-image-container .zakaj-egret-overlay-image-container p {
+  font-size: 0.875em !important;
+}
+
+/* line 123, ../sass/extras/_extra-classes.scss */
+.zakaj-egret-image-container .zakaj-egret-overlay-image-container h4 {
+  font-size: 1.7em !important;
+  line-height: 1.1 !important;
+}
+
+/* line 128, ../sass/extras/_extra-classes.scss */
+.zakaj-egret-image-container .zakaj-egret-overlay-image-container p,
+.zakaj-egret-image-container .zakaj-egret-overlay-image-container h4 {
+  text-shadow: none;
+  color: #231f20 !important;
+  margin: 0;
+}
+
+/*
+ * Konec image overlayi
+ */
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
@@ -8460,11 +8514,102 @@ a > img {
   padding: 0;
 }
 
-/* line 35, ../sass/navigation/_menus_my.scss */
+/*
+ * MOBILE VIEW - TEMPORARY
+ */
+/* line 39, ../sass/navigation/_menus_my.scss */
 .menu-toggle {
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -moz-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
+  -webkit-transition: all 0.4s ease;
+  -webkit-transition-delay: 0s;
+  transition: all 0.4s ease 0s;
   display: none;
+  padding: 0.25rem 0.5rem;
+  font-size: 2rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  outline: none;
+  border: none;
+  position: absolute;
+  right: 0;
+}
+/* line 51, ../sass/navigation/_menus_my.scss */
+.menu-toggle:focus, .menu-toggle:active {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+}
+@media (max-width: 767px) {
+  /* line 39, ../sass/navigation/_menus_my.scss */
+  .menu-toggle {
+    display: block;
+    min-width: auto;
+  }
+}
+/* line 59, ../sass/navigation/_menus_my.scss */
+.menu-toggle[aria-expanded="true"] {
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+  transform: rotate(-90deg);
 }
 
+@media (max-width: 767px) {
+  /* line 66, ../sass/navigation/_menus_my.scss */
+  #navhead {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 0.5rem 2.5%;
+    -moz-transition: all 1s ease 0s;
+    -o-transition: all 1s ease 0s;
+    -webkit-transition: all 1s ease;
+    -webkit-transition-delay: 0s;
+    transition: all 1s ease 0s;
+  }
+
+  /* line 75, ../sass/navigation/_menus_my.scss */
+  #navhead[aria-expanded="true"] {
+    background-color: #231f20;
+  }
+}
+@media (max-width: 767px) {
+  /* line 81, ../sass/navigation/_menus_my.scss */
+  #navhead #site-navigation {
+    position: relative;
+  }
+  /* line 83, ../sass/navigation/_menus_my.scss */
+  #navhead #site-navigation a {
+    display: inline-block;
+    vertical-align: middle;
+    *vertical-align: auto;
+    *zoom: 1;
+    *display: inline;
+    width: 100%;
+    padding: 0.5rem 0rem;
+  }
+
+  /* line 90, ../sass/navigation/_menus_my.scss */
+  #navhead #site-navigation #primary-menu {
+    -moz-transition: all 0.4s ease 0s;
+    -o-transition: all 0.4s ease 0s;
+    -webkit-transition: all 0.4s ease;
+    -webkit-transition-delay: 0s;
+    transition: all 0.4s ease 0s;
+    margin-top: -100%;
+  }
+
+  /* line 95, ../sass/navigation/_menus_my.scss */
+  #navhead #site-navigation #primary-menu[aria-expanded="true"] {
+    margin-top: 1rem;
+  }
+}
 /* line 2, ../sass/navigation/_nav-style-1.scss */
 .main-navigation.nav-style-1 {
   color: #fff;
@@ -8474,7 +8619,7 @@ a > img {
   color: #fff;
 }
 
-@media (min-width: 780px) {
+@media (min-width: 767px) {
   /*
    * nav-style-1
    */
@@ -8691,14 +8836,14 @@ a > img {
   text-align: center;
 }
 
-@media (max-width: 780px) {
+@media (max-width: 767px) {
   /* line 11, ../sass/site/primary/_header.scss */
   .top-headings {
     left: 10%;
     width: 80%;
   }
 }
-@media (min-width: 780px) {
+@media (min-width: 767px) {
   /* line 17, ../sass/site/primary/_header.scss */
   .sow-slider-base ul.sow-slider-images li.sow-slider-image .sow-slider-image-overlay {
     background-size: 110%;

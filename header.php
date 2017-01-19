@@ -33,7 +33,7 @@ $description = get_bloginfo( 'description', 'display' );
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'simpletheme' ); ?></a>
 
-	<header id="navhead" role="banner">
+	<header id="navhead" class="nav-header" role="banner">
 		<div class="site-branding skip">
 			<?php
 			
