@@ -145,7 +145,13 @@ function simpletheme_register_required_plugins() {
 			'required'  => true,
 			//'force_activation' => true,
 		),
-
+		array(
+			'name'      => 'TinyMCE Advanced',
+			'slug'      => 'tinymce-advanced',
+			'required'  => true,
+			'force_activation' => true,
+		),
+		
 
 		
 		
