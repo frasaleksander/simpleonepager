@@ -63,6 +63,25 @@ class SimplethemeCustomizer extends ExtClass {
 		       $user_ID, $simpletheme_views;
 
 
+		$folder_name     = str_replace('_', '-', $section_id);
+		$customizer_path = SIMPLETHEME_CUSTOMIZER_PATH . '/customizer/' . $folder_name . '/' . $folder_name . '.php';
+		$view_path       = SIMPLETHEME_CUSTOMIZER_PATH . '/view/' . $folder_name . '/' . $folder_name . '.php';
+		$model_path      = SIMPLETHEME_CUSTOMIZER_PATH . '/model/' . $folder_name . '/' . $folder_name . '.php';
+
+		/*
+		 * Customizer je neodvisen od modela in viewa. Model in view sta povezana in lahko tudi neodvisna od customizerja
+		 */
+
+		if(file_exists( $customizer_path )) {
+			require_once( $customizer_path );
+		}
+
+		if(!(file_exists( $model_path ) && file_exists( $view_path ))) {
+			return;
+		}
+
+		require_once( $model_path );
+
 		/* 
 		 * Ta class je nujno potreben za delovanje sekcije
 		 */
@@ -87,14 +106,6 @@ class SimplethemeCustomizer extends ExtClass {
 		//print_r($dependency_sections);
 
 		//print_r($dependency_classes);
-
-		$folder_name     = str_replace('_', '-', $section_id);
-		$customizer_path = SIMPLETHEME_CUSTOMIZER_PATH . '/customizer/' . $folder_name . '/' . $folder_name . '.php';
-		$view_path       = SIMPLETHEME_CUSTOMIZER_PATH . '/view/' . $folder_name . '/' . $folder_name . '.php';
-		$model_path      = SIMPLETHEME_CUSTOMIZER_PATH . '/model/' . $folder_name . '/' . $folder_name . '.php';
-		
-		require_once( $customizer_path );
-		require_once( $model_path );
 		
 		self::$views[$section_id] = array(
 			'section_id'          => $section_id,

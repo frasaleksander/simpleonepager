@@ -143,7 +143,7 @@ function simpletheme_register_required_plugins() {
 			'name'      => 'Customizer Export/Import',
 			'slug'      => 'customizer-export-import',
 			'required'  => true,
-			//'force_activation' => true,
+			'force_activation' => true,
 		),
 		array(
 			'name'      => 'TinyMCE Advanced',
