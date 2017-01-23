@@ -6,7 +6,6 @@
  *
  * @package simpletheme
  */
-ini_set( 'upload_max_size' , '64M' );
 
 
 if ( ! function_exists( 'simpletheme_setup' ) ) :

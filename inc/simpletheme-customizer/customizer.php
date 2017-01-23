@@ -28,6 +28,7 @@ SimplethemeCustomizer::config();
  */
 SimplethemeCustomizer::requirePanel('page_elements_panel');
 SimplethemeCustomizer::requirePanel('basic_html_panel');
+SimplethemeCustomizer::requirePanel('special_pages');
 
 Simpletheme_Kirki::add_panel( 'colors_panel', array(
 	'priority'       => 41,
@@ -75,7 +76,14 @@ SimplethemeCustomizer::requireSection('page_description', 'page_elements_panel')
 SimplethemeCustomizer::requireSection('site_logo', 'page_elements_panel');
 SimplethemeCustomizer::requireSection('site_loader', 'page_elements_panel');
 
+SimplethemeCustomizer::requireSection('the_404', 'special_pages');
+
 SimplethemeCustomizer::requireSection('custom_css');
 SimplethemeCustomizer::requireSection('custom_javascript');
+
+
+SimplethemeCustomizer::requireSection('head', '', array('custom_css', 'site_loader'));
+SimplethemeCustomizer::requireSection('header', '', array('custom_css', 'site_loader'));
+SimplethemeCustomizer::requireSection('header_404', '', array('custom_css', 'site_loader'));
 
 } //if(class_exists('Simpletheme_Kirki')) {

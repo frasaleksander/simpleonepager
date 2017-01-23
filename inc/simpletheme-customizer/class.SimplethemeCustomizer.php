@@ -118,6 +118,12 @@ class SimplethemeCustomizer extends ExtClass {
 			'customizer_path'     => $customizer_path,
 			'folder_name'         => $folder_name,
 			'show_function'       => function($data, $path) {
+			   global $posts, $post, 
+		       $wp_did_header, $wp_query, 
+		       $wp_rewrite, $wpdb, 
+		       $wp_version, $wp, 
+		       $id, $comment, 
+		       $user_ID, $simpletheme_views;
 				extract($data);
 				require_once($path);
 			},

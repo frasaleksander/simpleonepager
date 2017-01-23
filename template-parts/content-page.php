@@ -13,7 +13,7 @@
 
 	<div class="entry-content">
 		<?php
-			the_content();
+			simpletheme_the_content(get_the_ID());
 
 			wp_link_pages( array(
 				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'simpletheme' ),

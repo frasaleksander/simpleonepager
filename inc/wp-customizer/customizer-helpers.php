@@ -43,3 +43,17 @@ function css_selector_visited($selector) {
 function css_selector_link($selector) {
     return pseudo_css_selector($selector, ':link');
 }
+
+function simpletheme_the_content($post_id, $more_link_text = null, $strip_teaser = false) {
+        $content = get_post_field('post_content', $post_id);
+        /**
+         * Filters the post content.
+         *
+         * @since 0.71
+         *
+         * @param string $content Content of the current post.
+         */
+        $content = apply_filters( 'the_content', $content );
+        $content = str_replace( ']]>', ']]&gt;', $content );
+        echo $content;
+}
