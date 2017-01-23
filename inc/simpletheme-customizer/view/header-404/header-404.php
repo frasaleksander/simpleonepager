@@ -7,22 +7,6 @@ SimplethemeCustomizer::show('head');
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'simpletheme' ); ?></a>
 
 	<header id="navhead" class="nav-header" role="banner">
-		<div class="site-branding skip">
-			<?php
-			
-			if ( is_front_page() && is_home() ) : ?>
-
-				<h1 class="site-title"><a href="<?php echo $bloghref; ?>" rel="home"><?php echo $blogname; ?></a></h1>
-			<?php else : ?>
-				<p class="site-title"><a href="<?php echo $bloghref; ?>" rel="home"><?php echo $blogname; ?></a></p>
-			<?php
-			endif;
-
-			if ( $description ) : ?>
-				<p class="site-description"><?php echo $description; ?></p>
-			<?php
-			endif; ?>
-		</div><!-- .site-branding -->
 
 		<?php if($the_404_navigation_menu_is_visible): ?>
 		<nav id="site-navigation" class="main-navigation nav-style-1" role="main-navigation">
