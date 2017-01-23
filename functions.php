@@ -158,8 +158,6 @@ require_once get_template_directory() . '/inc/template-tags.php';
  */
 require_once get_template_directory() . '/inc/extras.php';
 
-require_once get_template_directory() . '/template-parts/navigation/navigation.php';
-
 /**
  * Customizer additions.
  * Include Kirki for faster workflow
