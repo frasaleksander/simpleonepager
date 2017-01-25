@@ -10,5 +10,6 @@
 
 <body <?php body_class(); ?>>
 <?php 
+    SimplethemeCustomizer::show('google_analytics');
 	SimplethemeCustomizer::show('site_loader');
 ?>

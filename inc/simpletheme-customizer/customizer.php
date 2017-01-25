@@ -78,6 +78,8 @@ SimplethemeCustomizer::requireSection('site_loader', 'page_elements_panel');
 
 SimplethemeCustomizer::requireSection('the_404', 'special_pages');
 
+
+SimplethemeCustomizer::requireSection('google_analytics');
 SimplethemeCustomizer::requireSection('custom_css');
 SimplethemeCustomizer::requireSection('custom_javascript');
 

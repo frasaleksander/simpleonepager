@@ -8098,24 +8098,24 @@ striping:
   padding: 1.5rem 2rem;
 }
 
-/* line 114, ../sass/extras/_extra-classes.scss */
+/* line 112, ../sass/extras/_extra-classes.scss */
 .zakaj-egret-image-container:hover .zakaj-egret-overlay-image-container {
   top: 0;
   bottom: 0;
 }
 
-/* line 119, ../sass/extras/_extra-classes.scss */
+/* line 117, ../sass/extras/_extra-classes.scss */
 .zakaj-egret-image-container .zakaj-egret-overlay-image-container p {
   font-size: 0.875em !important;
 }
 
-/* line 123, ../sass/extras/_extra-classes.scss */
+/* line 121, ../sass/extras/_extra-classes.scss */
 .zakaj-egret-image-container .zakaj-egret-overlay-image-container h4 {
   font-size: 1.7em !important;
   line-height: 1.1 !important;
 }
 
-/* line 128, ../sass/extras/_extra-classes.scss */
+/* line 126, ../sass/extras/_extra-classes.scss */
 .zakaj-egret-image-container .zakaj-egret-overlay-image-container p,
 .zakaj-egret-image-container .zakaj-egret-overlay-image-container h4 {
   text-shadow: none;
