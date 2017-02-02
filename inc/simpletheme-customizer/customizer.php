@@ -1,4 +1,6 @@
 <?php
+
+
 require_once get_template_directory() . '/inc/simpletheme-customizer/kirki-include.php';
 require_once get_template_directory() . '/inc/simpletheme-customizer/simpletheme-kirki.php';
 require_once get_template_directory() . '/inc/simpletheme-customizer/class.SimplethemeCustomizer.php';
@@ -58,6 +60,7 @@ Simpletheme_Kirki::add_panel( 'style_panel', array(
 $SimplethemeCustomizer->addWholeSection('style_common');
 $SimplethemeCustomizer->addWholeSection('colors_common');
 $SimplethemeCustomizer->addWholeSection('typography_common');
+
 /*
  * SECTIONS 
  */
