@@ -9,4 +9,4 @@
  * @package simpletheme
  */
 
-	SimplethemeCustomizer::show('header');
+SimplethemeCustomizer::show('header');
