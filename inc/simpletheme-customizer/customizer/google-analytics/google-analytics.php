@@ -13,7 +13,7 @@ Simpletheme_Kirki::add_section( $section_id, array(
 
 
 /* CREATE FIELDS */
-Simpletheme_Kirki::add_field( THEME_TEXTDOMAIN, array(
+/*Simpletheme_Kirki::add_field( THEME_TEXTDOMAIN, array(
 	'type'        => 'code',
 	'settings'    => 'google_analytics_code',
 	'label'       => simpletheme_esc_attr( 'Google Analytics Code' ),
@@ -25,4 +25,13 @@ Simpletheme_Kirki::add_field( THEME_TEXTDOMAIN, array(
 		'theme'    => 'monokai',
 		'height'   => 250,
 	),
+) );*/
+
+Simpletheme_Kirki::add_field( THEME_TEXTDOMAIN, array(
+	'type'        => 'text',
+	'settings'    => 'google_analytics_tracking_id',
+	'label'       => simpletheme_esc_attr( 'Google Analytics Tracking ID' ),
+	'section'     => $section_id,
+	'default'     => '',
+	'priority'    => 10,
 ) );
