@@ -79,7 +79,10 @@ if ( post_password_required() ) {
 	<?php
 	endif;
 
-	comment_form();
+	if(1==0) {
+		comment_form();
+	}
+	
 	?>
 
 </div><!-- #comments -->
